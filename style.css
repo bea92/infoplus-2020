@@ -6,7 +6,7 @@ html { font-family: 'Inter', sans-serif; }
 
 
 body{
-  background-colo:#FFFCF2;
+  background-color:#FFFCF2;
   font-family:"Inter", sans-serif;
   font-size: 1em;
   color:#5800FF;
@@ -31,8 +31,8 @@ font-size: 1em;
 }
 
 #header{
-background-color: white;
-border-bottom:1px solid blue;
+background-color:#FFFCF2;
+border-bottom:1px solid #5800FF;
 display: flex;
 align-items: center;
 justify-content:center;
@@ -40,9 +40,8 @@ justify-content:center;
 
 
 #intro{
-  background-color: peachpuff;
-  border-bottom:1px solid blue;
-
+  background-color:#FFFCF2;
+  border-bottom:1px solid #5800FF;
 }
 
 footer{
