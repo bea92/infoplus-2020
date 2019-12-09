@@ -13,7 +13,7 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
   <script src="vec2.js"></script>
-
+<script src="script.js"></script>
 
 
   <title>Infoplus 2020</title>
@@ -21,6 +21,8 @@
 
 <body>
   <content>
+    <main role="main" class="main-content">
+    <canvas id="noise" class="noise"></canvas>
 
     <section id="header">
       <div class="container-fluid">
@@ -39,43 +41,64 @@
 
     <section id="intro">
       <div class="container">
-        <h1>Info Plus</h1>
         <div class="row">
-          <div class="col-lg-8 text">
-            <p>Information+ is a biannual interdisciplinary conference, workshop, and exhibition that brings together researchers, educators, and practitioners in information design and data visualization to discuss common questions and challenges in
-              these rapidly changing fields. Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices and pedagogies of analyzing and communicating information.
+          <div class="col-lg-8">
+            <p class="text">Information+ is a biannual interdisciplinary conference, workshop, and exhibition that brings together researchers, educators, and practitioners in information design and data visualization to discuss common questions and
+              challenges in
+              these rapidly changing fields. Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices and pedagogies of analyzing and communicating information.</p>
 
-              The next Information+ will be held September 24-27, 2020 at the Georgia Institute of Technology in Atlanta, Georgia (USA). Georgia Tech has a strong international reputation for research on information visualization and its broad
+            <p class="text-small"> The next Information+ will be held September 24-27, 2020 at the Georgia Institute of Technology in Atlanta, Georgia (USA). Georgia Tech has a strong international reputation for research on information visualization
+              and its broad
               implications in scientific and engineering work, as well as civic life. Building on the experiences from the previous installments of Information+ at Emily Carr University of Art + Design, Vancouver in 2016 and the University of Applied
               Sciences Potsdam in 2018, we seek to broaden the base of our interdisciplinary community in Atlanta.</p>
 
-
           </div>
-          <div class="col-sm">
-            <h2>important dates</h2>
-            <p>10 Feb. 2020 Publication of call for papers <br>
-              20 April 2020 Submission of abstracts for talks<br>
-              1 June 2020 Notification of acceptance</p>
+          <div class="col-sm dates">
+            <h3>Important dates</h3>
+            <p><em>10 February 2020</em> Publication of call for papers <br>
+              <em>20 April 2020</em> Submission of abstracts for talks<br>
+              <em>1 June 2020</em> Notification of acceptance</p>
 
-            <h2>schedule</h2>
-            <p> 24 Sep. Workshop day<br>
-              25/26 Sep. Conference program<br>
-              27 Sep Excursion day</p>
+            <h3>Schedule</h3>
+            <p> <em>24 September</em> Workshop day<br>
+              <em>25/26 September</em> Conference program<br>
+              <em>27 September</em> Excursion day</p>
 
-            <h2>organizers</h2>
+            <h3>Organizers</h3>
+            <p><em>Yanni Loukissas</em>, Georgia Tech
+              <br><em>Isabel Meirelles</em>, OCAD University
+              <br><em>Marian Dörk</em>, FH Potsdam</p>
+
+            <h3>Chairs</h3>
             <p>Yanni Loukissas, Georgia Tech
-            <br>Isabel Meirelles, OCAD University
-            <br>Marian Dörk, FH Potsdam</p>
+              <br>Isabel Meirelles, OCAD University
+              <br>Marian Dörk, FH Potsdam</p>
+
+            <h3>Contact</h3>
+            <p> For updates, find us on Twitter: <a href="#">@InfoPlusConf</a><br>
+            <p>For questions, please send us an email: <a href = "mailto:admin@informationplusconference.com">mailto:admin@informationplusconference.com</a></p>
+
 
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-      <p>Information Plus Conference 2020</p>
-    </footer>
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Information Plus 2020</p>
+          </div>
+          <div class="col-md-3">
+            <ul class="list-unstyled">
+            </ul>
+          </div>
+        </div>
+      </div>
 
+    </footer>
 
   </content>
 

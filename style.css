@@ -6,10 +6,12 @@ html { font-family: 'Inter', sans-serif; }
 
 
 body{
-  background-color:#FFFCF2;
   font-family:"Inter", sans-serif;
   font-size: 1em;
   color:#5800FF;
+  background=ffffff00&noise=c412ff&density=41&opacity=66;
+  /* background: rgb(255,252,242);
+  background: linear-gradient(184deg, rgba(255,252,242,1) 0%, rgba(255,255,255,1) 100%); */
 }
 
 p{
@@ -31,32 +33,52 @@ font-size: 1em;
 }
 
 #header{
-background-color:#FFFCF2;
 border-bottom:1px solid #5800FF;
+position: relative;
 display: flex;
 align-items: center;
-justify-content:center;
+justify-content: center;
 }
 
 
 #intro{
-  background-color:#FFFCF2;
   border-bottom:1px solid #5800FF;
 }
 
 footer{
-padding:2em 0 2em 0;
+padding:4em 4em 4em 4em;
 height: 100px;
 }
 
 section{
   padding:2em 0 2em 0;
 }
+::selection{
+  color:white;
+  background-color: #5800FF;
+}
 
 .info{
   margin-top:2em;
 }
 
-.text p{
+.text{
+  font-size:1.8em;
+  font-weight:500;
+}
+
+.text-small{
+  margin-top:2em;
   font-size:1.3em;
+  line-height: 1.5em;
+  color:black;
+}
+
+.dates{
+  color:#af10ff;
+}
+
+a{
+text-decoration:underline;
+color:#5800FF;
 }
