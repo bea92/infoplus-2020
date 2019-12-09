@@ -6,9 +6,10 @@ html { font-family: 'Inter', sans-serif; }
 
 
 body{
+  background-colo:#FFFCF2;
   font-family:"Inter", sans-serif;
   font-size: 1em;
-  color:blue;
+  color:#5800FF;
 }
 
 p{
