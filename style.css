@@ -1,0 +1,55 @@
+body{
+  font-family:"Public Sans", sans-serif;
+  font-size: 1em;
+  color:blue;
+}
+
+p{
+  font-family:"Public Sans", sans-serif;
+  font-size: 0.8em;
+}
+
+h1{
+font-size: 2em;
+font-weight:800px;
+}
+
+h2{
+font-size: 1.5em;
+}
+
+h3{
+font-size: 1em;
+}
+
+#header{
+background-color: white;
+border-bottom:1px solid blue;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+
+
+#intro{
+  background-color: peachpuff;
+  border-bottom:1px solid blue;
+
+}
+
+footer{
+padding:2em 0 2em 0;
+height: 100px;
+}
+
+section{
+  padding:2em 0 2em 0;
+}
+
+.info{
+  margin-top:2em;
+}
+
+.text p{
+  font-size:1.3em;
+}
