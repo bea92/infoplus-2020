@@ -8,10 +8,11 @@ html { font-family: 'Inter', sans-serif; }
 body{
   font-family:"Inter", sans-serif;
   font-size: 1em;
-  color:#5800FF;
-  background=ffffff00&noise=c412ff&density=41&opacity=66;
-  /* background: rgb(255,252,242);
-  background: linear-gradient(184deg, rgba(255,252,242,1) 0%, rgba(255,255,255,1) 100%); */
+  background: rgb(255,252,242);
+}
+
+canvas {
+  display: block;
 }
 
 p{
@@ -33,7 +34,8 @@ font-size: 1em;
 }
 
 #canvas{
-    padding:0;
+  width: auto;
+    padding-left:0px;
     position: relative;
     display: flex;
     align-items: center;
@@ -64,6 +66,7 @@ height: 100px;
 section{
   padding:2em 0 2em 0;
 }
+
 ::selection{
   color:white;
   background-color: #5800FF;
@@ -76,6 +79,9 @@ section{
 .text{
   font-size:1.8em;
   font-weight:500;
+  background: -webkit-linear-gradient(#af10ff, #5800FF);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .text-small{

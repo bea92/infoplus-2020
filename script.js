@@ -1,22 +1,17 @@
 var canvas = document.querySelector("canvas");
     context = canvas.getContext("2d");
-    context.font = 'bold 10pt Calibri';
-  context.fillText('Hello World!', 150, 100);
-  context.font = 'italic 40pt Times Roman';
-  context.fillStyle = 'blue';
-  context.fillText('Hello World!', 200, 150);
-  context.font = '60pt Calibri';
-  context.lineWidth = 4;
-  context.strokeStyle = 'blue';
-  context.strokeText('Hello World!', 70, 70);
+
     offscreen = document.querySelector(".offscreen"),
     offscreenContext = offscreen.getContext("2d"),
     gui = new dat.GUI();
 
-var width = 1600,
-    height = 800,
-    numBoids = 1000,
-    flockmateRadius = 100,
+    canvas.width = window.innerWidth;
+    canvas.height = 400;
+
+var width = canvas.width,
+    height = canvas.height,
+    numBoids = 300,
+    flockmateRadius = 50,
     separationDistance = 30,
     maxVelocity = 2,
     separationForce = 0.03,
@@ -25,6 +20,7 @@ var width = 1600,
     startingPosition = "Random",
     coloring = "By Movement",
     boids;
+
 offscreenContext.globalAlpha = 0.85;
 gui.add(window, "flockmateRadius", 0, 500).step(1);
 gui.add(window, "separationDistance", 0, 100).step(1);
