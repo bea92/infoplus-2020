@@ -32,22 +32,33 @@ h3{
 font-size: 1em;
 }
 
+#canvas{
+    padding:0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #header{
-border-bottom:1px solid #5800FF;
-position: relative;
-display: flex;
-align-items: center;
-justify-content: center;
+
 }
 
 
 #intro{
-  border-bottom:1px solid #5800FF;
+  border-top:1px solid #5800FF;
 }
 
 footer{
 padding:4em 4em 4em 4em;
 height: 100px;
+}
+
+.footer-text{
+  font-size:1em;
+  margin-bottom:2em;
+  line-height: 1.5em;
+  color:#5800FF;
 }
 
 section{

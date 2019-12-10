@@ -12,27 +12,25 @@
   <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
-  <script src="vec2.js"></script>
-<script src="script.js"></script>
-
 
   <title>Infoplus 2020</title>
 </head>
 
 <body>
   <content>
-    <main role="main" class="main-content">
-    <canvas id="noise" class="noise"></canvas>
-
-    <section id="header">
+    <section id="canvas">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg">
-
-            <div>
+            <div id="header">
               <h2>Information Plus 2020</h2>
-              <h2>Atlanta, September 24-27 </h2>
+            <br> <h2>Atlanta, September 24-27 </h2>
             </div>
+            <canvas id="canvas" width="1600" height="800"></canvas>
+            <canvas width="1600" height="800" class="offscreen" style="display:none;">
+            </canvas>
+            <script src="vec2.js"></script>
+            <script src="script.js"></script>
           </div>
 
         </div>
@@ -46,7 +44,6 @@
             <p class="text">Information+ is a biannual interdisciplinary conference, workshop, and exhibition that brings together researchers, educators, and practitioners in information design and data visualization to discuss common questions and
               challenges in
               these rapidly changing fields. Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices and pedagogies of analyzing and communicating information.</p>
-
             <p class="text-small"> The next Information+ will be held September 24-27, 2020 at the Georgia Institute of Technology in Atlanta, Georgia (USA). Georgia Tech has a strong international reputation for research on information visualization
               and its broad
               implications in scientific and engineering work, as well as civic life. Building on the experiences from the previous installments of Information+ at Emily Carr University of Art + Design, Vancouver in 2016 and the University of Applied
@@ -76,7 +73,7 @@
 
             <h3>Contact</h3>
             <p> For updates, find us on Twitter: <a href="#">@InfoPlusConf</a><br>
-            <p>For questions, please send us an email: <a href = "mailto:admin@informationplusconference.com">mailto:admin@informationplusconference.com</a></p>
+              <p>For questions, please send us an email: <a href="mailto:admin@informationplusconference.com">mailto:admin@informationplusconference.com</a></p>
 
 
           </div>
@@ -88,21 +85,49 @@
     <footer>
       <div class="container text-center text-md-left">
         <div class="row">
-          <div class="col-md-6">
-            <p>Information Plus 2020</p>
+          <div class="col-lg-12">
+            <p class="footer-text">Information Plus 2020 is supported by:</p>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-1">
+            <ul class="list-unstyled">
+              <img src="logo-dd-01.svg">
+            </ul>
+          </div>
+          <div class="col-md-1">
             <ul class="list-unstyled">
             </ul>
           </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <img src="FHP_logo-01.svg">
+            </ul>
+          </div>
+          <div class="col-md-1">
+            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <img src="Georgia_Tech_logo-01.svg">
+            </ul>
+          </div>
+          <div class="col-md-1">
+            <ul class="list-unstyled">
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul class="list-unstyled">
+              <img src="ocad-01.svg">
+            </ul>
+          </div>
+
+
         </div>
       </div>
 
     </footer>
 
   </content>
-
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
