@@ -1,101 +1,140 @@
 @import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+
+html {
+  font-family: 'Inter', sans-serif;
 }
 
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
 
-body{
-  font-family:"Inter", sans-serif;
+body {
+  font-family: "Inter", sans-serif;
   font-size: 1em;
-  background: rgb(255,252,242);
+  background: rgb(255, 252, 242);
 }
 
 canvas {
   display: block;
 }
 
-p{
-  font-family:"Inter", sans-serif;
+p {
+  font-family: "Inter", sans-serif;
   font-size: 0.8em;
 }
 
-h1{
-font-size: 2em;
-font-weight:800px;
+h2 {
+  font-size: 2em;
+  font-weight: 800px;
 }
 
-h2{
-font-size: 1.5em;
+h3 {
+  font-size: 1em;
 }
 
-h3{
-font-size: 1em;
-}
-
-#canvas{
-  width: auto;
-    padding-left:0px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#header{
-
-}
-
-
-#intro{
-  border-top:1px solid #5800FF;
-}
-
-footer{
-padding:4em 4em 4em 4em;
-height: 100px;
-}
-
-.footer-text{
-  font-size:1em;
-  margin-bottom:2em;
-  line-height: 1.5em;
+h1 {
+  position: relative;
+  font-size: 4em;
+  font-weight: 700;
   color:#5800FF;
+  /* background: -webkit-linear-gradient(#af10ff, #ff9ba7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
-section{
-  padding:2em 0 2em 0;
+#canvas {
+  padding: 0px;
+  position: relative;
 }
 
-::selection{
-  color:white;
+#header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#intro {
+  border-top: 1px solid #5800FF;
+}
+
+
+footer {
+  padding: 4em 4em 4em 4em;
+  height: 100px;
+}
+
+.footer-text {
+  font-size: 1em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+  color: #5800FF;
+}
+
+section {
+  padding: 2em 0 2em 0;
+}
+
+::selection {
+  color: white;
   background-color: #5800FF;
 }
 
-.info{
-  margin-top:2em;
+.info {
+  margin-top: 2em;
 }
 
-.text{
-  font-size:1.8em;
-  font-weight:500;
+.text {
+  font-size: 1.8em;
+  font-weight: 500;
   background: -webkit-linear-gradient(#af10ff, #5800FF);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.text-small{
-  margin-top:2em;
-  font-size:1.3em;
+.text-small {
+  margin-top: 2em;
+  font-size: 1.3em;
   line-height: 1.5em;
-  color:black;
+  color: black;
 }
 
-.dates{
-  color:#af10ff;
+.dates {
+  color: #af10ff;
 }
 
-a{
-text-decoration:underline;
-color:#5800FF;
+a {
+  text-decoration: underline;
+  color: #5800FF;
+}
+
+.dg.main .close-button {
+  display: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  h2 {
+    font-size: 1.8em;
+    font-weight: 800px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color:#5800FF;
+    /* background: -webkit-linear-gradient(#af10ff, #ff9ba7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+
+
 }
