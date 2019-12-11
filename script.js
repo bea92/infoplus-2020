@@ -18,7 +18,7 @@ var width = window.innerWidth,
     alignmentForce = 0.3,
     cohesionForce = 0.03,
     startingPosition = "Random",
-    coloring = "Rainbow",
+    coloring = "By Movement",
     boids;
 
 d3.select("canvas").attr("width", window.innerWidth);
@@ -127,7 +127,7 @@ function updateBoid(b) {
   if (coloring === "Rainbow") {
     context.fillStyle = b.color;
   } else {
-    context.fillStyle = d3.interpolateSpectral(d3.mean(b.last));
+    context.fillStyle = d3.interpolateWarm(d3.mean(b.last));
   }
   context.arc(b.position.x, b.position.y, 2, 0, 2 * Math.PI);
   context.fill();
