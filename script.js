@@ -16,7 +16,7 @@ var width = canvas.width,
     alignmentForce = 0.03,
     cohesionForce = 0.03,
     startingPosition = "Random",
-    coloring = "By Movement",
+    coloring = "Rainbow",
     boids;
 
 offscreenContext.globalAlpha = 0.85;
