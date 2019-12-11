@@ -4,20 +4,25 @@ var canvas = document.querySelector("canvas");
     offscreenContext = offscreen.getContext("2d");
     gui = new dat.GUI();
 
-canvas.width = window.innerWidth;
 
-var width = canvas.width,
+
+// canvas.width = window.innerWidth;
+
+var width = window.innerWidth,
     height = 400,
     numBoids = 300,
-    flockmateRadius = 60,
+    flockmateRadius = 50,
     separationDistance = 30,
     maxVelocity = 2,
     separationForce = 0.03,
-    alignmentForce = 0.03,
+    alignmentForce = 0.3,
     cohesionForce = 0.03,
     startingPosition = "Random",
     coloring = "Rainbow",
     boids;
+
+d3.select("canvas").attr("width", window.innerWidth);
+d3.select(".offscreen").attr("width", window.innerWidth);
 
 offscreenContext.globalAlpha = 0.85;
 
@@ -32,15 +37,15 @@ offscreenContext.globalAlpha = 0.85;
 // gui.add(window, "coloring", ["Rainbow", "By Movement"]);
 // gui.add(window, "restart");
 
-// d3.select("canvas").on("click", function(){
-//   var xy = d3.mouse(this);
-//   boids.push({
-//     color: d3.interpolateRainbow((boids.length / 10) % 1),
-//     position: new Vec2(xy[0], xy[1]),
-//     velocity: randomVelocity(),
-//     last: []
-//   });
-// });
+d3.select("canvas").on("click", function(){
+  var xy = d3.mouse(this);
+  boids.push({
+    color: d3.interpolateRainbow((boids.length / 10) % 1),
+    position: new Vec2(xy[0], xy[1]),
+    velocity: randomVelocity(),
+    last: []
+  });
+});
 
 restart();
 requestAnimationFrame(tick);
@@ -122,7 +127,7 @@ function updateBoid(b) {
   if (coloring === "Rainbow") {
     context.fillStyle = b.color;
   } else {
-    context.fillStyle = d3.interpolateWarm(d3.mean(b.last));
+    context.fillStyle = d3.interpolateSpectral(d3.mean(b.last));
   }
   context.arc(b.position.x, b.position.y, 2, 0, 2 * Math.PI);
   context.fill();
