@@ -71,15 +71,15 @@ h1 {
 }
 
 footer {
-  padding: 4em 4em 4em 4em;
+  padding: 2em 2em 4em 2em;
   border-Top:1px solid #5800FF;
+  align-content: space-around;
 }
 
-.footer-text {
-  font-size: 1em;
-  margin-bottom: 2em;
-  line-height: 1.5em;
-  color: #5800FF;
+
+
+footer > svg{
+  align-items: baseline;
 }
 
 section {
@@ -148,8 +148,8 @@ img {
     border-style: none;
     width: 50%;
     margin-top:2em;
+    height:80px;
 }
-
 
 
 @media only screen and (max-width: 500px) {
@@ -170,16 +170,13 @@ img {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
   }
-
   img {
       vertical-align: middle;
       border-style: none;
-      width: 30%;
+      width: 100%;
       margin-top:2em;
+      height:80px;
   }
 
-  img.logo{
-    width: 20%;
-  }
 
 }
