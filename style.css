@@ -36,7 +36,7 @@ h2 {
 
 h3 {
   font-size: 1.2em;
-  margin-top: 1em;
+  margin-top: 0.2em;
 }
 
 h4 {
@@ -46,9 +46,8 @@ h4 {
 
 h5>a{
   font-size: 1em;
-  margin-top: 2em;
   font-weight: 600;
-  color:#ff5a23;
+  color:#5800FF;
   font-size:0.8em;
 }
 
@@ -57,7 +56,7 @@ h1 {
   position: relative;
   font-size: 4em;
   font-weight: 700;
-  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
+  background: -webkit-linear-gradient(#ff3f19,#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -85,8 +84,6 @@ footer {
   align-content: space-around;
 }
 
-
-
 footer > svg{
   align-items: baseline;
 }
@@ -107,7 +104,7 @@ section {
 .text {
   font-size: 1.8em;
   font-weight: 500;
-  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
+  background: -webkit-linear-gradient(#ff3f19,#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -139,7 +136,7 @@ img a:hover {
 }
 
 strong {
-  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
+  background: -webkit-linear-gradient(#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -186,6 +183,14 @@ img {
       margin-top:2em;
       height:80px;
   }
+
+  footer {
+    padding: 1em 2em 2em 2em;
+    border-Top:1px solid #5800FF;
+    align-content: space-around;
+  }
+
+
 
 
 }
