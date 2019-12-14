@@ -48,7 +48,9 @@ h1 {
   position: relative;
   font-size: 4em;
   font-weight: 700;
-  color: #5800FF;
+  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #canvas {
@@ -96,7 +98,7 @@ section {
 .text {
   font-size: 1.8em;
   font-weight: 500;
-  background: -webkit-linear-gradient(#af10ff, #5800FF);
+  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -128,10 +130,11 @@ img a:hover {
 }
 
 strong {
-  background: -webkit-linear-gradient(#af10ff, #5800FF);
+  background: -webkit-linear-gradient(#ff5a23,#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 a img:hover,
 a img:focus {
@@ -144,7 +147,10 @@ img {
     vertical-align: middle;
     border-style: none;
     width: 50%;
+    margin-top:2em;
 }
+
+
 
 @media only screen and (max-width: 500px) {
   h2 {
@@ -165,11 +171,15 @@ img {
     -webkit-text-fill-color: transparent; */
   }
 
-
   img {
       vertical-align: middle;
       border-style: none;
-      width: 40%;
+      width: 30%;
+      margin-top:2em;
+  }
+
+  img.logo{
+    width: 20%;
   }
 
 }
