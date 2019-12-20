@@ -65,6 +65,8 @@ h1 {
 #canvas {
   padding: 0px;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 #header {
