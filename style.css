@@ -84,6 +84,12 @@ h1 {
 #cfp {
   border-top: 1px solid #ff3f19;
   color:#ff3f19;
+  position: sticky;
+}
+
+#formats {
+  margin-bottom: 6em;
+  color:#ff3f19;
 }
 
 
@@ -136,6 +142,12 @@ section {
   font-size: 1.2em;
   line-height: 1.5em;
   color: black;
+}
+
+.text-ec {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #ff3f19;
 }
 
 
