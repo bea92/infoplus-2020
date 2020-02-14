@@ -81,6 +81,12 @@ h1 {
   border-top: 1px solid #5800FF;
 }
 
+#cfp {
+  border-top: 1px solid #ff3f19;
+  color:#ff3f19;
+}
+
+
 footer {
   padding: 2em 2em 4em 2em;
   border-Top:1px solid #5800FF;
@@ -119,8 +125,57 @@ section {
   color: black;
 }
 
+.text-cfp {
+  margin-top: 2em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: black;
+}
+
+.text-add {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: black;
+}
+
+
+.format-cfp {
+  margin-top: 2em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: #ff3f19;
+}
+
 .dates {
   color: #af10ff;
+}
+
+.requirements{
+  color:#ff3f19;
+}
+
+
+.box{
+  margin:1em 0em 0em 0em;;
+  padding:0em 1.5em 1.5em 1.5em;
+  border-width: 3px;
+  border: 1px solid #ff3f19;
+  border-radius:20px;
+  }
+
+li::before {
+content: '';
+}
+
+li{
+  margin-top: 2em;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+ul{
+  list-style-type: none;
+  list-style-position: inside;
 }
 
 a {
@@ -140,6 +195,12 @@ img a:hover {
 
 strong {
   background: -webkit-linear-gradient(#af10ff, #5800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#cfp strong{
+  background: -webkit-linear-gradient(#af10ff, #ff3f19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
