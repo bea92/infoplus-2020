@@ -31,13 +31,14 @@ p {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 800px;
 }
 
 h3 {
   font-size: 1.2em;
   margin-top: 0.2em;
+  margin-bottom:0.8em;
 }
 
 h4 {
@@ -88,7 +89,7 @@ h1 {
 }
 
 #formats {
-  margin-bottom: 6em;
+  margin-bottom: 3em;
   color:#ff3f19;
 }
 
