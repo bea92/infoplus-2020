@@ -30,6 +30,14 @@ p {
   font-size: 0.9em;
 }
 
+.small {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9em;
+  text-transform:uppercase;
+  font-weight: 300;
+  color:#5800FF;
+}
+
 h2 {
   font-size: 1.5em;
   font-weight: 800px;
@@ -85,9 +93,24 @@ h1 {
 
 #cfp {
   border-top: 1px solid #ff3f19;
-  xcolor:#ff3f19;
+  color:#ff3f19;
   position: sticky;
 }
+
+#pc {
+  border-top: 1px solid #5800FF;
+  color:black;
+  position: sticky;
+}
+
+#pc .text{
+  margin-bottom: 2em;
+}
+
+.uni{
+  margin-bottom: 2em;
+}
+
 
 #formats, #criteria {
   margin-bottom: 3em;
