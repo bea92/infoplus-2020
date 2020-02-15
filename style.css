@@ -39,6 +39,7 @@ h3 {
   font-size: 1.2em;
   margin-top: 0.2em;
   margin-bottom:0.8em;
+	font-weight: bold;
 }
 
 h4 {
@@ -84,7 +85,7 @@ h1 {
 
 #cfp {
   border-top: 1px solid #ff3f19;
-  color:#ff3f19;
+  xcolor:#ff3f19;
   position: sticky;
 }
 
@@ -127,7 +128,7 @@ section {
 
 .text-small {
   margin-top: 2em;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.5em;
   color: black;
 }
@@ -140,9 +141,13 @@ section {
 }
 
 .text-add {
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.5em;
   color: black;
+}
+
+h3.text-add  {
+	margin-top: 3em;
 }
 
 .text-ec {
