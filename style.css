@@ -30,11 +30,11 @@ p {
   font-size: 0.9em;
 }
 
-.small {
+span {
   font-family: "Inter", sans-serif;
-  font-size: 0.9em;
+  font-size: 0.8em;
   text-transform:uppercase;
-  font-weight: 300;
+  font-weight: 400;
   color:#5800FF;
 }
 
