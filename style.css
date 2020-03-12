@@ -302,6 +302,21 @@ img {
   }
 
 
-
-
 }
+
+
+@media only screen and (min-width: 1000px) {	
+	#corona {	margin-top: -5rem; }
+}
+
+
+#corona {
+	color: white;
+	padding: 1em;	
+	background: #9D00FE;
+	margin-bottom: 2em;
+}
+
+#corona p {margin-bottom: 0;} 
+
+
