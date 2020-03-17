@@ -87,6 +87,79 @@ h1 {
   justify-content: center;
 }
 
+/* Sticky Navbar */
+
+/* #navbar {
+  overflow: hidden;
+  background-color: rgb(255, 252, 242);
+  z-index:99999;
+  width: 80%;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #5800FF;
+  text-align: center;
+  padding: 2em 1em 1em 0em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: RED;
+}
+
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+} */
+
+/* slideDown Navbar */
+
+#navbar {
+    /* background: rgb(255, 252, 242); */
+  /* background: rgba(175,16,255,1); */
+   background: linear-gradient(0deg, rgba(255,63,25,1) 0%, rgba(175,16,255,1) 5%, rgba(88,0,255,1) 100%);
+  position: fixed;
+  z-index:9999;
+  width: 100%;
+  top: -50px;
+  display: block;
+  transition: top 0.3s;
+  border-bottom: none;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: rgb(255, 252, 242);
+  text-align: center;
+  padding: 1em 1em 1em 0em;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#navbar a:hover {
+  color:#ff3f19;
+  text-decoration: none;
+}
+
+
+
+
 #intro {
   border-top: 1px solid #5800FF;
 }
@@ -109,8 +182,11 @@ h1 {
 
 #pc .small { margin-left: .25em;}
 
-.uni{
-  margin-bottom: 2em;
+.uni a{
+  text-transform: uppercase;
+  font-size:0.8em;
+  font-weight: 500;
+
 }
 
 
@@ -305,18 +381,16 @@ img {
 }
 
 
-@media only screen and (min-width: 1000px) {	
+@media only screen and (min-width: 1000px) {
 	#corona {	margin-top: -5rem; }
 }
 
 
 #corona {
 	color: white;
-	padding: 1em;	
+	padding: 1em;
 	background: #9D00FE;
 	margin-bottom: 2em;
 }
 
-#corona p {margin-bottom: 0;} 
-
-
+#corona p {margin-bottom: 0;}
