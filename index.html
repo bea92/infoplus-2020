@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <!-- <link rel="stylesheet" type="text/css" href="style-color.css"> -->
@@ -60,13 +61,27 @@
     <script src="script.js"></script>
 
   </section>
-  <div id="navbar">
+
+
+<div id="navbar">
     <div class="container">
  <a href="#header">Intro</a>
  <a href="#cfp">Call for Papers</a>
  <a href="#pc">Committee</a>
 </div>
 </div>
+
+<div class="bottomnav" id="myBottomnav">
+  <a href="#header">Intro</a>
+  <a href="#cfp">Call for Papers</a>
+  <a href="#pc">Committee</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+</div>
+</div>
+</div>
+
 
   <section id="intro">
     <div class="container">
@@ -270,7 +285,6 @@
     </div>
   </section>
 
-
   <section id="info">
     <div class="container">
       <div class="row">
@@ -324,18 +338,23 @@ function scrollFunction() {
     document.getElementById("navbar").style.top = "-150px";
   }
 }
-// window.onscroll = function() {myFunction()};
-//
-// var navbar = document.getElementById("navbar");
-// var sticky = navbar.offsetTop;
-//
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//   } else {
-//     navbar.classList.remove("sticky");
-//   }
-// }</script>
+
+function myFunction() {
+  var x = document.getElementById("myBottomnav");
+  if (x.className === "bottomnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "bottomnav";
+  }
+}
+
+$(document).ready(function(){
+  $(".icon").click(function(){
+    $(".responsive").slideToggle(500);
+  });
+});
+
+</script>
   <!-- </content> -->
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
