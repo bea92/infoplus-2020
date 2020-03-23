@@ -15,7 +15,7 @@ function myFunction() {
   } else {
     x.className = "bottomnav";
   }
-}
+};
 
 $(document).ready(function(){
   $("#myBottomnav").click(function(){

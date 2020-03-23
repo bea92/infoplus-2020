@@ -11,10 +11,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <!-- <link rel="stylesheet" type="text/css" href="style-color.css"> -->
+  <script src="main.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
   <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
-    <script src="main.js"></script>
   <title>Information+ Conference 2020</title>
 
   <!-- metatag -->
@@ -63,24 +64,24 @@
   </section>
 
 
-<div id="navbar">
+  <div id="navbar">
     <div class="container">
- <a href="#header">Intro</a>
- <a href="#cfp">Call for Participation</a>
- <a href="#pc">Committee</a>
-</div>
-</div>
+      <a href="#header">Intro</a>
+      <a href="#cfp">Call for Participation</a>
+      <a href="#pc">Committee</a>
+    </div>
+  </div>
 
-<div class="bottomnav" id="myBottomnav">
-  <a href="#header">Intro</a>
-  <a href="#cfp">Call for Participation</a>
-  <a href="#pc">Committee</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-chevron-up"></i>
-  </a>
-</div>
-</div>
-</div>
+  <div class="bottomnav" id="myBottomnav">
+    <a href="#header">Intro</a>
+    <a href="#cfp">Call for Participation</a>
+    <a href="#pc">Committee</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+  </div>
+  </div>
 
 
   <section id="intro">
@@ -92,21 +93,22 @@
           <p class="text-small"> The next Information+ will be held September 24<sup>th</sup>-27<sup>th</sup>, 2020 at the <em> Georgia Institute of Technology</em> in Atlanta, Georgia (USA).
             Georgia Tech has a strong international reputation for research on information visualization
             and its broad implications in scientific and engineering work, as well as civic life.
-            Building on the experiences from the previous installments of  <a href="http://informationplusconference.com/2016/" target="_blank">Information+ 2016</a> at <em>Emily Carr University of Art + Design, Vancouver</em> and  <a
+            Building on the experiences from the previous installments of <a href="http://informationplusconference.com/2016/" target="_blank">Information+ 2016</a> at <em>Emily Carr University of Art + Design, Vancouver</em> and <a
               href="http://informationplusconference.com/2018/" target="_blank">Information+ 2018</a> <em> at University of Applied
               Sciences Potsdam</em>, we seek to broaden the base of our interdisciplinary community in Atlanta.</p>
-
         </div>
-        <div class="col-sm dates">
-					<div id="corona">
-          <h3>Coronavirus</h3>
-          <p>Information+ 2020 is planned to take place.
-						We are closely monitoring the development of COVID-19.
-						At the moment conference preparation is proceeding
-						under the assumption that the
-						virus will be stopped before Fall.</p>
-					 </div>
 
+        <div class="col-sm dates">
+          <div>
+            <div id="covid" style="background:#9D00FE; color:white; padding:1em; margin-bottom:1em">
+              <h3>Coronavirus</h3>
+              <p>Information+ 2020 is planned to take place.
+                We are closely monitoring the development of COVID-19.
+                At the moment conference preparation is proceeding
+                under the assumption that the
+                virus will be stopped before Fall.</p>
+            </div>
+          </div>
           <h3>Important Dates</h3>
           <p>
             <!-- <em>15 Feb 2020</em>&#8195; <a href="#cfp">Publication of call for papers</a><br> -->
@@ -146,9 +148,9 @@
             All proposals must feature original work, which has not been presented previously.</p>
           <p class="text-cfp">Proposals should contain the following elements: a clear research question or design objective; a discussion of related work; an explanation of methods employed or design decisions undertaken; culminating findings,
             reflections, and contributions.
-            There are two possible  <a href="#formats">formats for proposals</a>, both of which are appropriate for academic and practice-based work: 15-minute paper presentations and 5-minute lightning talks.
+            There are two possible <a href="#formats">formats for proposals</a>, both of which are appropriate for academic and practice-based work: 15-minute paper presentations and 5-minute lightning talks.
           </p>
-          <p class="text-cfp"><em>Please use  <a href="https://easychair.org/conferences/?conf=info2020">EasyChair</a> to submit your proposals by 20 April 2020.</em></p>
+          <p class="text-cfp"><em>Please use <a href="https://easychair.org/conferences/?conf=info2020">EasyChair</a> to submit your proposals by 20 April 2020.</em></p>
 
           <h3 class="text-add">Additional information</h3>
           <p class="text-add"> <em>Presenting authors</em> will be able to register for the conference at the reduced rate (to be announced soon).</p>
@@ -163,7 +165,7 @@
 
 
         <div class="col-sm">
-           <article id="formats">
+          <article id="formats">
             <h3>Formats for Proposals</h3>
             <h4 class="format-ec">15-minute paper presentation</h4>
             <p>Submit a long abstract (1000 words) with one descriptive figure and 3 keywords.</p>
@@ -171,7 +173,7 @@
             <p>Submit a short abstract (500 words) with one descriptive figure and 3 keywords.</p>
           </article>
 
-           <article id="criteria">
+          <article id="criteria">
             <h3>Evaluation Criteria</h3>
             <p>
               Each submission will be evaluated by three independent reviewers from the Program Committee. Evaluations will be based on the following criteria:</p>
@@ -201,82 +203,82 @@
           <h2 class="text">Program Committee</h2>
           <div class="row">
             <div class="col-md-6 uni">
-              <p>Clio	Andris  <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-<p>Dominikus	Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
-<p>Jessica	Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
-<p>Ilia	Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
-<p>Matthew	Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
-<p>Angeles	Briones <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
-<p>Vincent	Brown <a target="_blank" href="https://www.harvard.edu/">Harvard University</a></p>
-<p>Alberto	Cairo <a target="_blank" href="https://welcome.miami.edu/">University of Miami</a></p>
-<p>Petra	Cerne Oven <a target="_blank" href="https://www.uni-lj.si/university/">University of Ljubljana</a></p>
-<p>Rico	Chapman <a target="_blank" href="https://www.clarku.edu/">Clark University</a></p>
-<p>Lynn	Cherny	  <a>Freelance</a></p>
-<p>Paolo	Ciuccarelli <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-<p>Nicole	Coleman <a target="_blank" href="https://www.stanford.edu/">Stanford University</a></p>
-<p>Heather	Corcoran <a target="_blank" href="https://www.wustl.edu/">Washington University in St. Louis</a></p>
-<p>Pedro	Cruz <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-<p>Valentina	D’Efilippo <a target="_blank" href="https://www.economist.com/">The Economist</a></p>
-<p>Catherine	D’Ignazio <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
-<p>Patricio	Davila <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
-<p>Carl	DiSalvo <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-<p>Jason	Dykes <a target="_blank" href="https://www.https://www.city.ac.uk/">City, University of London</a></p>
-<p>Veronika	Egger <a target="_blank" href="https://www.iiid.net/">IIID – International Institute for Information Design</a></p>
-<p>Kennedy	Elliot <a target="_blank" href="https://www.nationalgeographic.com/">National Geographic</a></p>
-<p>Yuri	Engelhardt <a target="_blank" href="https://www.uva.nl/">University of Amsterdam</a></p>
-<p>Angus	Forbes <a target="_blank" href="https://www.ucsc.edu/">University of California, Santa Cruz</a></p>
-<p>Federica	Fragapane	  <a>Freelance</a></p>
-<p>Jorge	Frascara <a target="_blank" href="https://www.ualberta.ca/">University of Alberta</a></p>
-<p>Manuela	Garreton <a target="_blank" href="https://www.uc.cl/">Pontificia Universidad Católica, Chile</a></p>
-<p>Katherine	Gillieson <a target="_blank" href="https://www.ecuad.ca/">ECUAD</a></p>
-<p>Maria	Gonzalez de Cossio <a target="_blank" href="https://www.uam.mx/">Universidad Autónoma Metropolitana</a></p>
-<p>Sarah	Goodwin <a target="_blank" href="https://www.monash.edu/">Monash University</a></p>
-<p>Lena	Groeger <a target="_blank" href="https://www.propublica.org/">ProPublica</a></p>
-<p>Katherine	Hepworth <a target="_blank" href="https://www.unr.edu/">University of Nevada, Reno</a></p>
-<p>Uta	Hinrichs <a target="_blank" href="https://www.st-andrews.ac.uk/">University of St Andrews</a></p>
-<p>Angela	Iarocci <a target="_blank" href="https://www.sheridancollege.ca/">Sheridan College</a></p>
-<p>Petra	Isenberg <a target="_blank" href="https://www.inria.fr/en/centre-inria-de-paris">INRIA, Paris</a></p>
-<p>Meghan	Kelly <a target="_blank" href="https://www.wisc.edu/">University of Wisconsin</a></p>
-<p>Eric	Kindel <a target="_blank" href="http://www.reading.ac.uk/">The University of Reading</a></p>
+              <p>Clio Andris <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+              <p>Dominikus Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
+              <p>Jessica Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
+              <p>Ilia Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
+              <p>Matthew Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
+              <p>Angeles Briones <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
+              <p>Vincent Brown <a target="_blank" href="https://www.harvard.edu/">Harvard University</a></p>
+              <p>Alberto Cairo <a target="_blank" href="https://welcome.miami.edu/">University of Miami</a></p>
+              <p>Petra Cerne Oven <a target="_blank" href="https://www.uni-lj.si/university/">University of Ljubljana</a></p>
+              <p>Rico Chapman <a target="_blank" href="https://www.clarku.edu/">Clark University</a></p>
+              <p>Lynn Cherny <a>Freelance</a></p>
+              <p>Paolo Ciuccarelli <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+              <p>Nicole Coleman <a target="_blank" href="https://www.stanford.edu/">Stanford University</a></p>
+              <p>Heather Corcoran <a target="_blank" href="https://www.wustl.edu/">Washington University in St. Louis</a></p>
+              <p>Pedro Cruz <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+              <p>Valentina D’Efilippo <a target="_blank" href="https://www.economist.com/">The Economist</a></p>
+              <p>Catherine D’Ignazio <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
+              <p>Patricio Davila <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
+              <p>Carl DiSalvo <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+              <p>Jason Dykes <a target="_blank" href="https://www.https://www.city.ac.uk/">City, University of London</a></p>
+              <p>Veronika Egger <a target="_blank" href="https://www.iiid.net/">IIID – International Institute for Information Design</a></p>
+              <p>Kennedy Elliot <a target="_blank" href="https://www.nationalgeographic.com/">National Geographic</a></p>
+              <p>Yuri Engelhardt <a target="_blank" href="https://www.uva.nl/">University of Amsterdam</a></p>
+              <p>Angus Forbes <a target="_blank" href="https://www.ucsc.edu/">University of California, Santa Cruz</a></p>
+              <p>Federica Fragapane <a>Freelance</a></p>
+              <p>Jorge Frascara <a target="_blank" href="https://www.ualberta.ca/">University of Alberta</a></p>
+              <p>Manuela Garreton <a target="_blank" href="https://www.uc.cl/">Pontificia Universidad Católica, Chile</a></p>
+              <p>Katherine Gillieson <a target="_blank" href="https://www.ecuad.ca/">ECUAD</a></p>
+              <p>Maria Gonzalez de Cossio <a target="_blank" href="https://www.uam.mx/">Universidad Autónoma Metropolitana</a></p>
+              <p>Sarah Goodwin <a target="_blank" href="https://www.monash.edu/">Monash University</a></p>
+              <p>Lena Groeger <a target="_blank" href="https://www.propublica.org/">ProPublica</a></p>
+              <p>Katherine Hepworth <a target="_blank" href="https://www.unr.edu/">University of Nevada, Reno</a></p>
+              <p>Uta Hinrichs <a target="_blank" href="https://www.st-andrews.ac.uk/">University of St Andrews</a></p>
+              <p>Angela Iarocci <a target="_blank" href="https://www.sheridancollege.ca/">Sheridan College</a></p>
+              <p>Petra Isenberg <a target="_blank" href="https://www.inria.fr/en/centre-inria-de-paris">INRIA, Paris</a></p>
+              <p>Meghan Kelly <a target="_blank" href="https://www.wisc.edu/">University of Wisconsin</a></p>
+              <p>Eric Kindel <a target="_blank" href="http://www.reading.ac.uk/">The University of Reading</a></p>
             </div>
             <div class="col-md-6 uni">
-              <p>Lauren	Klein <a target="_blank" href="https://www.emory.edu/">Emory University</a></p>
-<p>Robert	Kosara <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
-<p>Doris	Kosminsky <a target="_blank" href="https://www.ufrj.br/">Universidade Federal do RJ</a></p>
-<p>Maarten	Lambrechts	  <a>Freelance</a> </p>
-<p>Yu-Ru	Lin <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a></p>
-<p>Anne	Luther <a target="_blank" href="https://www.newschool.edu/">The New School</a></p>
-<p>Michele	Mauri <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
-<p>Rodrigo	Medeiros <a target="_blank" href="https://www.ifpb.edu.br/">Inst. Fed. Educação Ciência, Tecnologia, Paraíba</a></p>
-<p>Elijah	Meeks <a target="_blank" href="https://www.apple.com/">Apple</a></p>
-<p>Sky	Moret <a target="_blank" href="https://www.tba21.org/">TBA21–Academy</a></p>
-<p>Romi Ron	Morrison <a target="_blank" href="https://www.usc.edu/">University of Southern California</a></p>
-<p>Tamara	Munzner <a target="_blank" href="https://www.ubc.edu/">University of British Columbia</a></p>
-<p>Till	Nagel <a target="_blank" href="https://www.english.hs-mannheim.de/the-university.html">Mannheim University of Applied Sciences</a></p>
-<p>Paul	Nini <a target="_blank" href="https://www.osu.edu/">Ohio State University</a></p>
-<p>Angela	Norwood <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
-<p>Dietmar	Offenhuber <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-<p>Nassim	Parvin <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-<p>Charles	Perin <a target="_blank" href="https://www.unic.ca/">University of Victoria</a></p>
-<p>Laura	Perovich <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
-<p>Nathalie	Riche <a target="_blank" href="https://www.microsoft.com/">Microsoft</a></p>
-<p>Jessica	Roberts <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-<p>Stacie	Rohrbach <a target="_blank" href="https://www.design.cmu.edu/">Carnegie Mellon, School of Design</a></p>
-<p>Lisa Charlotte	Rost <a target="_blank" href="https://www.datawrapper.de/">Datawrapper</a></p>
-<p>Arvind	Satyanarayan <a target="_blank" href="https://www.google.com/">Google</a></p>
-<p>Chad	Skelton <a target="_blank" href="https://www.kpu.ca/">Kwantlen Polytechnic University</a></p>
-<p>Carla	Spinillo <a target="_blank" href="https://www.ufpr.br/">Universidade Federal, Paraná</a></p>
-<p>Tim	Stallmann	  <a>RAD Cat</a></p>
-<p>John	Stasko <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-<p>Moritz	Stefaner <a target="_blank" href="https://www.truth-and-beauty.com/">Truth & Beauty</a></p>
-<p>Olivia	Vane <a target="_blank" href="https://www.bl.uk/">British Library</a></p>
-<p>Rupesh	Vyas <a target="_blank" href="https://www.aalto.fi/">Aalto University</a></p>
-<p>Karel	van der Waarde <a target="_blank" href="https://www.https://www.swinburne.edu.au">Swinburne University of Technology, Melbourne</a></p>
-<p>Jagoda	Walny <a target="_blank" href="https://www.cer-rec.gc.ca/index-eng.html">Canada Energy Regulator</a></p>
-<p>Mitchell	Whitelaw <a target="_blank" href="https://www.anu.edu.au/">Australian National University</a></p>
-<p>Jan	Willem Tulp  <a>Freelance</a></p>
-<p>Mushon	Zer-Aviv <a target="_blank" href="https://www.shenkar.ac.il/en">Shenkar School of Engineering and Design</p></a></p>
-<p>Siqi	Zhu <a target="_blank" href="https://www.sidewalklabs.com/">Sidewalk Labs</a></p>
+              <p>Lauren Klein <a target="_blank" href="https://www.emory.edu/">Emory University</a></p>
+              <p>Robert Kosara <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
+              <p>Doris Kosminsky <a target="_blank" href="https://www.ufrj.br/">Universidade Federal do RJ</a></p>
+              <p>Maarten Lambrechts <a>Freelance</a> </p>
+              <p>Yu-Ru Lin <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a></p>
+              <p>Anne Luther <a target="_blank" href="https://www.newschool.edu/">The New School</a></p>
+              <p>Michele Mauri <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
+              <p>Rodrigo Medeiros <a target="_blank" href="https://www.ifpb.edu.br/">Inst. Fed. Educação Ciência, Tecnologia, Paraíba</a></p>
+              <p>Elijah Meeks <a target="_blank" href="https://www.apple.com/">Apple</a></p>
+              <p>Sky Moret <a target="_blank" href="https://www.tba21.org/">TBA21–Academy</a></p>
+              <p>Romi Ron Morrison <a target="_blank" href="https://www.usc.edu/">University of Southern California</a></p>
+              <p>Tamara Munzner <a target="_blank" href="https://www.ubc.edu/">University of British Columbia</a></p>
+              <p>Till Nagel <a target="_blank" href="https://www.english.hs-mannheim.de/the-university.html">Mannheim University of Applied Sciences</a></p>
+              <p>Paul Nini <a target="_blank" href="https://www.osu.edu/">Ohio State University</a></p>
+              <p>Angela Norwood <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
+              <p>Dietmar Offenhuber <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+              <p>Nassim Parvin <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+              <p>Charles Perin <a target="_blank" href="https://www.unic.ca/">University of Victoria</a></p>
+              <p>Laura Perovich <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
+              <p>Nathalie Riche <a target="_blank" href="https://www.microsoft.com/">Microsoft</a></p>
+              <p>Jessica Roberts <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+              <p>Stacie Rohrbach <a target="_blank" href="https://www.design.cmu.edu/">Carnegie Mellon, School of Design</a></p>
+              <p>Lisa Charlotte Rost <a target="_blank" href="https://www.datawrapper.de/">Datawrapper</a></p>
+              <p>Arvind Satyanarayan <a target="_blank" href="https://www.google.com/">Google</a></p>
+              <p>Chad Skelton <a target="_blank" href="https://www.kpu.ca/">Kwantlen Polytechnic University</a></p>
+              <p>Carla Spinillo <a target="_blank" href="https://www.ufpr.br/">Universidade Federal, Paraná</a></p>
+              <p>Tim Stallmann <a>RAD Cat</a></p>
+              <p>John Stasko <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+              <p>Moritz Stefaner <a target="_blank" href="https://www.truth-and-beauty.com/">Truth & Beauty</a></p>
+              <p>Olivia Vane <a target="_blank" href="https://www.bl.uk/">British Library</a></p>
+              <p>Rupesh Vyas <a target="_blank" href="https://www.aalto.fi/">Aalto University</a></p>
+              <p>Karel van der Waarde <a target="_blank" href="https://www.https://www.swinburne.edu.au">Swinburne University of Technology, Melbourne</a></p>
+              <p>Jagoda Walny <a target="_blank" href="https://www.cer-rec.gc.ca/index-eng.html">Canada Energy Regulator</a></p>
+              <p>Mitchell Whitelaw <a target="_blank" href="https://www.anu.edu.au/">Australian National University</a></p>
+              <p>Jan Willem Tulp <a>Freelance</a></p>
+              <p>Mushon Zer-Aviv <a target="_blank" href="https://www.shenkar.ac.il/en">Shenkar School of Engineering and Design</p></a></p>
+              <p>Siqi Zhu <a target="_blank" href="https://www.sidewalklabs.com/">Sidewalk Labs</a></p>
             </div>
           </div>
         </div>
@@ -287,19 +289,41 @@
 
   <section id="intro">
     <div class="container">
+      <h2 class="text">Keynotes</h2>
       <div class="row">
-        <div class="col-lg-8">
-            <h2 class="">Keynotes</h2>
+        <div class="col-sm">
+          <img class="people" src="assets/reuben.gif">
+          <h3>Reuben Fischer-Baum & Chiqui Esteban</h3>
 
-            <article id="keynotes">
-              <h4>Reuben Fischer-Baum & Chiqui Esteban <span id="overlay"><img class="people float" src="assets/reuben-l.png"></span></h4>
-              <p>Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic, The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.</p>
-
-            </article>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <p>Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an
+            ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic,
+            The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.</p>
+        </div>
+        <div class="col-sm">
+          <img class="people" src="assets/reuben.gif">
+          <h3>Fernanda Viégas and Martin Wattenberg</h3>
+          <p>Fernanda Viégas and Martin Wattenberg co-lead Google’s PAIR (People+AI Research) initiative, part of Google Brain. Their work in machine learning focuses on transparency and interpretability, as part of a broad agenda to improve human/AI
+            interaction. They are well known for their contributions to social and collaborative visualization, and the systems they’ve created are used daily by millions of people. Their visualization-based artwork has been exhibited worldwide, and
+            is part of the permanent collection of Museum of Modern Art in New York.</p>
+        </div>
+</div>
+  <div class="row">
+        <div class="col-sm">
+          <img class="people" src="assets/reuben.gif">
+          <h3>Sandra Rendgen</h3>
+          <p>Sandra Rendgen is an independent author and researcher with a particular focus on data visualization, interactive media and the history of infographics. Her academic background is in art history and cultural theory. In collaboration with
+            Taschen Publishing, she released “Information Graphics” (2012) and “Understanding the World” (2014). Currently she is working on two new books about the history of data visualization and information graphics.</p>
+        </div>
+        <div class="col-sm">
+          <img class="people" src="assets/reuben.gif">
+          <h3>Ron Morrison</h3>
+          <p>Ron Morrison is a designer, artist, and researcher working across the fields of human geography, digital technology, and urbanism. They investigate how the unassimilable complicates race and geographic space as fixed and knowable. From
+            building open source platforms to upend solitary confinement to crafting community based archives to combat gentrification, their work explores cartographies of slow violence, cybernetics, and blackness. Their work was implemented in the
+            US, Ghana, Colombia, Ethiopia, Italy and featured at AIA New York, UN World Urban Forum, and Tribeca Film Festival. They are currently an Annenberg PhD fellow at the University of Southern California in Los Angeles. </p>
+</div>
+      </div>
+    </div>
+  </section>
 
 
 
@@ -309,12 +333,12 @@
         <div class="col-lg-8">
 
           <!--  <a href="http://informationplusconference.com/2016/" target="_blank">2016</a></h4> -->
-          <h4>For updates, find us on Twitter:  <a href="https://twitter.com/InfoPlusConf" target="_blank">@InfoPlusConf</a><br></h4>
-          <h4>For mentions, use the  <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a> hashtag</h4>
-          <h4>For questions, please send us an email:  <a href="mailto:admin@informationplusconference.com">admin@informationplusconference.com</a></h4>
+          <h4>For updates, find us on Twitter: <a href="https://twitter.com/InfoPlusConf" target="_blank">@InfoPlusConf</a><br></h4>
+          <h4>For mentions, use the <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a> hashtag</h4>
+          <h4>For questions, please send us an email: <a href="mailto:admin@informationplusconference.com">admin@informationplusconference.com</a></h4>
 
           <br>
-          <h4>...and thanks to  <a href="https://noahveltman.com/">Noah Veltman</a> for the beautiful flocking boids.</h4>
+          <h4>...and thanks to <a href="https://noahveltman.com/">Noah Veltman</a> for the beautiful flocking boids.</h4>
         </div>
       </div>
     </div>
@@ -325,19 +349,19 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col">
-           <a href="https://www.gatech.edu/" target="_blank"><img alt="Logo of Georgia Tech" src="./assets/Georgia_Tech_logo-01.svg"></a>
+          <a href="https://www.gatech.edu/" target="_blank"><img alt="Logo of Georgia Tech" src="./assets/Georgia_Tech_logo-01.svg"></a>
         </div>
         <div class="col">
-           <a href="https://www.fh-potsdam.de/" target="_blank"><img alt="Logo of Fachhochschule Potsdam" src="./assets/FHP_logo-01.svg"></a>
+          <a href="https://www.fh-potsdam.de/" target="_blank"><img alt="Logo of Fachhochschule Potsdam" src="./assets/FHP_logo-01.svg"></a>
         </div>
         <div class="col">
-           <a href="https://www.ocadu.ca/" target="_blank"><img alt="Logo of OCAD" src="./assets/ocad-01.svg" class="logo"></a>
+          <a href="https://www.ocadu.ca/" target="_blank"><img alt="Logo of OCAD" src="./assets/ocad-01.svg" class="logo"></a>
         </div>
         <div class="col">
-           <a href="https://polimi.it" target="_blank"><img alt="Logo of Polimi" src="./assets/logo_poli.svg" class="logo"></a>
+          <a href="https://polimi.it" target="_blank"><img alt="Logo of Polimi" src="./assets/logo_poli.svg" class="logo"></a>
         </div>
         <div class="col">
-           <a href="https://densitydesign.org" target="_blank"><img alt="Logo of DensityDesign" src="./assets/logo-dd-01.svg" class="logo"></a>
+          <a href="https://densitydesign.org" target="_blank"><img alt="Logo of DensityDesign" src="./assets/logo-dd-01.svg" class="logo"></a>
         </div>
 
       </div>
@@ -345,6 +369,8 @@
     </div>
 
   </footer>
+
+
 
   <!-- </content> -->
   <!-- Optional JavaScript -->

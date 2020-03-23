@@ -27,7 +27,7 @@ canvas {
 
 p {
   font-family: "Inter", sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 span {
@@ -211,7 +211,7 @@ h1 {
 }
 
 
-#pc .text {
+.text {
   margin-bottom: 1em;
 }
 
@@ -224,9 +224,7 @@ h1 {
   font-size: 0.8em;
   font-weight: 500;
 }
-.uni{
-    margin-top:1em;
-}
+
 #formats, #criteria {
   margin-bottom: 3em;
   color: #ff3f19;
@@ -381,12 +379,15 @@ img {
 .people{
   width: 50%;
   height: auto;
+  margin-top:1em;
+  margin-bottom:1em;
 }
+
 
 #overlay img {
   display: block;
-  position: absolute;
-  width:20%;
+  position: relative;
+  width:80%;
   opacity:1;
   z-index:-9999;
   /* filter: invert(12%) sepia(67%) saturate(6275%) hue-rotate(237deg) brightness(105%) contrast(98%); */
@@ -398,25 +399,25 @@ img {
   height: auto;
 }
 
-@keyframes float {
+/* @keyframes float {
   0% {
-    top: -20px;
-    left:20px;
+    top: -20%;
+    left:20%;
     -webkit-animation-timing-function: ease-out;
   }
 
   50% {
-    top: 10px;
-    left: 80px;
+    top: 10%;
+    left: 80%;
     -webkit-animation-timing-function: ease-in;
   }
 
   100% {
-    top: -20px;
-    left: 20px;
+    top: -20%;
+    left:20%;
     animation-timing-function: ease-out;
   }
-}
+} */
 
 
 @media only screen and (max-width: 600px) {
@@ -433,9 +434,6 @@ img {
     font-size: 3em;
     font-weight: 700;
     color: #5800FF;
-    /* background: -webkit-linear-gradient(#af10ff, #ff9ba7);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
   }
 
   img {
@@ -452,19 +450,17 @@ img {
     align-content: space-around;
   }
 
-  @media only screen and (min-width: 1000px) {
-    #corona {
+ @media only screen and (min-width: 1000px) {
+  	#covid {
       margin-top: -5rem;
     }
   }
 
-  #corona {
-    color: white;
-    padding: 1em;
-    background: #9D00FE;
-    margin-bottom: 2em;
+  #covid {
+  	color: white;
+  	padding: 1em;
+  	background-color: #9D00FE;
+  	margin-bottom: 2em;
   }
 
-  #corona p {
-    margin-bottom: 0;
-  }
+  #covid p {margin-bottom: 0;}
