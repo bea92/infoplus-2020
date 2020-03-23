@@ -16,9 +16,3 @@ function myFunction() {
     x.className = "bottomnav";
   }
 };
-
-$(document).ready(function(){
-  $("#myBottomnav").click(function(){
-    $("#myBottomnav .responsive").slideToggle("slow");
-  });
-});

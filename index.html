@@ -291,7 +291,7 @@
     <div class="container">
       <h2 class="text">Keynotes</h2>
       <div class="row">
-        <div class="col-sm">
+        <div class="col-">
           <img class="people" src="assets/reuben.gif">
           <h3>Reuben Fischer-Baum & Chiqui Esteban</h3>
 
@@ -299,7 +299,7 @@
             ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic,
             The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.</p>
         </div>
-        <div class="col-sm">
+        <div class="col">
           <img class="people" src="assets/reuben.gif">
           <h3>Fernanda Viégas and Martin Wattenberg</h3>
           <p>Fernanda Viégas and Martin Wattenberg co-lead Google’s PAIR (People+AI Research) initiative, part of Google Brain. Their work in machine learning focuses on transparency and interpretability, as part of a broad agenda to improve human/AI
@@ -308,13 +308,13 @@
         </div>
 </div>
   <div class="row">
-        <div class="col-sm">
+        <div class="col">
           <img class="people" src="assets/reuben.gif">
           <h3>Sandra Rendgen</h3>
           <p>Sandra Rendgen is an independent author and researcher with a particular focus on data visualization, interactive media and the history of infographics. Her academic background is in art history and cultural theory. In collaboration with
             Taschen Publishing, she released “Information Graphics” (2012) and “Understanding the World” (2014). Currently she is working on two new books about the history of data visualization and information graphics.</p>
         </div>
-        <div class="col-sm">
+        <div class="col">
           <img class="people" src="assets/reuben.gif">
           <h3>Ron Morrison</h3>
           <p>Ron Morrison is a designer, artist, and researcher working across the fields of human geography, digital technology, and urbanism. They investigate how the unassimilable complicates race and geographic space as fixed and knowable. From
@@ -370,7 +370,16 @@
 
   </footer>
 
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});</script>
 
   <!-- </content> -->
   <!-- Optional JavaScript -->

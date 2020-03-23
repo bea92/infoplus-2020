@@ -113,6 +113,7 @@ h1 {
   font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
+  transition:0.5 ease;
 }
 
 #navbar a:hover {
