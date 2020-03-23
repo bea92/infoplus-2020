@@ -204,6 +204,13 @@ h1 {
   position: sticky;
 }
 
+#key {
+  background: linear-gradient(0deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 30%, rgba(88, 0, 255, 1) 100%);
+  color: white;
+  position: sticky;
+}
+
+
 #pc .text {
   margin-bottom: 1em;
 }
