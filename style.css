@@ -433,7 +433,7 @@ img {
 }
 
 .bullets:before{
-background: url(../assets/bullet-arrow-red.png) no-repeat 100% 0;
+background: url(/assets/bullet-arrow-red.png) no-repeat 100% 0;
 background-size: contain;
 content: "";
 width: 50px;
