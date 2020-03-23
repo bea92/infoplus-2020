@@ -47,12 +47,16 @@ h2 {
   font-size: 2em;
   font-weight: 800px;
   margin-bottom:1em;
+  color:black;
+  /* background: -webkit-linear-gradient(#af10ff, #ff3f19);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 h3 {
   font-size: 1.2em;
-  margin-top: 0.2em;
-  margin-bottom: 0.8em;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
   font-weight: bold;
 }
 
@@ -223,6 +227,12 @@ h1 {
   position: sticky;
 }
 
+#diversity{
+  border-top: 1px solid #5800FF;
+  color: black;
+  position: sticky;
+}
+
 /* #keynotes {
   padding: 1rem;
   position: relative;
@@ -254,6 +264,10 @@ h1 {
 #formats, #criteria {
   margin-bottom: 3em;
   color: #ff3f19;
+}
+
+#formats h3{
+  margin-top:0.2em;
 }
 
 footer {
@@ -415,10 +429,23 @@ img {
 .bullets-text {
     padding-left: 70px;
     margin-bottom: .5rem;
+    transition: 0.5s;
 }
 
 .bullets:before{
 background: url(../assets/bullet-arrow-red.png) no-repeat 100% 0;
+background-size: contain;
+content: "";
+width: 50px;
+-webkit-transform: translateY(5px);
+transform: translateY(5px);
+height: 23px;
+display: block;
+margin-bottom: -23px;
+}
+
+.bullets-blue:before{
+background: url(../assets/bullet-arrow-blue.png) no-repeat 100% 0;
 background-size: contain;
 content: "";
 width: 50px;
@@ -471,6 +498,10 @@ margin-bottom: -23px;
   	padding: 1em;
   	background-color: #9D00FE;
   	margin-bottom: 2em;
+  }
+
+  #covid h3{
+    margin-top:1em;
   }
 
   #covid p {margin-bottom: 0;}
