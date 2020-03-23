@@ -43,6 +43,12 @@ h2 {
   font-weight: 800px;
 }
 
+.title{
+  font-size: 2em;
+  font-weight: 800px;
+  margin-bottom:1em;
+}
+
 h3 {
   font-size: 1.2em;
   margin-top: 0.2em;
@@ -121,7 +127,7 @@ h1 {
   text-decoration: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   #myBottomnav {
     display: block;
     transition: 0.5s ease;
@@ -200,16 +206,35 @@ h1 {
 }
 
 #pc {
+  border-top: 1px solid #af10ff;
+  color: black;
+  position: sticky;
+}
+
+#keynotes {
   border-top: 1px solid #5800FF;
   color: black;
   position: sticky;
 }
 
-#key {
-  background: linear-gradient(0deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 30%, rgba(88, 0, 255, 1) 100%);
-  color: white;
+#exhibition {
+  border-top: 1px solid #ff3f19;
+  color: black;
   position: sticky;
 }
+
+/* #keynotes {
+  padding: 1rem;
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 30%, rgba(88, 0, 255, 1) 100%);
+
+}
+
+.wrap{
+  background: rgb(255, 252, 242);;
+   padding: 2rem;
+} */
 
 
 .text {
@@ -270,7 +295,6 @@ section {
 }
 
 .text-cfp {
-  margin-top: 1em;
   font-size: 1.2em;
   line-height: 1.5em;
   color: black;
@@ -282,22 +306,13 @@ section {
   color: black;
 }
 
-h3.text-add {
-  margin-top: 3em;
-}
-
 .text-ec {
   font-size: 1.2em;
   line-height: 1.5em;
   color: #ff3f19;
 }
 
-.format-cfp {
-  margin-top: 2em;
-  font-size: 1.2em;
-  line-height: 1.5em;
-  color: #ff3f19;
-}
+
 
 .dates {
   color: #af10ff;
@@ -307,13 +322,8 @@ h3.text-add {
   color: #ff3f19;
 }
 
-.box {
-  margin: 1em 0em 0em 0em;
-  ;
-  padding: 0em 1.5em 1.5em 1.5em;
-  border-width: 3px;
-  border: 1px solid #ff3f19;
-  border-radius: 20px;
+.infobox{
+  margin-top:2em;
 }
 
 li::before {
@@ -400,25 +410,24 @@ img {
   height: auto;
 }
 
-/* @keyframes float {
-  0% {
-    top: -20%;
-    left:20%;
-    -webkit-animation-timing-function: ease-out;
-  }
+/* Exhibition */
 
-  50% {
-    top: 10%;
-    left: 80%;
-    -webkit-animation-timing-function: ease-in;
-  }
+.bullets-text {
+    padding-left: 70px;
+    margin-bottom: .5rem;
+}
 
-  100% {
-    top: -20%;
-    left:20%;
-    animation-timing-function: ease-out;
-  }
-} */
+.bullets:before{
+background: url(../assets/bullet-arrow-red.png) no-repeat 100% 0;
+background-size: contain;
+content: "";
+width: 50px;
+-webkit-transform: translateY(5px);
+transform: translateY(5px);
+height: 23px;
+display: block;
+margin-bottom: -23px;
+}
 
 
 @media only screen and (max-width: 600px) {
