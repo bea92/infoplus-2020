@@ -58,6 +58,7 @@
         <a href="#cfp">Call for Participation</a>
         <a href="#pc">Committee</a>
         <a href="#keynotes">Keynotes</a>
+        <a href="#schedule">Schedule</a>
         <a href="#exhibition">Exhibition</a>
         <a href="#diversity">Diversity</a>
       </div>
@@ -81,6 +82,7 @@
         <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')">Call for Participation</a>
         <a href="#pc" onclick="$('.mobile-nav').toggleClass('visible')">Committee</a>
         <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
+        <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
         <a href="#exhibition" onclick="$('.mobile-nav').toggleClass('visible')">Exhibition</a>
         <a href="#diversity" onclick="$('.mobile-nav').toggleClass('visible')">Diversity</a>
       </div>
@@ -333,6 +335,27 @@
         </div>
       </div>
     </section>
+    <section id="schedule">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Schedule</h2>
+          <div class="row">
+            <div class="here-d3"></div>
+          </div>
+        </div>
+      </div>
+      <!-- This is the pattern created by D3js -->
+      <!-- <div class="day">
+        <h4>Friday 19, October</h4>
+        <div class="item">
+          <div class="time">00:00</div>
+          <div class="description">
+            <h3>Tipo che parla</h3>
+            <p>A caso, a caso, a caso, a caso</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
     <section id="exhibition">
       <div class="container">
         <h2 class="title">Exhibition</h2>
@@ -492,31 +515,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>
       $(document).ready(function(){
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
-      
           // Make sure this.hash has a value before overriding default behavior
           if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
-      
             // Store hash
             var hash = this.hash;
-      
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
               scrollTop: $(hash).offset().top
             }, 800, function(){
-      
               // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
             });
           } // End if
         });
       });
+      const populateSchedule = (data)=>{
+        console.log(data);
+        const days = d3.nest()
+          .key(d=>d.date)
+          .entries(data);
+        const schedule = d3.selectAll('#schedule .here-d3');
+        const day = schedule.selectAll('.day').data(days)
+          .enter().append('div').classed('day',true);
+        day.append('h4').text(d=>d.key);
+        const item = day.selectAll('.item').data(d=>d.values)
+          .enter().append('div').attr('class',d=>`item ${d.type}`);
+        item.append('div').classed('item',true).text(d=>d.time);
+        const description = item.append('div').classed('description',true);
+        description.append('h3').text(d=>d.speaker).style('display',d=>d.speaker===''?'none':'block');
+        description.append('p').text(d=>d.description);
+      }
+      function init() {
+        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/13YkrocwfWg88qmNxI7n1h6d7CIHuPvsWyO48mFpt8sU/edit?usp=sharing',
+          callback: function(data, tabletop) { 
+            populateSchedule(data.schedule.elements);
+          },
+          simpleSheet: false
+        } );
+      }
+      window.addEventListener('DOMContentLoaded', init);
     </script>
   </body>
 </html>

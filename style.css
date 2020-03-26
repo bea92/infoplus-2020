@@ -180,6 +180,22 @@ h1 {
   transform: rotate(180deg);
 }
 
+/* schedule */
+
+.item {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 100px auto;
+}
+
+.time {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.description {
+  grid-column-start: 2;
+}
+
 @media screen and (max-width: 1000px) {
   #navbar {
     display: none;
