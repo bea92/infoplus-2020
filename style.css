@@ -182,6 +182,10 @@ h1 {
 
 /* schedule */
 
+#schedule{
+  display: none;
+}
+
 .item {
   display: grid;
   grid-column-gap: 15px;
@@ -202,7 +206,7 @@ h1 {
   }
   .mobile-nav{
     display: block;
-  }
+  }}
   /* 🌺🌸🌼🍀 Get rid of those, from here */
 
   /* #myBottomnav {
@@ -297,13 +301,7 @@ h1 {
   position: sticky;
 }
 
-/* #keynotes {
-  padding: 1rem;
-  position: relative;
-  padding: 10px;
-  background: linear-gradient(0deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 30%, rgba(88, 0, 255, 1) 100%);
 
-}
 
 .wrap{
   background: rgb(255, 252, 242);;
@@ -357,7 +355,7 @@ section {
   margin-top: 2em;
 }
 
-.text {
+#intro .text {
   font-size: 1.8em;
   font-weight: 500;
   background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
@@ -365,7 +363,7 @@ section {
   -webkit-text-fill-color: transparent;
 }
 
-.text-small {
+#intro .text-small {
   margin-top: 2em;
   font-size: 1.2em;
   line-height: 1.5em;
