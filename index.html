@@ -1,522 +1,567 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <link rel="stylesheet" type="text/css" href="style-color.css"> -->
-  <script src="main.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
-  <title>Information+ Conference 2020</title>
-
-  <!-- metatag -->
-
-  <meta property="og:title" content="Information+ Conference 2020" />
-  <meta property="og:description " content="Interdisciplinary practices in information design & visualization in Atlanta, USA: 24-27 Sept 2020" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://informationplusconference.com/2020/" />
-  <meta property="og:image" content="http://informationplusconference.com/2020/assets/infoplus20.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="" />
-  <meta property="og:image:height" content="" />
-  <meta property="og:image:alt" content="Information+ Conference 2020" />
-  <meta name="twitter:image" content="http://informationplusconference.com/2020/assets/infoplus-cover-right.png" />
-
-</head>
-
-<body>
-  <!-- <content> -->
-  <section id="canvas">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg">
-
-          <section id="header">
-            <div class="row">
-              <div class="col-lg-8">
-                <h1>Information+ Conference 2020</h1>
-                <h2>Interdisciplinary practices in information design & visualization</h2>
-                <h3>Atlanta, September 24<sup>th</sup> ⟶ 27<sup>th</sup> </h3>
-                <h5> <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a></h5>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style-color.css"> -->
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+    <title>Information+ Conference 2020</title>
+    <!-- metatag -->
+    <meta property="og:title" content="Information+ Conference 2020" />
+    <meta property="og:description " content="Interdisciplinary practices in information design & visualization in Atlanta, USA: 24-27 Sept 2020" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://informationplusconference.com/2020/" />
+    <meta property="og:image" content="http://informationplusconference.com/2020/assets/infoplus20.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="" />
+    <meta property="og:image:height" content="" />
+    <meta property="og:image:alt" content="Information+ Conference 2020" />
+    <meta name="twitter:image" content="http://informationplusconference.com/2020/assets/infoplus-cover-right.png" />
+  </head>
+  <body>
+    <!-- <content> -->
+    <section id="canvas">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <section id="header">
+              <div class="row">
+                <div class="col-lg-8">
+                  <h1>Information+ Conference 2020</h1>
+                  <h2>Interdisciplinary practices in information design & visualization</h2>
+                  <h3>Atlanta, September 24<sup>th</sup> ⟶ 27<sup>th</sup> </h3>
+                  <h5> <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a></h5>
+                </div>
               </div>
-            </div>
-          </section>
-
+            </section>
+          </div>
         </div>
       </div>
+      <canvas height="400"></canvas>
+      <canvas height="400" class="offscreen" style="display:none;">
+      </canvas>
+      <script src="vec2.js"></script>
+      <script src="script.js"></script>
+    </section>
+    <div id="navbar">
+      <div class="container">
+        <a href="#header">Intro</a>
+        <a href="#cfp">Call for Participation</a>
+        <a href="#pc">Committee</a>
+        <a href="#keynotes">Keynotes</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#exhibition">Exhibition</a>
+        <a href="#diversity">Diversity</a>
+      </div>
     </div>
-
-    <canvas height="400"></canvas>
-    <canvas height="400" class="offscreen" style="display:none;">
-    </canvas>
-    <script src="vec2.js"></script>
-    <script src="script.js"></script>
-
-  </section>
-
-
-  <div id="navbar">
-    <div class="container">
+    <!-- 🌺🌸🌼🍀 remove from here -->
+    <!-- <div class="bottomnav" id="myBottomnav">
       <a href="#header">Intro</a>
       <a href="#cfp">Call for Participation</a>
       <a href="#pc">Committee</a>
       <a href="#keynotes">Keynotes</a>
       <a href="#exhibition">Exhibition</a>
       <a href="#diversity">Diversity</a>
-    </div>
-  </div>
-
-  <div class="bottomnav" id="myBottomnav">
-    <a href="#header">Intro</a>
-    <a href="#cfp">Call for Participation</a>
-    <a href="#pc">Committee</a>
-    <a href="#keynotes">Keynotes</a>
-    <a href="#exhibition">Exhibition</a>
-    <a href="#diversity">Diversity</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div> -->
+    <!-- 🌺🌸🌼🍀 remove to here -->
+    <div class="mobile-nav">
+      <div class="items">
+        <a href="#header" onclick="$('.mobile-nav').toggleClass('visible')">Intro</a>
+        <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')">Call for Participation</a>
+        <a href="#pc" onclick="$('.mobile-nav').toggleClass('visible')">Committee</a>
+        <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
+        <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
+        <a href="#exhibition" onclick="$('.mobile-nav').toggleClass('visible')">Exhibition</a>
+        <a href="#diversity" onclick="$('.mobile-nav').toggleClass('visible')">Diversity</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="$('.mobile-nav').toggleClass('visible')">
       <i class="fa fa-chevron-up"></i>
-    </a>
-  </div>
-  </div>
-  </div>
-
-  <section id="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <p class="text">Information+ is a biannual interdisciplinary conference, workshop, and exhibition that brings together researchers, educators, and practitioners in information design and data visualization to discuss common questions and
-            challenges in these rapidly changing fields. Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices and pedagogies of analyzing and communicating information.</p>
-          <p class="text-small"> The next Information+ will be held September 24<sup>th</sup>-27<sup>th</sup>, 2020 at the <em> Georgia Institute of Technology</em> in Atlanta, Georgia (USA).
-            Georgia Tech has a strong international reputation for research on information visualization
-            and its broad implications in scientific and engineering work, as well as civic life.
-            Building on the experiences from the previous installments of <a href="http://informationplusconference.com/2016/" target="_blank">Information+ 2016</a> at <em>Emily Carr University of Art + Design, Vancouver</em> and <a
-              href="http://informationplusconference.com/2018/" target="_blank">Information+ 2018</a> <em> at University of Applied
-              Sciences Potsdam</em>, we seek to broaden the base of our interdisciplinary community in Atlanta.</p>
-        </div>
-
-        <div class="col-sm dates">
-          <div>
-            <div id="covid" style="background:#9D00FE; color:white; padding:1em; margin-bottom:1em">
-              <h3 style="margin-top:0.8em">Coronavirus</h3>
-              <p>Information+ 2020 is planned to take place.
-                We are closely monitoring the development of COVID-19.
-                At the moment conference preparation is proceeding
-                under the assumption that the
-                virus will be stopped before Fall.</p>
-            </div>
+      </a>
+    </div>
+    </div>
+    </div>
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="text">Information+ is a biannual interdisciplinary conference, workshop, and exhibition that brings together researchers, educators, and practitioners in information design and data visualization to discuss common questions and
+              challenges in these rapidly changing fields. Information+ seeks to foster productive exchanges amongst the variety of people involved in the theories, practices and pedagogies of analyzing and communicating information.
+            </p>
+            <p class="text-small"> The next Information+ will be held September 24<sup>th</sup>-27<sup>th</sup>, 2020 at the <em> Georgia Institute of Technology</em> in Atlanta, Georgia (USA).
+              Georgia Tech has a strong international reputation for research on information visualization
+              and its broad implications in scientific and engineering work, as well as civic life.
+              Building on the experiences from the previous installments of <a href="http://informationplusconference.com/2016/" target="_blank">Information+ 2016</a> at <em>Emily Carr University of Art + Design, Vancouver</em> and <a
+                href="http://informationplusconference.com/2018/" target="_blank">Information+ 2018</a> <em> at University of Applied
+              Sciences Potsdam</em>, we seek to broaden the base of our interdisciplinary community in Atlanta.
+            </p>
           </div>
-          <h3>Important Dates</h3>
-          <p>
-            <!-- <em>15 Feb 2020</em>&#8195; <a href="#cfp">Publication of call for papers</a><br> -->
-            <em>20 Apr 2020</em>&#8195;Submission of abstracts for talks<br>
-            <em>01 Jun 2020</em>&#8195;Notification of acceptance</p>
-
-          <h3>Schedule</h3>
-          <p> <em>24 Sep</em>&#8195;&#8195;Workshop day<br>
-            <em>25-26 Sep</em>&#8195;Conference program<br>
-            <em>27 Sep</em>&#8195;&#8195;Excursion day</p>
-
-          <h3>Organizers</h3>
-          <p><em>Yanni Loukissas</em>, Georgia Tech
-            <br><em>Isabel Meirelles</em>, OCAD University
-            <br><em>Marian Dörk</em>, FH Potsdam</p>
-
-          <h3>Chairs</h3>
-          <p>Design: <em>Michele Mauri</em>, Politecnico di Milano
-            <br>Exhibition: <em>Catherine D'Ignazio</em>, MIT &amp; <em>Lauren Klein</em>, Emory
-            <br>Workshops: <em>Nassim Parvin</em>, Georgia Tech
-            <br>Diversity: <em>Romi Ron Morrison</em>, University of Southern California</p>
-          <!-- <br>Communication: <em>N.N.</em>-->
-
+          <div class="col-sm dates">
+            <div>
+              <div id="covid" style="background:#9D00FE; color:white; padding:1em; margin-bottom:1em">
+                <h3 style="margin-top:0.8em">Coronavirus</h3>
+                <p>Information+ 2020 is planned to take place.
+                  We are closely monitoring the development of COVID-19.
+                  At the moment conference preparation is proceeding
+                  under the assumption that the
+                  virus will be stopped before Fall.
+                </p>
+              </div>
+            </div>
+            <h3>Important Dates</h3>
+            <p>
+              <!-- <em>15 Feb 2020</em>&#8195; <a href="#cfp">Publication of call for papers</a><br> -->
+              <em>20 Apr 2020</em>&#8195;Submission of abstracts for talks<br>
+              <em>01 Jun 2020</em>&#8195;Notification of acceptance
+            </p>
+            <h3>Schedule</h3>
+            <p> <em>24 Sep</em>&#8195;&#8195;Workshop day<br>
+              <em>25-26 Sep</em>&#8195;Conference program<br>
+              <em>27 Sep</em>&#8195;&#8195;Excursion day
+            </p>
+            <h3>Organizers</h3>
+            <p><em>Yanni Loukissas</em>, Georgia Tech
+              <br><em>Isabel Meirelles</em>, OCAD University
+              <br><em>Marian Dörk</em>, FH Potsdam
+            </p>
+            <h3>Chairs</h3>
+            <p>Design: <em>Michele Mauri</em>, Politecnico di Milano
+              <br>Exhibition: <em>Catherine D'Ignazio</em>, MIT &amp; <em>Lauren Klein</em>, Emory
+              <br>Workshops: <em>Nassim Parvin</em>, Georgia Tech
+              <br>Diversity: <em>Romi Ron Morrison</em>, University of Southern California
+            </p>
+            <!-- <br>Communication: <em>N.N.</em>-->
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section id="cfp">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <h2 class="title">Call for Participation</h2>
-          <p class="text-cfp">Information+, an interdisciplinary conference for information design and data visualization, invites proposals from all relevant areas of professional practice, research, and pedagogy.</p>
-          <p class="text-cfp">We welcome submissions on topics, such as but not limited to the following: <em>algorithmic accountability, critical visualization, cultural analytics, data journalism, data studies, digital civics, digital humanities,
+    </section>
+    <section id="cfp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="title">Call for Participation</h2>
+            <p class="text-cfp">Information+, an interdisciplinary conference for information design and data visualization, invites proposals from all relevant areas of professional practice, research, and pedagogy.</p>
+            <p class="text-cfp">We welcome submissions on topics, such as but not limited to the following: <em>algorithmic accountability, critical visualization, cultural analytics, data journalism, data studies, digital civics, digital humanities,
               environmental awareness, health information, historical collections, science communication, and social advocacy</em>.
-            All proposals must feature original work, which has not been presented previously.</p>
-          <p class="text-cfp">Proposals should contain the following elements: a clear research question or design objective; a discussion of related work; an explanation of methods employed or design decisions undertaken; culminating findings,
-            reflections, and contributions.
-            There are two possible <a href="#formats">formats for proposals</a>, both of which are appropriate for academic and practice-based work: 15-minute paper presentations and 5-minute lightning talks.
-          </p>
-          <p class="text-cfp"><em>Please use <a href="https://easychair.org/conferences/?conf=info2020">EasyChair</a> to submit your proposals by 20 April 2020.</em></p>
-
-          <h3 class="text-add">Additional information</h3>
-          <p class="text-add"> <em>Presenting authors</em> will be able to register for the conference at the reduced rate (to be announced soon).</p>
-          <p class="text-add">To foster a diversity of submissions, <em>only one proposal is allowed by each author</em>. In the case of multi-authored submissions, the limit is increased to two proposals per author.</p>
-          <p class="text-add"><em>Authors accepted for presentation </em> at the conference will have an opportunity to submit articles for publication in a special issue of an open-access academic journal. Articles will be selected by a
-            peer review process. Submission and
-            selection for the journal will take place after the conference.</p>
-          <p class="text-add"><em>Attendees from traditionally underrepresented and/or marginalized groups</em> will be eligible to apply for a need-based diversity scholarship. Priority will be given to applicants who have their contributions
-            accepted for presentation at the
-            conference.</p>
-        </div>
-
-
-        <div class="col-sm">
-          <article id="formats">
-            <h3>Formats for Proposals</h3>
-            <h4 class="format-ec">15-minute paper presentation</h4>
-            <p>Submit a long abstract (1000 words) with one descriptive figure and 3 keywords.</p>
-            <h4 class="format-ec">5-minute lightning talk</h4>
-            <p>Submit a short abstract (500 words) with one descriptive figure and 3 keywords.</p>
-          </article>
-
-          <article id="criteria">
-            <h3>Evaluation Criteria</h3>
-            <p>
-              Each submission will be evaluated by three independent reviewers from the Program Committee. Evaluations will be based on the following criteria:</p>
-
-            <h4>Originality</h4>
-            <p><em>Does the submission explore a novel, unconventional, or understudied approach to representing information?</em></p>
-
-            <p>
+              All proposals must feature original work, which has not been presented previously.
+            </p>
+            <p class="text-cfp">Proposals should contain the following elements: a clear research question or design objective; a discussion of related work; an explanation of methods employed or design decisions undertaken; culminating findings,
+              reflections, and contributions.
+              There are two possible <a href="#formats">formats for proposals</a>, both of which are appropriate for academic and practice-based work: 15-minute paper presentations and 5-minute lightning talks.
+            </p>
+            <p class="text-cfp"><em>Please use <a href="https://easychair.org/conferences/?conf=info2020">EasyChair</a> to submit your proposals by 20 April 2020.</em></p>
+            <h3 class="text-add">Additional information</h3>
+            <p class="text-add"> <em>Presenting authors</em> will be able to register for the conference at the reduced rate (to be announced soon).</p>
+            <p class="text-add">To foster a diversity of submissions, <em>only one proposal is allowed by each author</em>. In the case of multi-authored submissions, the limit is increased to two proposals per author.</p>
+            <p class="text-add"><em>Authors accepted for presentation </em> at the conference will have an opportunity to submit articles for publication in a special issue of an open-access academic journal. Articles will be selected by a
+              peer review process. Submission and
+              selection for the journal will take place after the conference.
+            </p>
+            <p class="text-add"><em>Attendees from traditionally underrepresented and/or marginalized groups</em> will be eligible to apply for a need-based diversity scholarship. Priority will be given to applicants who have their contributions
+              accepted for presentation at the
+              conference.
+            </p>
+          </div>
+          <div class="col-sm">
+            <article id="formats">
+              <h3>Formats for Proposals</h3>
+              <h4 class="format-ec">15-minute paper presentation</h4>
+              <p>Submit a long abstract (1000 words) with one descriptive figure and 3 keywords.</p>
+              <h4 class="format-ec">5-minute lightning talk</h4>
+              <p>Submit a short abstract (500 words) with one descriptive figure and 3 keywords.</p>
+            </article>
+            <article id="criteria">
+              <h3>Evaluation Criteria</h3>
+              <p>
+                Each submission will be evaluated by three independent reviewers from the Program Committee. Evaluations will be based on the following criteria:
+              </p>
+              <h4>Originality</h4>
+              <p><em>Does the submission explore a novel, unconventional, or understudied approach to representing information?</em></p>
+              <p>
               <h4>Impact</h4>
               <p><em>Is the submission of potential interest to a broader audience, beyond the author’s primary area of academic research or practice?</em></p>
-
               <p>
-                <h4>Contribution</h4>
-                <p><em>Does the submission build upon and extend current knowledge of information design and visualization through the use of empirical, critical, or theoretical methods?</em></p>
-
-          </article>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="pc">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="title">Program Committee</h2>
-          <div class="row">
-            <div class="col-md-6 uni">
-              <p>Clio Andris <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-              <p>Dominikus Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
-              <p>Jessica Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
-              <p>Ilia Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
-              <p>Matthew Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
-              <p>Angeles Briones <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
-              <p>Vincent Brown <a target="_blank" href="https://www.harvard.edu/">Harvard University</a></p>
-              <p>Alberto Cairo <a target="_blank" href="https://welcome.miami.edu/">University of Miami</a></p>
-              <p>Petra Cerne Oven <a target="_blank" href="https://www.uni-lj.si/university/">University of Ljubljana</a></p>
-              <p>Rico Chapman <a target="_blank" href="https://www.clarku.edu/">Clark University</a></p>
-              <p>Lynn Cherny <a>Freelance</a></p>
-              <p>Paolo Ciuccarelli <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-              <p>Nicole Coleman <a target="_blank" href="https://www.stanford.edu/">Stanford University</a></p>
-              <p>Heather Corcoran <a target="_blank" href="https://www.wustl.edu/">Washington University in St. Louis</a></p>
-              <p>Pedro Cruz <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-              <p>Valentina D’Efilippo <a target="_blank" href="https://www.economist.com/">The Economist</a></p>
-              <p>Catherine D’Ignazio <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
-              <p>Patricio Davila <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
-              <p>Carl DiSalvo <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-              <p>Jason Dykes <a target="_blank" href="https://www.https://www.city.ac.uk/">City, University of London</a></p>
-              <p>Veronika Egger <a target="_blank" href="https://www.iiid.net/">IIID – International Institute for Information Design</a></p>
-              <p>Kennedy Elliot <a target="_blank" href="https://www.nationalgeographic.com/">National Geographic</a></p>
-              <p>Yuri Engelhardt <a target="_blank" href="https://www.uva.nl/">University of Amsterdam</a></p>
-              <p>Angus Forbes <a target="_blank" href="https://www.ucsc.edu/">University of California, Santa Cruz</a></p>
-              <p>Federica Fragapane <a>Freelance</a></p>
-              <p>Jorge Frascara <a target="_blank" href="https://www.ualberta.ca/">University of Alberta</a></p>
-              <p>Manuela Garreton <a target="_blank" href="https://www.uc.cl/">Pontificia Universidad Católica, Chile</a></p>
-              <p>Katherine Gillieson <a target="_blank" href="https://www.ecuad.ca/">ECUAD</a></p>
-              <p>Maria Gonzalez de Cossio <a target="_blank" href="https://www.uam.mx/">Universidad Autónoma Metropolitana</a></p>
-              <p>Sarah Goodwin <a target="_blank" href="https://www.monash.edu/">Monash University</a></p>
-              <p>Lena Groeger <a target="_blank" href="https://www.propublica.org/">ProPublica</a></p>
-              <p>Katherine Hepworth <a target="_blank" href="https://www.unr.edu/">University of Nevada, Reno</a></p>
-              <p>Uta Hinrichs <a target="_blank" href="https://www.st-andrews.ac.uk/">University of St Andrews</a></p>
-              <p>Angela Iarocci <a target="_blank" href="https://www.sheridancollege.ca/">Sheridan College</a></p>
-              <p>Petra Isenberg <a target="_blank" href="https://www.inria.fr/en/centre-inria-de-paris">INRIA, Paris</a></p>
-              <p>Meghan Kelly <a target="_blank" href="https://www.wisc.edu/">University of Wisconsin</a></p>
-              <p>Eric Kindel <a target="_blank" href="http://www.reading.ac.uk/">The University of Reading</a></p>
-            </div>
-            <div class="col-md-6 uni">
-              <p>Lauren Klein <a target="_blank" href="https://www.emory.edu/">Emory University</a></p>
-              <p>Robert Kosara <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
-              <p>Doris Kosminsky <a target="_blank" href="https://www.ufrj.br/">Universidade Federal do RJ</a></p>
-              <p>Maarten Lambrechts <a>Freelance</a> </p>
-              <p>Yu-Ru Lin <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a></p>
-              <p>Anne Luther <a target="_blank" href="https://www.newschool.edu/">The New School</a></p>
-              <p>Michele Mauri <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
-              <p>Rodrigo Medeiros <a target="_blank" href="https://www.ifpb.edu.br/">Inst. Fed. Educação Ciência, Tecnologia, Paraíba</a></p>
-              <p>Elijah Meeks <a target="_blank" href="https://www.apple.com/">Apple</a></p>
-              <p>Sky Moret <a target="_blank" href="https://www.tba21.org/">TBA21–Academy</a></p>
-              <p>Romi Ron Morrison <a target="_blank" href="https://www.usc.edu/">University of Southern California</a></p>
-              <p>Tamara Munzner <a target="_blank" href="https://www.ubc.edu/">University of British Columbia</a></p>
-              <p>Till Nagel <a target="_blank" href="https://www.english.hs-mannheim.de/the-university.html">Mannheim University of Applied Sciences</a></p>
-              <p>Paul Nini <a target="_blank" href="https://www.osu.edu/">Ohio State University</a></p>
-              <p>Angela Norwood <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
-              <p>Dietmar Offenhuber <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
-              <p>Nassim Parvin <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-              <p>Charles Perin <a target="_blank" href="https://www.unic.ca/">University of Victoria</a></p>
-              <p>Laura Perovich <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
-              <p>Nathalie Riche <a target="_blank" href="https://www.microsoft.com/">Microsoft</a></p>
-              <p>Jessica Roberts <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-              <p>Stacie Rohrbach <a target="_blank" href="https://www.design.cmu.edu/">Carnegie Mellon, School of Design</a></p>
-              <p>Lisa Charlotte Rost <a target="_blank" href="https://www.datawrapper.de/">Datawrapper</a></p>
-              <p>Arvind Satyanarayan <a target="_blank" href="https://www.google.com/">Google</a></p>
-              <p>Chad Skelton <a target="_blank" href="https://www.kpu.ca/">Kwantlen Polytechnic University</a></p>
-              <p>Carla Spinillo <a target="_blank" href="https://www.ufpr.br/">Universidade Federal, Paraná</a></p>
-              <p>Tim Stallmann <a>RAD Cat</a></p>
-              <p>John Stasko <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-              <p>Moritz Stefaner <a target="_blank" href="https://www.truth-and-beauty.com/">Truth & Beauty</a></p>
-              <p>Olivia Vane <a target="_blank" href="https://www.bl.uk/">British Library</a></p>
-              <p>Rupesh Vyas <a target="_blank" href="https://www.aalto.fi/">Aalto University</a></p>
-              <p>Karel van der Waarde <a target="_blank" href="https://www.https://www.swinburne.edu.au">Swinburne University of Technology, Melbourne</a></p>
-              <p>Jagoda Walny <a target="_blank" href="https://www.cer-rec.gc.ca/index-eng.html">Canada Energy Regulator</a></p>
-              <p>Mitchell Whitelaw <a target="_blank" href="https://www.anu.edu.au/">Australian National University</a></p>
-              <p>Jan Willem Tulp <a>Freelance</a></p>
-              <p>Mushon Zer-Aviv <a target="_blank" href="https://www.shenkar.ac.il/en">Shenkar School of Engineering and Design</p></a></p>
-              <p>Siqi Zhu <a target="_blank" href="https://www.sidewalklabs.com/">Sidewalk Labs</a></p>
-            </div>
+              <h4>Contribution</h4>
+              <p><em>Does the submission build upon and extend current knowledge of information design and visualization through the use of empirical, critical, or theoretical methods?</em></p>
+            </article>
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-  <section id="keynotes">
-    <div class="wrap">
+    </section>
+    <section id="pc">
       <div class="container">
-        <h2 class="title">Keynotes</h2>
         <div class="row">
-          <div class="col-sm">
-            <img class="people" src="assets/reuben.png">
-            <h3>Reuben Fischer-Baum & Chiqui Esteban</h3>
-
-            <p>Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an
-              ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic,
-              The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.</p>
-          </div>
-          <div class="col-sm">
-            <img class="people" src="assets/reuben.png">
-            <h3>Fernanda Viégas and Martin Wattenberg</h3>
-            <p>Fernanda Viégas and Martin Wattenberg co-lead Google’s PAIR (People+AI Research) initiative, part of Google Brain. Their work in machine learning focuses on transparency and interpretability, as part of a broad agenda to improve
-              human/AI
-              interaction. They are well known for their contributions to social and collaborative visualization, and the systems they’ve created are used daily by millions of people. Their visualization-based artwork has been exhibited worldwide,
-              and
-              is part of the permanent collection of Museum of Modern Art in New York.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm">
-            <img class="people" src="assets/reuben.png">
-            <h3>Sandra Rendgen</h3>
-            <p>Sandra Rendgen is an independent author and researcher with a particular focus on data visualization, interactive media and the history of infographics. Her academic background is in art history and cultural theory. In collaboration
-              with
-              Taschen Publishing, she released “Information Graphics” (2012) and “Understanding the World” (2014). Currently she is working on two new books about the history of data visualization and information graphics.</p>
-          </div>
-          <div class="col-sm">
-            <img class="people" src="assets/reuben.png">
-            <h3>Ron Morrison</h3>
-            <p>Ron Morrison is a designer, artist, and researcher working across the fields of human geography, digital technology, and urbanism. They investigate how the unassimilable complicates race and geographic space as fixed and knowable. From
-              building open source platforms to upend solitary confinement to crafting community based archives to combat gentrification, their work explores cartographies of slow violence, cybernetics, and blackness. Their work was implemented in
-              the
-              US, Ghana, Colombia, Ethiopia, Italy and featured at AIA New York, UN World Urban Forum, and Tribeca Film Festival. They are currently an Annenberg PhD fellow at the University of Southern California in Los Angeles. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="exhibition">
-    <div class="container">
-      <h2 class="title">Exhibition</h2>
-      <div class="row">
-        <div class="col-lg-6">
-          <p class="text-cfp" style="color:#ff3f19">The exhibition “Image Factories” (Bildfabriken) organized
-            by the German Museum of Books and Writing of the German National Library
-            opened at the University of Applied Sciences Potsdam
-            [19 Oct – 14 Dec] during Information+ 2018.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <h3> Image Factories. </h3>
-          <h3><em>Infographics 1920–1945
-              Fritz Kahn, Otto & Marie Neurath, Gerd Arntz</em></h3>
-          <p>The exhibition focuses on a period of visualization history
-            that was characterized by information overload and growing demands for visual
-            communication in the early 20th century. Two specific responses are highlighted,
-            each paving the way for a newly established genre of infographics.
-            The teams around the Austrians Otto & Marie Neurath,
-            and the German physician Fritz Kahn, developed their distinctive visual languages
-            almost simultaneously, in both cases based on formal stylization of the human body.
-            The Neuraths’ “Isotype” utilized pictogram-like graphics as counting units
-            for the quantification of social realities. In contrast Kahn’s “Factories
-            of the Human Body” employed sequences of mechanistically interpreted diagrams,
-            in which the human being was depicted as an “Industrial Palace”.
-
-            The exhibition includes detailed reproductions and animations
-            from the rich holdings of the German National Library and from American
-            and British archives. The exhibition was developed at the German Museum
-            of Books and Writing together with the Institute of Communication and Media Studies,
-            University of Erfurt.</p>
-        </div>
-        <div class="col">
-
-          <img class="people" style="width:100%;" src="assets/exh-hh.jpg">
-          <small>FRITZ KAHN: DIE EMPFINDUNGSBAHN, 1929. IMAGE: KOSMOS/DEBSCHITZ</small>
-          <div class="infobox">
-            <h3>Visit the Exhibition</h3>
-            <div class="bullets">
-              <p class="bullets-text"> Location: FH Potsdam, Hauptgebäude Kiepenheuerallee 5, 14469 Potsdam</p>
-            </div>
-            <div class="bullets">
-              <p class="bullets-text"> Opening hours: 23 Oct - 14 Dec 2018,
-                Monday - Friday, 11am - 4pm</p>
-            </div>
-            <div class="bullets">
-              <p class="bullets-text"> Opening reception: 19 Oct 2018 at 7pm</p>
+          <div class="col-md-12">
+            <h2 class="title">Program Committee</h2>
+            <div class="row">
+              <div class="col-md-6 uni">
+                <p>Clio Andris <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+                <p>Dominikus Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
+                <p>Jessica Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
+                <p>Ilia Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
+                <p>Matthew Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
+                <p>Angeles Briones <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
+                <p>Vincent Brown <a target="_blank" href="https://www.harvard.edu/">Harvard University</a></p>
+                <p>Alberto Cairo <a target="_blank" href="https://welcome.miami.edu/">University of Miami</a></p>
+                <p>Petra Cerne Oven <a target="_blank" href="https://www.uni-lj.si/university/">University of Ljubljana</a></p>
+                <p>Rico Chapman <a target="_blank" href="https://www.clarku.edu/">Clark University</a></p>
+                <p>Lynn Cherny <a>Freelance</a></p>
+                <p>Paolo Ciuccarelli <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+                <p>Nicole Coleman <a target="_blank" href="https://www.stanford.edu/">Stanford University</a></p>
+                <p>Heather Corcoran <a target="_blank" href="https://www.wustl.edu/">Washington University in St. Louis</a></p>
+                <p>Pedro Cruz <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+                <p>Valentina D’Efilippo <a target="_blank" href="https://www.economist.com/">The Economist</a></p>
+                <p>Catherine D’Ignazio <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
+                <p>Patricio Davila <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
+                <p>Carl DiSalvo <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+                <p>Jason Dykes <a target="_blank" href="https://www.https://www.city.ac.uk/">City, University of London</a></p>
+                <p>Veronika Egger <a target="_blank" href="https://www.iiid.net/">IIID – International Institute for Information Design</a></p>
+                <p>Kennedy Elliot <a target="_blank" href="https://www.nationalgeographic.com/">National Geographic</a></p>
+                <p>Yuri Engelhardt <a target="_blank" href="https://www.uva.nl/">University of Amsterdam</a></p>
+                <p>Angus Forbes <a target="_blank" href="https://www.ucsc.edu/">University of California, Santa Cruz</a></p>
+                <p>Federica Fragapane <a>Freelance</a></p>
+                <p>Jorge Frascara <a target="_blank" href="https://www.ualberta.ca/">University of Alberta</a></p>
+                <p>Manuela Garreton <a target="_blank" href="https://www.uc.cl/">Pontificia Universidad Católica, Chile</a></p>
+                <p>Katherine Gillieson <a target="_blank" href="https://www.ecuad.ca/">ECUAD</a></p>
+                <p>Maria Gonzalez de Cossio <a target="_blank" href="https://www.uam.mx/">Universidad Autónoma Metropolitana</a></p>
+                <p>Sarah Goodwin <a target="_blank" href="https://www.monash.edu/">Monash University</a></p>
+                <p>Lena Groeger <a target="_blank" href="https://www.propublica.org/">ProPublica</a></p>
+                <p>Katherine Hepworth <a target="_blank" href="https://www.unr.edu/">University of Nevada, Reno</a></p>
+                <p>Uta Hinrichs <a target="_blank" href="https://www.st-andrews.ac.uk/">University of St Andrews</a></p>
+                <p>Angela Iarocci <a target="_blank" href="https://www.sheridancollege.ca/">Sheridan College</a></p>
+                <p>Petra Isenberg <a target="_blank" href="https://www.inria.fr/en/centre-inria-de-paris">INRIA, Paris</a></p>
+                <p>Meghan Kelly <a target="_blank" href="https://www.wisc.edu/">University of Wisconsin</a></p>
+                <p>Eric Kindel <a target="_blank" href="http://www.reading.ac.uk/">The University of Reading</a></p>
+              </div>
+              <div class="col-md-6 uni">
+                <p>Lauren Klein <a target="_blank" href="https://www.emory.edu/">Emory University</a></p>
+                <p>Robert Kosara <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
+                <p>Doris Kosminsky <a target="_blank" href="https://www.ufrj.br/">Universidade Federal do RJ</a></p>
+                <p>Maarten Lambrechts <a>Freelance</a> </p>
+                <p>Yu-Ru Lin <a target="_blank" href="https://www.pitt.edu/">University of Pittsburgh</a></p>
+                <p>Anne Luther <a target="_blank" href="https://www.newschool.edu/">The New School</a></p>
+                <p>Michele Mauri <a target="_blank" href="https://www.polimi.it/">Politecnico di Milano</a></p>
+                <p>Rodrigo Medeiros <a target="_blank" href="https://www.ifpb.edu.br/">Inst. Fed. Educação Ciência, Tecnologia, Paraíba</a></p>
+                <p>Elijah Meeks <a target="_blank" href="https://www.apple.com/">Apple</a></p>
+                <p>Sky Moret <a target="_blank" href="https://www.tba21.org/">TBA21–Academy</a></p>
+                <p>Romi Ron Morrison <a target="_blank" href="https://www.usc.edu/">University of Southern California</a></p>
+                <p>Tamara Munzner <a target="_blank" href="https://www.ubc.edu/">University of British Columbia</a></p>
+                <p>Till Nagel <a target="_blank" href="https://www.english.hs-mannheim.de/the-university.html">Mannheim University of Applied Sciences</a></p>
+                <p>Paul Nini <a target="_blank" href="https://www.osu.edu/">Ohio State University</a></p>
+                <p>Angela Norwood <a target="_blank" href="https://www.yorku.ca/">York University</a></p>
+                <p>Dietmar Offenhuber <a target="_blank" href="https://www.northeastern.edu/">Northeastern University</a></p>
+                <p>Nassim Parvin <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+                <p>Charles Perin <a target="_blank" href="https://www.unic.ca/">University of Victoria</a></p>
+                <p>Laura Perovich <a target="_blank" href="https://www.mit.edu/">MIT</a></p>
+                <p>Nathalie Riche <a target="_blank" href="https://www.microsoft.com/">Microsoft</a></p>
+                <p>Jessica Roberts <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+                <p>Stacie Rohrbach <a target="_blank" href="https://www.design.cmu.edu/">Carnegie Mellon, School of Design</a></p>
+                <p>Lisa Charlotte Rost <a target="_blank" href="https://www.datawrapper.de/">Datawrapper</a></p>
+                <p>Arvind Satyanarayan <a target="_blank" href="https://www.google.com/">Google</a></p>
+                <p>Chad Skelton <a target="_blank" href="https://www.kpu.ca/">Kwantlen Polytechnic University</a></p>
+                <p>Carla Spinillo <a target="_blank" href="https://www.ufpr.br/">Universidade Federal, Paraná</a></p>
+                <p>Tim Stallmann <a>RAD Cat</a></p>
+                <p>John Stasko <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+                <p>Moritz Stefaner <a target="_blank" href="https://www.truth-and-beauty.com/">Truth & Beauty</a></p>
+                <p>Olivia Vane <a target="_blank" href="https://www.bl.uk/">British Library</a></p>
+                <p>Rupesh Vyas <a target="_blank" href="https://www.aalto.fi/">Aalto University</a></p>
+                <p>Karel van der Waarde <a target="_blank" href="https://www.https://www.swinburne.edu.au">Swinburne University of Technology, Melbourne</a></p>
+                <p>Jagoda Walny <a target="_blank" href="https://www.cer-rec.gc.ca/index-eng.html">Canada Energy Regulator</a></p>
+                <p>Mitchell Whitelaw <a target="_blank" href="https://www.anu.edu.au/">Australian National University</a></p>
+                <p>Jan Willem Tulp <a>Freelance</a></p>
+                <p>Mushon Zer-Aviv <a target="_blank" href="https://www.shenkar.ac.il/en">Shenkar School of Engineering and Design</p>
+                </a></p>
+                <p>Siqi Zhu <a target="_blank" href="https://www.sidewalklabs.com/">Sidewalk Labs</a></p>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
-
-  <section id="diversity">
-    <div class="container">
-      <h2 class="title">Diversity Scholarship</h2>
-      <div class="row">
-        <div class="col-lg-6">
-          <p class="text-cfp" style="color:#5800FF">The Information+ Conference welcomes and encourages
-            participation by people of all backgrounds and identities.
-            We are committed to fostering and sustaining an environment
-            of respect and inclusivity. To increase participation at
-            the Information+ by underrepresented or historically marginalized groups,
-            we awarded 10 diversity scholarships.
-            Priority was given to applicants who have their
-            contributions accepted for presentation at the conference.</p>
-        </div>
-      </div>
-      <div class="row">
-  <div class="col-lg-6">
-        <h3>Information and Process</h3>
-        <p>The Information+ Diversity Scholarship Committee
-          reviewed applications based on a combination
-          of need and impact, and awarded 10 diversity scholarships that include:</p>
-          <div class="bullets-blue">
-          <p class="bullets-text">Complementary Conference registration. </p>
-        </div>
-        <div class="bullets-blue">
-          <p class="bullets-text">A maximum of: 500 € per recipient within Europe,
-          and 1,000 € per recipient from other countries.
-          We understand that the funds may not cover all costs,
-          but we do hope the scholarship will help recipients attend
-          the conference. Funds can be used to help support travel,
-          lodging, and childcare. Recipients will need to keep original flight
-          or train tickets, expense receipts, and evidence of payment (i.e. bank statement)
-          up to described limits for reimbursement once the conference is over.</p>
-        </div>
-        <h3>Eligibility</h3>
-<p>Applicants from underrepresented and/or marginalized groups including, but not limited to: gender, identity, race, ethnicity, disabilities, socioeconomic status, discipline.</p>
-<div class="bullets-blue">
-<p class="bullets-text">Financial need in order to be able to attend the conference.</p>
-</div>
-<div class="bullets-blue">
-<p class="bullets-text">18 years or older.</p>
-</div>
-      </div>
-
-      <div class="col-lg-6 uni">
-
-        <div>
-        <h3>Timeline</h3>
-          <em>10 Jul 2020</em>&#8195;Application period closes<br>
-          <em>31 Jul 2020</em>&#8195;Notification sent</p>
-        </div>
-
-        <h3>Diversity Scholarship Committee</h3>
-        <p>Clio Andris <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
-        <p>Dominikus Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
-        <p>Jessica Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
-        <p>Ilia Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
-        <p>Matthew Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
-
-
-</div>
-    </div>
-    </div>
-    <section>
-
-      <section id="info">
+    </section>
+    <section id="keynotes">
+      <div class="wrap">
         <div class="container">
+          <h2 class="title">Keynotes</h2>
           <div class="row">
-            <div class="col-lg-8">
-
-              <!--  <a href="http://informationplusconference.com/2016/" target="_blank">2016</a></h4> -->
-              <h4>For updates, find us on Twitter: <a href="https://twitter.com/InfoPlusConf" target="_blank">@InfoPlusConf</a><br></h4>
-              <h4>For mentions, use the <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a> hashtag</h4>
-              <h4>For questions, please send us an email: <a href="mailto:admin@informationplusconference.com">admin@informationplusconference.com</a></h4>
-
-              <br>
-              <h4>...and thanks to <a href="https://noahveltman.com/">Noah Veltman</a> for the beautiful flocking boids.</h4>
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Reuben Fischer-Baum & Chiqui Esteban</h3>
+              <p>Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an
+                ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic,
+                The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.
+              </p>
+            </div>
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Fernanda Viégas and Martin Wattenberg</h3>
+              <p>Fernanda Viégas and Martin Wattenberg co-lead Google’s PAIR (People+AI Research) initiative, part of Google Brain. Their work in machine learning focuses on transparency and interpretability, as part of a broad agenda to improve
+                human/AI
+                interaction. They are well known for their contributions to social and collaborative visualization, and the systems they’ve created are used daily by millions of people. Their visualization-based artwork has been exhibited worldwide,
+                and
+                is part of the permanent collection of Museum of Modern Art in New York.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Sandra Rendgen</h3>
+              <p>Sandra Rendgen is an independent author and researcher with a particular focus on data visualization, interactive media and the history of infographics. Her academic background is in art history and cultural theory. In collaboration
+                with
+                Taschen Publishing, she released “Information Graphics” (2012) and “Understanding the World” (2014). Currently she is working on two new books about the history of data visualization and information graphics.
+              </p>
+            </div>
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Ron Morrison</h3>
+              <p>Ron Morrison is a designer, artist, and researcher working across the fields of human geography, digital technology, and urbanism. They investigate how the unassimilable complicates race and geographic space as fixed and knowable. From
+                building open source platforms to upend solitary confinement to crafting community based archives to combat gentrification, their work explores cartographies of slow violence, cybernetics, and blackness. Their work was implemented in
+                the
+                US, Ghana, Colombia, Ethiopia, Italy and featured at AIA New York, UN World Urban Forum, and Tribeca Film Festival. They are currently an Annenberg PhD fellow at the University of Southern California in Los Angeles. 
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Footer -->
-      <footer>
+      </div>
+    </section>
+    <section id="schedule">
+      <div class="wrap">
         <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col">
-              <a href="https://www.gatech.edu/" target="_blank"><img alt="Logo of Georgia Tech" src="./assets/Georgia_Tech_logo-01.svg"></a>
+          <h2 class="title">Schedule</h2>
+          <div class="row">
+            <div class="here-d3"></div>
+          </div>
+        </div>
+      </div>
+      <!-- This is the pattern created by D3js -->
+      <!-- <div class="day">
+        <h4>Friday 19, October</h4>
+        <div class="item">
+          <div class="time">00:00</div>
+          <div class="description">
+            <h3>Tipo che parla</h3>
+            <p>A caso, a caso, a caso, a caso</p>
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <section id="exhibition">
+      <div class="container">
+        <h2 class="title">Exhibition</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="text-cfp" style="color:#ff3f19">The exhibition “Image Factories” (Bildfabriken) organized
+              by the German Museum of Books and Writing of the German National Library
+              opened at the University of Applied Sciences Potsdam
+              [19 Oct – 14 Dec] during Information+ 2018.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3> Image Factories. </h3>
+            <h3><em>Infographics 1920–1945
+              Fritz Kahn, Otto & Marie Neurath, Gerd Arntz</em>
+            </h3>
+            <p>The exhibition focuses on a period of visualization history
+              that was characterized by information overload and growing demands for visual
+              communication in the early 20th century. Two specific responses are highlighted,
+              each paving the way for a newly established genre of infographics.
+              The teams around the Austrians Otto & Marie Neurath,
+              and the German physician Fritz Kahn, developed their distinctive visual languages
+              almost simultaneously, in both cases based on formal stylization of the human body.
+              The Neuraths’ “Isotype” utilized pictogram-like graphics as counting units
+              for the quantification of social realities. In contrast Kahn’s “Factories
+              of the Human Body” employed sequences of mechanistically interpreted diagrams,
+              in which the human being was depicted as an “Industrial Palace”.
+              The exhibition includes detailed reproductions and animations
+              from the rich holdings of the German National Library and from American
+              and British archives. The exhibition was developed at the German Museum
+              of Books and Writing together with the Institute of Communication and Media Studies,
+              University of Erfurt.
+            </p>
+          </div>
+          <div class="col">
+            <img class="people" style="width:100%;" src="assets/exh-hh.jpg">
+            <small>FRITZ KAHN: DIE EMPFINDUNGSBAHN, 1929. IMAGE: KOSMOS/DEBSCHITZ</small>
+            <div class="infobox">
+              <h3>Visit the Exhibition</h3>
+              <div class="bullets">
+                <p class="bullets-text"> Location: FH Potsdam, Hauptgebäude Kiepenheuerallee 5, 14469 Potsdam</p>
+              </div>
+              <div class="bullets">
+                <p class="bullets-text"> Opening hours: 23 Oct - 14 Dec 2018,
+                  Monday - Friday, 11am - 4pm
+                </p>
+              </div>
+              <div class="bullets">
+                <p class="bullets-text"> Opening reception: 19 Oct 2018 at 7pm</p>
+              </div>
             </div>
-            <div class="col">
-              <a href="https://www.fh-potsdam.de/" target="_blank"><img alt="Logo of Fachhochschule Potsdam" src="./assets/FHP_logo-01.svg"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="diversity">
+      <div class="container">
+        <h2 class="title">Diversity Scholarship</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="text-cfp" style="color:#5800FF">The Information+ Conference welcomes and encourages
+              participation by people of all backgrounds and identities.
+              We are committed to fostering and sustaining an environment
+              of respect and inclusivity. To increase participation at
+              the Information+ by underrepresented or historically marginalized groups,
+              we awarded 10 diversity scholarships.
+              Priority was given to applicants who have their
+              contributions accepted for presentation at the conference.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>Information and Process</h3>
+            <p>The Information+ Diversity Scholarship Committee
+              reviewed applications based on a combination
+              of need and impact, and awarded 10 diversity scholarships that include:
+            </p>
+            <div class="bullets-blue">
+              <p class="bullets-text">Complementary Conference registration. </p>
             </div>
-            <div class="col">
-              <a href="https://www.ocadu.ca/" target="_blank"><img alt="Logo of OCAD" src="./assets/ocad-01.svg" class="logo"></a>
+            <div class="bullets-blue">
+              <p class="bullets-text">A maximum of: 500 € per recipient within Europe,
+                and 1,000 € per recipient from other countries.
+                We understand that the funds may not cover all costs,
+                but we do hope the scholarship will help recipients attend
+                the conference. Funds can be used to help support travel,
+                lodging, and childcare. Recipients will need to keep original flight
+                or train tickets, expense receipts, and evidence of payment (i.e. bank statement)
+                up to described limits for reimbursement once the conference is over.
+              </p>
             </div>
-            <div class="col">
-              <a href="https://polimi.it" target="_blank"><img alt="Logo of Polimi" src="./assets/logo_poli.svg" class="logo"></a>
+            <h3>Eligibility</h3>
+            <p>Applicants from underrepresented and/or marginalized groups including, but not limited to: gender, identity, race, ethnicity, disabilities, socioeconomic status, discipline.</p>
+            <div class="bullets-blue">
+              <p class="bullets-text">Financial need in order to be able to attend the conference.</p>
             </div>
-            <div class="col">
-              <a href="https://densitydesign.org" target="_blank"><img alt="Logo of DensityDesign" src="./assets/logo-dd-01.svg" class="logo"></a>
+            <div class="bullets-blue">
+              <p class="bullets-text">18 years or older.</p>
             </div>
-
-      </footer>
-
-
-
-      <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
+          </div>
+          <div class="col-lg-6 uni">
+            <div>
+              <h3>Timeline</h3>
+              <em>10 Jul 2020</em>&#8195;Application period closes<br>
+              <em>31 Jul 2020</em>&#8195;Notification sent</p>
+            </div>
+            <h3>Diversity Scholarship Committee</h3>
+            <p>Clio Andris <a target="_blank" href="https://www.gatech.edu/">Georgia Tech</a></p>
+            <p>Dominikus Baur <a target="_blank" href="https://www.do.minik.us/">do.minik.us</a></p>
+            <p>Jessica Bellamy <a target="_blank" href="https://www.jessicabellamy.design/">jessicabellamy.design</a></p>
+            <p>Ilia Blinderman <a target="_blank" href="https://www.pudding.cool/">Pudding.cool</a></p>
+            <p>Matthew Brehmer <a target="_blank" href="https://www.tableau.com/">Tableau</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="info">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <!--  <a href="http://informationplusconference.com/2016/" target="_blank">2016</a></h4> -->
+            <h4>For updates, find us on Twitter: <a href="https://twitter.com/InfoPlusConf" target="_blank">@InfoPlusConf</a><br></h4>
+            <h4>For mentions, use the <a href="https://twitter.com/hashtag/infoplus2020?src=hashtag_click" target="_blank">#infoplus2020</a> hashtag</h4>
+            <h4>For questions, please send us an email: <a href="mailto:admin@informationplusconference.com">admin@informationplusconference.com</a></h4>
+            <br>
+            <h4>...and thanks to <a href="https://noahveltman.com/">Noah Veltman</a> for the beautiful flocking boids.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+      <div class="row justify-content-md-center">
+      <div class="col">
+        <a href="https://www.gatech.edu/" target="_blank"><img alt="Logo of Georgia Tech" src="./assets/Georgia_Tech_logo-01.svg"></a>
+      </div>
+      <div class="col">
+        <a href="https://www.fh-potsdam.de/" target="_blank"><img alt="Logo of Fachhochschule Potsdam" src="./assets/FHP_logo-01.svg"></a>
+      </div>
+      <div class="col">
+        <a href="https://www.ocadu.ca/" target="_blank"><img alt="Logo of OCAD" src="./assets/ocad-01.svg" class="logo"></a>
+      </div>
+      <div class="col">
+        <a href="https://polimi.it" target="_blank"><img alt="Logo of Polimi" src="./assets/logo_poli.svg" class="logo"></a>
+      </div>
+      <div class="col">
+        <a href="https://densitydesign.org" target="_blank"><img alt="Logo of DensityDesign" src="./assets/logo-dd-01.svg" class="logo"></a>
+      </div>
+    </footer>
+    <!-- </content> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+            // Store hash
+            var hash = this.hash;
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
             });
-          });
+          } // End if
         });
-      </script>
-
-      <!-- </content> -->
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-
+      });
+      const populateSchedule = (data)=>{
+        console.log(data);
+        const days = d3.nest()
+          .key(d=>d.date)
+          .entries(data);
+        const schedule = d3.selectAll('#schedule .here-d3');
+        const day = schedule.selectAll('.day').data(days)
+          .enter().append('div').classed('day',true);
+        day.append('h4').text(d=>d.key);
+        const item = day.selectAll('.item').data(d=>d.values)
+          .enter().append('div').attr('class',d=>`item ${d.type}`);
+        item.append('div').classed('item',true).text(d=>d.time);
+        const description = item.append('div').classed('description',true);
+        description.append('h3').text(d=>d.speaker).style('display',d=>d.speaker===''?'none':'block');
+        description.append('p').text(d=>d.description);
+      }
+      function init() {
+        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/13YkrocwfWg88qmNxI7n1h6d7CIHuPvsWyO48mFpt8sU/edit?usp=sharing',
+          callback: function(data, tabletop) { 
+            populateSchedule(data.schedule.elements);
+          },
+          simpleSheet: false
+        } );
+      }
+      window.addEventListener('DOMContentLoaded', init);
+    </script>
+  </body>
 </html>

@@ -131,26 +131,95 @@ h1 {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1000px) {
-  #myBottomnav {
-    display: block;
-    transition: 0.5s ease;
-  }
+.mobile-nav {
+  display: none;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 98%, rgba(88, 0, 255, 1) 100%);
+  z-index: 10000;
+}
 
+.mobile-nav .items {
+  padding-bottom: 60px;
+}
+
+.mobile-nav .items a {
+  height: 0;
+  opacity: 0;
+  transition: all 0.35s ease;
+}
+.mobile-nav.visible .items a {
+  height: 60px;
+  opacity: 1;
+}
+
+.mobile-nav a {
+  color: rgb(255, 252, 242);
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.mobile-nav a:hover {
+  color: rgb(255, 252, 242);
+}
+
+.mobile-nav .icon {
+  transition: transform 0.35s ease;
+  transform: rotate(0);
+  position: absolute;
+  bottom: 0;
+}
+
+.mobile-nav.visible .icon {
+  transform: rotate(180deg);
+}
+
+/* schedule */
+
+.item {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-columns: 100px auto;
+}
+
+.time {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
+.description {
+  grid-column-start: 2;
+}
+
+@media screen and (max-width: 1000px) {
   #navbar {
     display: none;
   }
+  .mobile-nav{
+    display: block;
+  }
+  /* 🌺🌸🌼🍀 Get rid of those, from here */
 
+  /* #myBottomnav {
+    display: block;
+  }
   .bottomnav {
     overflow: hidden;
     background: linear-gradient(180deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 98%, rgba(88, 0, 255, 1) 100%);
     position: fixed;
-    bottom: 0;
     width: 100%;
     z-index: 9999;
     text-align: center;
+    transition: bottom 0.5s ease;
   }
-
+  .bottomnav.responsive {
+    bottom: 0;
+  }
   .bottomnav a {
     display: block;
     font-size: 1.2em;
@@ -161,42 +230,37 @@ h1 {
     text-align: center;
 
   }
-
   .bottomnav a:hover {
     color: rgb(255, 252, 242);
   }
-
   .bottomnav a {
-    display: none;
-      text-align: center;
+    text-align: center;
   }
-
-  .bottomnav a.icon {
+  .bottomnav .icon {
     display: block;
     padding: 1em 1em 1em 1em;
+    transition: 0.5s ease;
   }
-
   .bottomnav.responsive .icon {
     position: relative;
     top: 0;
     transform: rotate(180deg);
-    transition: 0.5s ease;
   }
-
   .bottomnav.responsive a {
+    bottom: 0;
     float: none;
     display: block;
     text-align: left;
     text-align: center;
     -webkit-animation: slide 0.5s;
-  animation: slide 0.5s;}
+    animation: slide 0.5s;}
   }
+  @keyframes slide {
+    0% { bottom: 0; }
+    100% { bottom: 10px; }
+  } */
 
-
-@keyframes slide {
-  0% { bottom: 0; }
-  100% { bottom: 10px; }
-}
+  /* to here 🌺🌸🌼🍀*/
 
 /* End Navabar */
 #intro {
