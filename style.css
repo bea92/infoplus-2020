@@ -30,13 +30,6 @@ p {
   font-size: 1em;
 }
 
-span {
-  font-family: "Inter", sans-serif;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #5800FF;
-}
 
 h2 {
   font-size: 1.5em;
@@ -73,6 +66,16 @@ h5>a {
 }
 
 h1 {
+  position: relative;
+  font-size: 4em;
+  font-weight: 700;
+  color:#ff3f19;
+  /* background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.gradienttext{
   position: relative;
   font-size: 4em;
   font-weight: 700;
