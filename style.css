@@ -75,14 +75,6 @@ h1 {
   -webkit-text-fill-color: transparent; */
 }
 
-.gradienttext{
-  position: relative;
-  font-size: 4em;
-  font-weight: 700;
-  background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 #canvas {
   padding: 0px;
