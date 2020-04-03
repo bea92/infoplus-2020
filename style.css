@@ -515,6 +515,8 @@ margin-bottom: -23px;
 }
 
 
+#covid { 	font-size: 1.2em; }
+
 @media only screen and (max-width: 600px) {
   h2 {
     font-size: 1.8em;
@@ -528,8 +530,9 @@ margin-bottom: -23px;
   h1 {
     font-size: 3em;
     font-weight: 700;
-    color: #5800FF;
   }
+
+	#covid { 	font-size: 1em; }
 
   img {
     vertical-align: middle;
