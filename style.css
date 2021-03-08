@@ -38,7 +38,7 @@ h2 {
 
 .title{
   font-size: 2em;
-  font-weight: 800px;
+  font-weight: 800;
   margin-bottom:1em;
   color:black;
   /* background: -webkit-linear-gradient(#af10ff, #ff3f19);
@@ -393,6 +393,12 @@ section {
   color: #5800FF;
 }
 
+#about h3{
+  color: #5800FF;
+  margin-top:2em;
+}
+
+
 
 .requirements {
   color: #ff3f19;
@@ -436,6 +442,7 @@ strong {
   background: -webkit-linear-gradient(#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 400;
 }
 
 #cfp strong {
