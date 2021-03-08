@@ -70,10 +70,10 @@ h1 {
   position: relative;
   font-size: 4em;
   font-weight: 700;
-  color:#ff3f19;
-  /* background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
+  /* color:#ff3f19; */
+  background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent; 
 }
 
 
@@ -273,6 +273,12 @@ h1 {
   position: sticky;
 }
 
+#about {
+  border-top: 1px solid #5800FF;
+  color: black;
+  position: sticky;
+}
+
 #pc {
   border-top: 1px solid #af10ff;
   color: black;
@@ -388,6 +394,10 @@ section {
 
 .dates {
   color: #af10ff;
+}
+
+.dates h3{
+  margin-top:0.8;
 }
 
 .requirements {
