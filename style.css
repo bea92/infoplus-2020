@@ -319,10 +319,11 @@ h1 {
   margin-left: .25em;
 }
 
-.uni a {
+.uni small {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 500;
+  color:#5800FF;
 }
 
 #formats, #criteria {
