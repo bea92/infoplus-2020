@@ -48,7 +48,7 @@ h2 {
 
 h3 {
   font-size: 1.2em;
-  margin-top: 2em;
+  margin-top: 0.8em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
@@ -330,10 +330,6 @@ h1 {
   color: #ff3f19;
 }
 
-#formats h3{
-  margin-top:0.2em;
-}
-
 footer {
   padding: 2em 2em 4em 2em;
   border-Top: 1px solid #5800FF;
@@ -396,9 +392,6 @@ section {
   color: #af10ff;
 }
 
-.dates h3{
-  margin-top:0.8;
-}
 
 .requirements {
   color: #ff3f19;
