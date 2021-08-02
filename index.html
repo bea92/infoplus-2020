@@ -217,7 +217,7 @@
         <div class="container">
           <h2 class="title">Schedule</h2>
           <div class="row">
-            <div class="here-d3">ciao</div>
+            <div class="here-d3"></div>
           </div>
         </div>
       </div>
@@ -381,7 +381,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-    <script type="text/javascript" src="tabletop.js"></script>
     <script>
       $(document).ready(function(){
         // Add smooth scrolling to all links
@@ -420,11 +419,11 @@
         description.append('p').text(d=>d.description);
       }
       function init() {
-        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRr7HhxmLscx3Ur_FEY9vNngk-R6lOHcT_upTGs9I731TYl9L7ES3EHb-SFWE91AtvACF-vGwZtCC3w/pubhtml?gid=0&single=true',
+        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/13YkrocwfWg88qmNxI7n1h6d7CIHuPvsWyO48mFpt8sU/edit?usp=sharing',
           callback: function(data, tabletop) {
-            populateSchedule(data.schedule.data);
+            populateSchedule(data.schedule.elements);
           },
-          simpleSheet: true
+          simpleSheet: false
         } );
       }
       window.addEventListener('DOMContentLoaded', init);

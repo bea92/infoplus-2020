@@ -179,7 +179,7 @@ h1 {
 /* schedule */
 
 #schedule{
-  display: none;
+  display: block;
 }
 
 .item {
