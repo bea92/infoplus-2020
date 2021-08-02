@@ -61,6 +61,7 @@
         <a href="#header">Information+</a>
         <a href="#cfp">Call for Participation</a>
         <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
         <!-- <a href="#keynotes">Keynotes</a>
         <a href="#schedule">Schedule</a>
         <a href="#exhibition">Exhibition</a>
@@ -85,6 +86,7 @@
         <a href="#header" onclick="$('.mobile-nav').toggleClass('visible')">Intro</a>
         <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')">Call for Participation</a>
         <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')">About</a>
+        <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
         <!-- <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
         <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
         <a href="#exhibition" onclick="$('.mobile-nav').toggleClass('visible')">Exhibition</a>
@@ -160,6 +162,62 @@
               <h4>Contribution</h4>
               <p><em>Does the submission build upon and extend current knowledge of information design and visualization through the use of empirical, critical, or theoretical methods?</em></p>
             </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="keynotes">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Keynotes</h2>
+          <div class="row">
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Reuben Fischer-Baum & Chiqui Esteban</h3>
+              <p>Reuben Fischer-Baum is an Assignment Editor on the Washington Post graphics team, focused on politics and sports. Chiqui Esteban is the Post's Graphics Director. This award-winning team builds visually-driven stories for an
+                ever-expanding number of platforms, experimenting with new storytelling techniques to help readers make sense of the news. Reuben previously worked at FiveThirtyEight and Gawker Media. Chiqui previously worked at National Geographic,
+                The Boston Globe, La Voz de Galicia, Diario de Cadiz, Publico and lainformacion.com.
+              </p>
+            </div>
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Fernanda Viégas and Martin Wattenberg</h3>
+              <p>Fernanda Viégas and Martin Wattenberg co-lead Google’s PAIR (People+AI Research) initiative, part of Google Brain. Their work in machine learning focuses on transparency and interpretability, as part of a broad agenda to improve
+                human/AI
+                interaction. They are well known for their contributions to social and collaborative visualization, and the systems they’ve created are used daily by millions of people. Their visualization-based artwork has been exhibited worldwide,
+                and
+                is part of the permanent collection of Museum of Modern Art in New York.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Sandra Rendgen</h3>
+              <p>Sandra Rendgen is an independent author and researcher with a particular focus on data visualization, interactive media and the history of infographics. Her academic background is in art history and cultural theory. In collaboration
+                with
+                Taschen Publishing, she released “Information Graphics” (2012) and “Understanding the World” (2014). Currently she is working on two new books about the history of data visualization and information graphics.
+              </p>
+            </div>
+            <div class="col-sm">
+              <img class="people" src="assets/reuben.png">
+              <h3>Ron Morrison</h3>
+              <p>Ron Morrison is a designer, artist, and researcher working across the fields of human geography, digital technology, and urbanism. They investigate how the unassimilable complicates race and geographic space as fixed and knowable. From
+                building open source platforms to upend solitary confinement to crafting community based archives to combat gentrification, their work explores cartographies of slow violence, cybernetics, and blackness. Their work was implemented in
+                the
+                US, Ghana, Colombia, Ethiopia, Italy and featured at AIA New York, UN World Urban Forum, and Tribeca Film Festival. They are currently an Annenberg PhD fellow at the University of Southern California in Los Angeles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="schedule">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Schedule</h2>
+          <div class="row">
+            <div class="here-d3">ciao</div>
           </div>
         </div>
       </div>
@@ -291,6 +349,8 @@
         </div>
       </div>
     </section>
+
+    
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -321,6 +381,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type="text/javascript" src="tabletop.js"></script>
     <script>
       $(document).ready(function(){
         // Add smooth scrolling to all links
@@ -359,11 +420,11 @@
         description.append('p').text(d=>d.description);
       }
       function init() {
-        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/13YkrocwfWg88qmNxI7n1h6d7CIHuPvsWyO48mFpt8sU/edit?usp=sharing',
+        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRr7HhxmLscx3Ur_FEY9vNngk-R6lOHcT_upTGs9I731TYl9L7ES3EHb-SFWE91AtvACF-vGwZtCC3w/pubhtml?gid=0&single=true',
           callback: function(data, tabletop) {
-            populateSchedule(data.schedule.elements);
+            populateSchedule(data.schedule.data);
           },
-          simpleSheet: false
+          simpleSheet: true
         } );
       }
       window.addEventListener('DOMContentLoaded', init);
