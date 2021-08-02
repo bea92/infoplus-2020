@@ -306,9 +306,9 @@ h1 {
 
 
 .wrap{
-  background: rgb(255, 252, 242);;
+  background: rgb(255, 252, 242);
    padding: 2rem;
-} */
+} 
 
 
 .text {
@@ -319,7 +319,7 @@ h1 {
   margin-left: .25em;
 }
 
-.uni small {
+small {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 500;
@@ -460,7 +460,7 @@ a img:focus {
 
 img {
   vertical-align: middle;
-  border-style: none;
+
   width: 50%;
   margin-top: 2em;
   height: 80px;
@@ -471,29 +471,75 @@ img {
 }
 
 .people{
-  width: 50%;
+  width: 30%;
   height: auto;
   margin-top:1em;
   margin-bottom:1em;
-  border:1px solid black;
+  display: inline;
+  background-color: transparent;
+
+}
+
+@keyframes floatR {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatey(-20px);
+    transform: translatex(25px);
+	}
+	50% {
+		box-shadow: 0 10px 15px 0px rgba(175,15,255,.3);
+		transform: translatey(-25px);
+    transform: translatex(-25px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatey(0px);
+    transform: translatex(25px);
+	}
+}
+
+@keyframes floatL {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+		transform: translatey(-25px);
+    transform: translatex(-40px);
+	}
+	50% {
+		box-shadow: 0 10px 15px 0px rgba(222,63,25,.5);
+		transform: translatey(20px);
+    transform: translatex(20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+		transform: translatey(20px);
+    transform: translatex(-40px);
+	}
 }
 
 
 #overlay img {
-  display: block;
+  display: inline;
   position: relative;
-  width:80%;
+  width:30%;
   opacity:1;
-  z-index:-9999;
-  /* filter: invert(12%) sepia(67%) saturate(6275%) hue-rotate(237deg) brightness(105%) contrast(98%); */
+  z-index:1;
+  background-color: transparent;
 }
 
-#overlay .float {
-  animation: float 5s infinite;
+#overlay .floatL {
+  animation: floatL 5s infinite;
+  transform: translatex(-40px);
+  animation-direction:inherit;
+  height: auto;
+  margin-top:2em;
+}
+
+#overlay .floatR {
+  animation: floatR 5s infinite;
   animation-direction: normal;
   height: auto;
+  margin-bottom:3em;
 }
-
 /* Exhibition */
 
 .bullets-text {
