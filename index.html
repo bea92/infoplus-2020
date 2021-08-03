@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -376,9 +376,35 @@
     <section id="schedule">
       <div class="wrap">
         <div class="container">
-          <!-- <h2 class="title">Schedule</h2> -->
+          <h2 class="title">Schedule</h2>
           <div class="row">
-            <div class="here-d3"></div>
+            <div class="col-lg">
+<button class="accordion">Monday, 27th September <span><p><small>Opening keynote conversation & first panel</small></p></span>
+</button>
+<div class="panel here-d3">
+  <p></p>
+</div>
+
+<button class="accordion"> Tuesday, 28th September <span><p><small>Panels</small></p></span></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion"> Wednesday, 29 September <span><p><small>Panels</small></p></span></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion"> Thursday, 30th September <span><p><small>Panels</small></p></span></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="accordion"> Friday, 1st October <span><p><small>Closing Keynote</small></p></span></button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+          </div>
+
+          </div>
           </div>
         </div>
       </div>
@@ -596,7 +622,6 @@
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -655,6 +680,8 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
     <script>
+
+
       $(document).ready(function () {
         // Add smooth scrolling to all links
         $("a").on("click", function (event) {
@@ -679,69 +706,81 @@
           } // End if
         });
       });
+
+      var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
       const populateSchedule = (data) => {
         console.log(data);
+       
         const days = d3
           .nest()
           .key((d) => d.date)
           .entries(data);
-        const schedule = d3.selectAll("#schedule .here-d3");
+        
+          const schedule = d3.selectAll("#schedule .here-d3");
+        
         const day = schedule
           .selectAll(".day")
           .data(days)
           .enter()
           .append("div")
-          .classed("day", true);
-        day.append("h4").text((d) => d.key);
+          .classed("day", true)
+          
+        day
+            .append("h4")
+            .text((d) => d.key)
+            .classed("day", false);
+
         const item = day
           .selectAll(".item")
           .data((d) => d.values)
           .enter()
           .append("div")
           .attr("class", (d) => `item ${d.type}`);
-        item
-          .append("div")
-          .classed("item", true)
+            item
+            .append("div")
+            .classed("type", true)
+            .text((d) => d.type);
+
+
+        const time = item.append("div")
+        .classed("time", true);
+
+          time
+          .append("p")
           .text((d) => d.time);
-        const description = item.append("div").classed("description", true);
-        description
-          .append("h3")
-          .text((d) => d.speaker)
-          .style("display", (d) => (d.speaker === "" ? "none" : "block"));
-        description.append("p").text((d) => d.description);
+          
+       
+          const description = 
+        item.append("div")
+        .classed("description", true);
+          
+          description.append("h4").text((d) => d.speaker);
+          description.append("small").text((d) => d.affiliation);
+
+
+          description
+            .append("h3")
+            .text((d) => d.title)
+            .style("display", (d) => (d.speaker === "" ? "none" : "block"));
+          description.append("p").text((d) => d.description);
+    
       };
 
-      const populatePapers = (data) => {
-        console.log(data);
-        const days = d3
-          .nest()
-          .key((d) => d.date)
-          .entries(data);
-        const keynote = d3.selectAll("#keynotes .here-d3");
-        const day = keynote
-          .selectAll(".speaker")
-          .data(days)
-          .enter()
-          .append("div")
-          .classed("day", true);
-        day.append("h4").text((d) => d.key);
-        const item = day
-          .selectAll(".item")
-          .data((d) => d.values)
-          .enter()
-          .append("div")
-          .attr("class", (d) => `item ${d.type}`);
-        item
-          .append("div")
-          .classed("item", true)
-          .text((d) => d.time);
-        const description = item.append("div").classed("description", true);
-        description
-          .append("h3")
-          .text((d) => d.speaker)
-          .style("display", (d) => (d.speaker === "" ? "none" : "block"));
-        description.append("p").text((d) => d.description);
-      };
+      
       function init() {
         Tabletop.init({
           key: "https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing",
@@ -755,4 +794,4 @@
       window.addEventListener("DOMContentLoaded", init);
     </script>
   </body>
-</html>
+</html> -->

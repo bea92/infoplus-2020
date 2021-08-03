@@ -179,7 +179,7 @@ h1 {
 /* schedule */
 
 #schedule{
-  display: none;
+  display: block;
 }
 
 .item {
@@ -190,11 +190,70 @@ h1 {
 
 .time {
   grid-row-start: 1;
-  grid-row-end: span 2;
+  grid-row-end: 4;
 }
 .description {
   grid-column-start: 2;
+  padding:0 15px 0 0;
 }
+
+.speaker{
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.type{
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-color: rgba(255, 63, 25, 1);
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: fit-content;
+  height: 30px !important;
+  border-radius: 20px;
+  margin:0;
+  color:white;
+  text-align: inherit;
+}
+
+.type p{
+  margin:0px !important;
+  font-size: x-small !important;
+}
+
+  /* Style the buttons that are used to open and close the accordion panel */
+  .accordion {
+    background-color: rgb(255, 252, 242);
+    color: black;
+    border-bottom: 1px solid rgba(255, 63, 25, 1);
+    cursor: pointer;
+    padding: 10px 0px 10px 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .focus, .active, .accordion:hover {
+    background-color:white;
+    border:none;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 20px 0px 20px 10px;
+    background-color: white;
+    border-bottom: 1px solid rgba(255, 63, 25, 1);
+    display: none;
+    overflow: hidden;
+  }
+
+  
+
+
+
 
 @media screen and (max-width: 1000px) {
   #navbar {
@@ -398,6 +457,12 @@ section {
   margin-top:2em;
 }
 
+
+.abstract{
+background-color: red;
+width:300px;
+height:fit-content;
+}
 
 
 .requirements {
@@ -624,3 +689,4 @@ margin-bottom: -23px;
   }
 
   #covid p {margin-bottom: 0;}
+
