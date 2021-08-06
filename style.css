@@ -46,15 +46,17 @@ h2 {
   -webkit-text-fill-color: transparent; */
 }
 
+
 h3 {
   font-size: 1.2em;
   margin-top: 0.8em;
   margin-bottom: 1em;
   font-weight: bold;
+  color:inherit;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 1.1em;
   margin-top: 1em;
   line-height: 1.7em;
 }
@@ -379,18 +381,28 @@ h1 {
   position: sticky;
 }
 
-#exhibition {
+#registration {
   border-top: 1px solid #ff3f19;
-  color: black;
+  color: #ff3f19;
   position: sticky;
 }
 
-#diversity{
+#registration h3{
+  color: #ff3f19;
+}
+
+
+#schedule{
   border-top: 1px solid #5800FF;
   color: black;
   position: sticky;
 }
 
+#workshops {
+  border-top: 1px solid #af10ff;
+  color: black;
+  position: sticky;
+}
 
 
 .wrap{
@@ -614,7 +626,7 @@ img {
 #overlay img {
   display: inline;
   position: relative;
-  width:30%;
+  width:20%;
   opacity:1;
   z-index:1;
   background-color: transparent;
@@ -633,6 +645,10 @@ img {
   animation-direction: normal;
   height: auto;
   margin-bottom:3em;
+}
+
+#overlay{
+
 }
 /* Exhibition */
 
