@@ -185,13 +185,22 @@ h1 {
 .item {
   display: grid;
   grid-column-gap: 15px;
+  grid-row-gap: 15px;
   grid-template-columns: 100px auto;
+  filter:drop-shadow(10px);
+  margin-bottom:15px;
+}
+
+.day {
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 
 .time {
   grid-row-start: 1;
   grid-row-end: 4;
 }
+
 .description {
   grid-column-start: 2;
   padding:0 15px 0 0;
@@ -201,51 +210,71 @@ h1 {
   grid-row-start: 1;
   grid-row-end: 4;
 }
+
 .type{
-  grid-row-start: 1;
-  grid-row-end: 4;
-  background-color: rgba(255, 63, 25, 1);
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
+  background-color: #5800FF;
   width: fit-content;
-  height: 30px !important;
+  padding:0 5px 0 5px;
   border-radius: 20px;
-  margin:0;
   color:white;
   text-align: inherit;
 }
+
 
 .type p{
   margin:0px !important;
   font-size: x-small !important;
 }
 
+.number{
+  display:none;
+  background-color: rgb(255, 252, 242);
+  border:1px solid #af10ff;
+  width: fit-content;
+  border-radius: 99999px;
+  color:black;
+}
+
   /* Style the buttons that are used to open and close the accordion panel */
-  .accordion {
+
+.collapsible-link .icon {
+  transition: transform 0.35s ease;
+  transform: rotate(0);
+  position: absolute;
+  bottom: 0;
+}
+
+.collapsible-link.visible .icon {
+  transform: rotate(180deg);
+}
+
+.accordion {
     background-color: rgb(255, 252, 242);
     color: black;
-    border-bottom: 1px solid rgba(255, 63, 25, 1);
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     cursor: pointer;
     padding: 10px 0px 10px 10px;
     width: 100%;
     text-align: left;
-    border: none;
-    outline: none;
     transition: 0.4s;
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .focus, .active, .accordion:hover {
     background-color:white;
-    border:none;
+    border-bottom: 1px solid rgb(255, 252, 242);
+    border-top: none;
+    border-left: none;
+    border-right: none;
   }
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding: 20px 0px 20px 10px;
+    padding: 20px 20px 20px 20px;
     background-color: white;
-    border-bottom: 1px solid rgba(255, 63, 25, 1);
     display: none;
     overflow: hidden;
   }

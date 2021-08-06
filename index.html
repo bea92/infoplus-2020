@@ -96,10 +96,11 @@
     <div id="navbar">
       <div class="container">
         <a href="#header">Information+</a>
-        <a href="#cfp">Call for Participation</a>
         <a href="#keynotes">Keynotes</a>
-        <a href="#schedule">Schedule</a>
+        <!-- <a href="#schedule">Schedule</a> -->
         <a href="#about">About</a>
+        <a href="#cfp">Call for Participation</a>
+
       </div>
     </div>
     <!-- 🌺🌸🌼🍀 remove from here -->
@@ -120,17 +121,17 @@
         <a href="#header" onclick="$('.mobile-nav').toggleClass('visible')"
           >Intro</a
         >
+        <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')"
+        >Keynotes</a
+      >
+      <!-- <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')"
+        >Schedule</a
+      > -->
+      <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')"
+      >About</a
+    >
         <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')"
           >Call for Participation</a
-        >
-        <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')"
-          >About</a
-        >
-        <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')"
-          >Keynotes</a
-        >
-        <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')"
-          >Schedule</a
         >
         <!-- <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
         <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
@@ -204,126 +205,6 @@
         </div>
       </div>
     </section>
-    <section id="cfp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8">
-            <h2 class="title">Call for Participation</h2>
-            <p class="text-cfp">
-              Information+, an interdisciplinary conference for information
-              design and data visualization, invites proposals from all relevant
-              areas of professional practice, research, and pedagogy.
-            </p>
-            <p class="text-cfp">
-              We welcome submissions on topics, such as but not limited to the
-              following:
-              <em
-                >algorithmic accountability, critical visualization, cultural
-                analytics, data journalism, data studies, digital civics,
-                digital humanities, environmental awareness, health information,
-                historical collections, science communication, and social
-                advocacy</em
-              >. All proposals must feature original work, which has not been
-              presented previously.
-            </p>
-            <p class="text-cfp">
-              Proposals should contain the following elements: a clear research
-              question or design objective; a discussion of related work; an
-              explanation of methods employed or design decisions undertaken;
-              culminating findings, reflections, and contributions. There are
-              two possible <a href="#formats">formats for proposals</a>, both of
-              which are appropriate for academic and practice-based work:
-              15-minute paper presentations and 5-minute lightning talks.
-              Please, use
-              <a href="https://easychair.org/my/conference?conf=info2021#"
-                >EasyChair</a
-              >
-              to submit your proposals by 20 May 2021. The paper presentations
-              and lightning talks will be pre-recorded by the authors, with live
-              discussions among presenters and participants during the event
-              between 27<sup>th</sup> – October 2<sup>nd</sup>. More information
-              about the live format will be shared after contributions have been
-              accepted.
-            </p>
-            <h3 class="text-add">Additional information</h3>
-            <p class="text-add">
-              To foster a diversity of submissions,
-              <em>only one proposal is allowed by each author</em>. In the case
-              of multi-authored submissions, the limit is increased to two
-              proposals per author.
-            </p>
-            <p class="text-add">
-              <em>Authors accepted for presentation </em> at the conference will
-              have an opportunity to submit articles for publication in a
-              special issue of an open-access academic journal. Articles will be
-              selected by a peer review process. Submission and selection for
-              the journal will take place after the conference. Previous special
-              issues have been published as open access with the Information
-              Design Journal:
-              <a href="https://doi.org/10.1075/idj.23.1">IDJ 23.1</a> has
-              articles from the 2016 conference, and
-              <a href="https://doi.org/10.1075/idj.25.1">IDJ 25:1</a> from the
-              2018 event.
-            </p>
-          </div>
-          <div class="col-sm">
-            <article id="formats">
-              <h3>Formats for Proposals</h3>
-              <h4 class="format-ec">15-minute paper presentation</h4>
-              <p>
-                Submit a long abstract (1000 words) with one descriptive figure
-                and 3 keywords.
-              </p>
-              <h4 class="format-ec">5-minute lightning talk</h4>
-              <p>
-                Submit a short abstract (500 words) with one descriptive figure
-                and 3 keywords.
-              </p>
-              <p>
-                → Please, submit via
-                <a href="https://easychair.org/my/conference?conf=info2021#"
-                  >EasyChair</a
-                >
-                by 20 May.
-              </p>
-            </article>
-            <article id="criteria">
-              <h3>Evaluation Criteria</h3>
-              <p>
-                Each submission will be evaluated by three independent reviewers
-                from the Program Committee. Evaluations will be based on the
-                following criteria:
-              </p>
-              <h4>Originality</h4>
-              <p>
-                <em
-                  >Does the submission explore a novel, unconventional, or
-                  understudied approach to representing information?</em
-                >
-              </p>
-              <p></p>
-              <h4>Impact</h4>
-              <p>
-                <em
-                  >Is the submission of potential interest to a broader
-                  audience, beyond the author’s primary area of academic
-                  research or practice?</em
-                >
-              </p>
-              <p></p>
-              <h4>Contribution</h4>
-              <p>
-                <em
-                  >Does the submission build upon and extend current knowledge
-                  of information design and visualization through the use of
-                  empirical, critical, or theoretical methods?</em
-                >
-              </p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="keynotes">
       <div class="wrap">
         <div class="container">
@@ -373,42 +254,34 @@
         </div>
       </div>
     </section>
-    <section id="schedule">
+    <!-- <section id="schedule">
       <div class="wrap">
         <div class="container">
           <h2 class="title">Schedule</h2>
           <div class="row">
             <div class="col-lg">
-<button class="accordion">Monday, 27th September <span><p><small>Opening keynote conversation & first panel</small></p></span>
-</button>
+              <div><button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="preview accordion collapsible-link">
+                <p><small>Opening keynote conversation & first panel</small></p>
+              </button>
+              <div class="panel here-d3"></div></div>
+
+              <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Tuesday, 28th September</h4><span><p><small>Panels</small></p></span></button>
+            <div class="panel here-d3"></div>
+
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Wednesday, 29 September</h4><span><p><small>Panels</small></p></span></button>
 <div class="panel here-d3">
-  <p></p>
 </div>
-
-<button class="accordion"> Tuesday, 28th September <span><p><small>Panels</small></p></span></button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion"> Wednesday, 29 September <span><p><small>Panels</small></p></span></button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="accordion"> Thursday, 30th September <span><p><small>Panels</small></p></span></button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="accordion"> Friday, 1st October <span><p><small>Closing Keynote</small></p></span></button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Thursday, 30th September</h4><span><p><small>Panels</small></p></span></button>
+<div class="panel here-d3"></div>
+<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"class="accordion collapsible-link"><h4>Friday, 1st October</h4><span><p><small>Closing Keynote</small></p></span></button>
+<div class="panel here-d3"></div>
           </div>
 
           </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section id="about">
       <div class="container">
         <div class="row">
@@ -622,6 +495,126 @@
         </div>
       </div>
     </section>
+    <section id="cfp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="title">Call for Participation</h2>
+            <p class="text-cfp">
+              Information+, an interdisciplinary conference for information
+              design and data visualization, invites proposals from all relevant
+              areas of professional practice, research, and pedagogy.
+            </p>
+            <p class="text-cfp">
+              We welcome submissions on topics, such as but not limited to the
+              following:
+              <em
+                >algorithmic accountability, critical visualization, cultural
+                analytics, data journalism, data studies, digital civics,
+                digital humanities, environmental awareness, health information,
+                historical collections, science communication, and social
+                advocacy</em
+              >. All proposals must feature original work, which has not been
+              presented previously.
+            </p>
+            <p class="text-cfp">
+              Proposals should contain the following elements: a clear research
+              question or design objective; a discussion of related work; an
+              explanation of methods employed or design decisions undertaken;
+              culminating findings, reflections, and contributions. There are
+              two possible <a href="#formats">formats for proposals</a>, both of
+              which are appropriate for academic and practice-based work:
+              15-minute paper presentations and 5-minute lightning talks.
+              Please, use
+              <a href="https://easychair.org/my/conference?conf=info2021#"
+                >EasyChair</a
+              >
+              to submit your proposals by 20 May 2021. The paper presentations
+              and lightning talks will be pre-recorded by the authors, with live
+              discussions among presenters and participants during the event
+              between 27<sup>th</sup> – October 2<sup>nd</sup>. More information
+              about the live format will be shared after contributions have been
+              accepted.
+            </p>
+            <h3 class="text-add">Additional information</h3>
+            <p class="text-add">
+              To foster a diversity of submissions,
+              <em>only one proposal is allowed by each author</em>. In the case
+              of multi-authored submissions, the limit is increased to two
+              proposals per author.
+            </p>
+            <p class="text-add">
+              <em>Authors accepted for presentation </em> at the conference will
+              have an opportunity to submit articles for publication in a
+              special issue of an open-access academic journal. Articles will be
+              selected by a peer review process. Submission and selection for
+              the journal will take place after the conference. Previous special
+              issues have been published as open access with the Information
+              Design Journal:
+              <a href="https://doi.org/10.1075/idj.23.1">IDJ 23.1</a> has
+              articles from the 2016 conference, and
+              <a href="https://doi.org/10.1075/idj.25.1">IDJ 25:1</a> from the
+              2018 event.
+            </p>
+          </div>
+          <div class="col-sm">
+            <article id="formats">
+              <h3>Formats for Proposals</h3>
+              <h4 class="format-ec">15-minute paper presentation</h4>
+              <p>
+                Submit a long abstract (1000 words) with one descriptive figure
+                and 3 keywords.
+              </p>
+              <h4 class="format-ec">5-minute lightning talk</h4>
+              <p>
+                Submit a short abstract (500 words) with one descriptive figure
+                and 3 keywords.
+              </p>
+              <p>
+                → Please, submit via
+                <a href="https://easychair.org/my/conference?conf=info2021#"
+                  >EasyChair</a
+                >
+                by 20 May.
+              </p>
+            </article>
+            <article id="criteria">
+              <h3>Evaluation Criteria</h3>
+              <p>
+                Each submission will be evaluated by three independent reviewers
+                from the Program Committee. Evaluations will be based on the
+                following criteria:
+              </p>
+              <h4>Originality</h4>
+              <p>
+                <em
+                  >Does the submission explore a novel, unconventional, or
+                  understudied approach to representing information?</em
+                >
+              </p>
+              <p></p>
+              <h4>Impact</h4>
+              <p>
+                <em
+                  >Is the submission of potential interest to a broader
+                  audience, beyond the author’s primary area of academic
+                  research or practice?</em
+                >
+              </p>
+              <p></p>
+              <h4>Contribution</h4>
+              <p>
+                <em
+                  >Does the submission build upon and extend current knowledge
+                  of information design and visualization through the use of
+                  empirical, critical, or theoretical methods?</em
+                >
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -722,27 +715,56 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+
       const populateSchedule = (data) => {
-        console.log(data);
+      
+      var groups = d3.set(data.map(function(d){ return d.date;})).values();
+
+      console.log(groups[0])
+
        
         const days = d3
           .nest()
           .key((d) => d.date)
           .entries(data);
         
-          const schedule = d3.selectAll("#schedule .here-d3");
+        const preview = d3.selectAll('.preview');
+
+        const dayPrev = preview
+        .selectAll('.day')
+        .data(days)
+        .enter()
+        .append('div')
+        .classed('day',false);
         
-        const day = schedule
-          .selectAll(".day")
-          .data(days)
+        dayPrev
+        .append('h4')
+        .text(d=>d.key);
+
+        const textPrev = dayPrev
+          .selectAll(".textPrev")
+          .data((d) => d.values)
           .enter()
           .append("div")
-          .classed("day", true)
-          
-        day
-            .append("h4")
-            .text((d) => d.key)
-            .classed("day", false);
+          .attr("class", (d) => `groups ${d.date}`);
+
+     
+        textPrev
+        .append('h4')
+        .text(groups[0]);
+
+        
+    
+        const schedule = d3.selectAll('#schedule .here-d3');
+
+        const day = schedule
+        .selectAll('.day')
+        .data(days)
+        .enter()
+        .append('div')
+        .classed('day',false);
+
+        console.log(day)
 
         const item = day
           .selectAll(".item")
@@ -750,48 +772,57 @@ for (i = 0; i < acc.length; i++) {
           .enter()
           .append("div")
           .attr("class", (d) => `item ${d.type}`);
+            
             item
             .append("div")
             .classed("type", true)
             .text((d) => d.type);
 
+            item
+            .append("div")
+            .classed("number", true)
+            .attr("display", "none")
+            .text((d) => d.number);
 
-        const time = item.append("div")
-        .classed("time", true);
+        const time = item
+          
+          .append("div")
+          .classed("time", true);
 
           time
           .append("p")
           .text((d) => d.time);
           
        
-          const description = 
-        item.append("div")
-        .classed("description", true);
+        const description = 
+          item.append("div")
+          .classed("description", true);
           
           description.append("h4").text((d) => d.speaker);
           description.append("small").text((d) => d.affiliation);
-
-
+          
           description
             .append("h3")
             .text((d) => d.title)
             .style("display", (d) => (d.speaker === "" ? "none" : "block"));
           description.append("p").text((d) => d.description);
+
     
       };
 
-      
+  
       function init() {
         Tabletop.init({
           key: "https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing",
           callback: function (data, tabletop) {
             populateSchedule(data.schedule.elements);
-            populatePapers(data.papers.elements);
           },
           simpleSheet: false,
         });
       }
       window.addEventListener("DOMContentLoaded", init);
+
+
     </script>
   </body>
 </html> -->
