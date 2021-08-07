@@ -184,13 +184,30 @@ h1 {
   display: block;
 }
 
+#timeZone{
+  margin:20px 0 20px 0;
+}
+
+#timeZone button{
+  background-color: #ff3f19;
+  border:none;
+  color:white;
+  border-radius:100px;
+  display: inline;
+}
+
+#timeZone button p{
+  margin-bottom:0;
+}
+
 .item {
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   grid-template-columns: 100px auto;
   filter:drop-shadow(10px);
-  margin-bottom:15px;
+  margin:15px 0px 15px 0px;
+  align-items: baseline;
 }
 
 .day {
@@ -203,9 +220,20 @@ h1 {
   grid-row-end: 4;
 }
 
+.break{
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
 .description {
   grid-column-start: 2;
   padding:0 15px 0 0;
+}
+
+.description .title{
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #5800FF;
 }
 
 .speaker{
@@ -214,18 +242,17 @@ h1 {
 }
 
 .type{
-  background-color: #5800FF;
   width: fit-content;
   padding:0 5px 0 5px;
   border-radius: 20px;
   color:white;
-  text-align: inherit;
+  background-color:#ff3f19;
 }
-
 
 .type p{
   margin:0px !important;
   font-size: x-small !important;
+  padding:2em;
 }
 
 .number{
@@ -258,7 +285,7 @@ h1 {
     border-left: none;
     border-right: none;
     cursor: pointer;
-    padding: 10px 0px 10px 10px;
+    padding: 20px 0px 10px 10px;
     width: 100%;
     text-align: left;
     transition: 0.4s;
@@ -267,7 +294,7 @@ h1 {
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .focus, .active, .accordion:hover {
     background-color:white;
-    border-bottom: 1px solid rgb(255, 252, 242);
+    border-bottom: 1px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -275,14 +302,41 @@ h1 {
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding: 20px 20px 20px 20px;
+    padding: 10px 20px 0px 20px;
     background-color: white;
+    border-bottom: 2px solid black;
     display: none;
     overflow: hidden;
   }
 
-  
 
+  /* Display only schedule for days */
+
+  .monday .day_one, .tuesday .day_two, .wednesday .day_three, .thursday .day_four, .friday .day_five {
+    display: block;
+  }
+
+  /* Hide only schedule for days */
+
+  .monday .day_two,.monday .day_three,.monday .day_four, .monday .day_five{
+    display: none;
+  }
+
+  .tuesday .day_one, .tuesday .day_three, .tuesday .day_four, .tuesday .day_five{
+    display: none;
+  }
+
+  .wednesday .day_one, .wednesday .day_two, .wednesday .day_four, .wednesday .day_five{
+    display:none;
+  }
+  
+  .thursday .day_one, .thursday .day_three, .thursday .day_two, .thursday .day_five{
+    display: none;
+  }
+
+  .friday .day_one, .friday .day_three, .friday .day_four, .friday .day_two{
+    display: none;
+  }
 
 
 
@@ -376,8 +430,14 @@ h1 {
 }
 
 #keynotes {
+  border-top: 1px solid #ff3f19;
+  color: #ff3f19;
+  position: sticky;
+}
+
+#schedule{
   border-top: 1px solid #5800FF;
-  color: black;
+  color: #5800FF;
   position: sticky;
 }
 
@@ -389,13 +449,6 @@ h1 {
 
 #registration h3{
   color: #ff3f19;
-}
-
-
-#schedule{
-  border-top: 1px solid #5800FF;
-  color: black;
-  position: sticky;
 }
 
 #workshops {
@@ -419,12 +472,19 @@ h1 {
   margin-left: .25em;
 }
 
+.uni small{
+  color:#5800FF;
+} 
+
 small {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 500;
-  color:#5800FF;
 }
+
+
+
+
 
 #formats, #criteria {
   margin-bottom: 3em;
@@ -458,6 +518,14 @@ section {
   font-size: 1.8em;
   font-weight: 500;
   background: -webkit-linear-gradient(#ff3f19, #af10ff, #5800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient{
+    font-size: 1.8em;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#af10ff, #5800FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -626,7 +694,7 @@ img {
 #overlay img {
   display: inline;
   position: relative;
-  width:20%;
+  width:40%;
   opacity:1;
   z-index:1;
   background-color: transparent;

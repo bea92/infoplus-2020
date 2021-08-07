@@ -97,11 +97,11 @@
       <div class="container">
         <a href="#header">Information+</a>
         <a href="#keynotes">Keynotes</a>
+        <a href="#schedule">Schedule</a>
         <a href="#registration">Registration</a>
         <a href="#workshops">Workshops</a>
-        <!-- <a href="#schedule">Schedule</a> -->
-        <a href="#about">About</a>
         <a href="#cfp">Call for Participation</a>
+        <a href="#about">About</a>
 
       </div>
     </div>
@@ -126,21 +126,21 @@
         <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')"
         >Keynotes</a
       >
+      <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')"
+      >Schedule</a
+    >
       <a href="#registration" onclick="$('.mobile-nav').toggleClass('visible')"
       >Registration</a
     >
     <a href="#workshops" onclick="$('.mobile-nav').toggleClass('visible')"
     >Workshops</a
   >
-      <!-- <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')"
-        >Schedule</a
-      > -->
+      <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')"
+      >Call for Participation</a
+    >
       <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')"
       >About</a
     >
-        <a href="#cfp" onclick="$('.mobile-nav').toggleClass('visible')"
-          >Call for Participation</a
-        >
         <!-- <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
         <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Schedule</a>
         <a href="#exhibition" onclick="$('.mobile-nav').toggleClass('visible')">Exhibition</a>
@@ -221,25 +221,27 @@
             <div class="col-sm">
               <div id="overlay">
                 <img class="people floatR" src="assets/keynote_1.png" />
-                <img class="people floatL" src="assets/keynote_2.png" />
+                <img class="people floatL" src="assets/keynote_2.png" /></div>
+              <div><h2>(Mis)Organizing Information</h2>
+              <p class="type">Opening Keynote</p>
             </div>
-            <h2>(Mis)Organizing Information</h2>
-              <h3>Shannon Mattern 
-              <small><p>The New School</small></p></h3>
-                <h3>Kameelah Janan Rasheed<small><p>Lerner</p></small>
-                </h3>
+            <div>
+              <h3>Shannon Mattern<p><small>The New School</small></p></h3>
+              <h3>Kameelah Janan Rasheed<p><small>Learner</small></p></h3>
+            </div>
               <p class="text-add">
-               This conversation brings together Kameelah Janan Rasheed, a learner who explores the poetics and politics of the unfinished and uncategorized through her sprawling installations, public art, publications, poems, other forms yet to be determined; and Shannon Mattern, a Professor of Anthropology at The New School, who has written books, taught classes, and worked with community groups on projects about maps, libraries, archives, media architectures and infrastructures, and urban data. We’ll address such themes as: how the designed world materializes humans’ and other species’ means of (mis)organizing information, miscommunication, and the productivity of error, ambiguity, and opacity.
+               This conversation brings together Kameelah Janan Rasheed,a learner who explores the poetics and politics of the unfinished and uncategorized through her sprawling installations, public art, publications, poems, other forms yet to be determined; and Shannon Mattern, a Professor of Anthropology at The New School, who has written books, taught classes, and worked with community groups on projects about maps, libraries, archives, media architectures and infrastructures, and urban data. We’ll address such themes as: how the designed world materializes humans’ and other species’ means of (mis)organizing information, miscommunication, and the productivity of error, ambiguity, and opacity.
               </p>
             </div>
             <div class="col-sm">
-              <div id="overlay" class="uni">
+              <div id="overlay">
                 <img class="people floatL" src="assets/keynote_3.png"/>
                 <img class="people floatR" src="assets/keynote_4.png"/>
                 <h2>On Maps</h2>
-              <h3>Margaret Pearce <p><small>Studio 1:1</small></p></h3>
-                <h3>Marty Schnure <p><small>The Wilderness Society and Maps for Good</small></p>
-              </h3></div>
+                <a href="#schedule"><p class="type">Closing Keynote</p></a>
+                <h3>Margaret Pearce <p><small>Studio 1:1</small></p></h3>
+                <h3>Marty Schnure <p><small>The Wilderness Society and Maps for Good</small></p></h3>
+              </div>
               <p class="text-add">
                 What are the impacts we seek when we map, and how do we shape
                 our work to make those impacts possible? What are the barriers?
@@ -260,34 +262,44 @@
         </div>
       </div>
     </section>
-    <!-- <section id="schedule">
+    <section id="schedule">
       <div class="wrap">
         <div class="container">
           <h2 class="title">Schedule</h2>
           <div class="row">
-            <div class="col-lg">
-              <div><button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="preview accordion collapsible-link">
-                <p><small>Opening keynote conversation & first panel</small></p>
+            <div class="col-lg-12">
+              <div id="timeZone"><p class="text-add">Which time zone are you in? the default program follows the cest zone.</p>
+              <button type="button accordion"><p>Change timezone</p></button>
+            </div>
+              <div><button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="one accordion collapsible-link">
+                <p class="text-add">Monday, 27th September</p><span>
+                  <h3><small>Opening keynote conversation & first panels</small><h3></span>
               </button>
-              <div class="panel here-d3"></div></div>
-
-              <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Tuesday, 28th September</h4><span><p><small>Panels</small></p></span></button>
-            <div class="panel here-d3"></div>
-
-            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Wednesday, 29 September</h4><span><p><small>Panels</small></p></span></button>
-<div class="panel here-d3">
-</div>
-<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="here-d3-preview accordion collapsible-link"><h4>Thursday, 30th September</h4><span><p><small>Panels</small></p></span></button>
-<div class="panel here-d3"></div>
-<button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"class="accordion collapsible-link"><h4>Friday, 1st October</h4><span><p><small>Closing Keynote</small></p></span></button>
-<div class="panel here-d3"></div>
+              <div class="panel here-d3 monday"></div></div>
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+              <p class="text-add">Tuesday, 28th September</p><span>
+                <h3><small>Panels</small></h3></span></button>
+            <div class="panel here-d3 tuesday"></div>
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+              <p class="text-add">Wednesday, 29 September</p><span>
+                <h3><small>Panels</small></h3></span></button>
+            <div class="panel here-d3 wednesday">
+            </div>
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
+              <p class="text-add">Thursday, 30th September</p><span>
+                <h3><small>Panels</small></h3></span></button>
+            <div class="panel here-d3 thursday"></div>
+            <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"class="accordion collapsible-link">
+              <p class="text-add">Friday, 1st October</p><span>
+                <h3><small>Closing Keynote</small></h3></span></button>
+            <div class="panel here-d3 friday"></div>
           </div>
 
           </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <section id = "registration">
       <div class="container">
@@ -751,111 +763,105 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-      const populateSchedule = (data) => {
-      
-      var groups = d3.set(data.map(function(d){ return d.date;})).values();
+const populateSchedule = (data)=>{
 
-      console.log(groups[0])
+        console.log(data)
 
-       
         const days = d3
           .nest()
-          .key((d) => d.date)
+          .key(d=>d.groups)
           .entries(data);
-        
-        const preview = d3.selectAll('.preview');
 
-        const dayPrev = preview
-        .selectAll('.day')
-        .data(days)
-        .enter()
-        .append('div')
-        .classed('day',false);
-        
-        dayPrev
-        .append('h4')
-        .text(d=>d.key);
 
-        const textPrev = dayPrev
-          .selectAll(".textPrev")
-          .data((d) => d.values)
-          .enter()
-          .append("div")
-          .attr("class", (d) => `groups ${d.date}`);
+        const schedule = d3
+        .selectAll('#schedule .here-d3');
 
-     
-        textPrev
-        .append('h4')
-        .text(groups[0]);
-
-        
-    
-        const schedule = d3.selectAll('#schedule .here-d3');
 
         const day = schedule
         .selectAll('.day')
         .data(days)
         .enter()
         .append('div')
-        .classed('day',false);
+        .attr('class',d=> `day_${d.key}`);
+
+
 
         console.log(day)
 
         const item = day
-          .selectAll(".item")
-          .data((d) => d.values)
-          .enter()
-          .append("div")
-          .attr("class", (d) => `item ${d.type}`);
-            
-            item
-            .append("div")
-            .classed("type", true)
-            .text((d) => d.type);
+        .selectAll('.item')
+        .data(d=>d.values)
+        .enter()
+        .append('div')
+        .attr('class',d=>`item ${d.type}`);
 
-            item
-            .append("div")
-            .classed("number", true)
-            .attr("display", "none")
-            .text((d) => d.number);
+        item
+        .append('div')
+        .classed('item',true)
+        .text(d=>d.cest);
 
-        const time = item
-          
-          .append("div")
-          .classed("time", true);
+        item
+        .append('p')
+        .classed('type',true)
+        .text(d=>d.type)
+        .style('display',d=>d.type===''?'none':'block')
+        .style("background-color", function(d) {
+            if (d.type === "keynote") {return "#ff3f19"}
+            else    { return "#5800FF" }});
 
-          time
-          .append("p")
-          .text((d) => d.time);
-          
-       
-        const description = 
-          item.append("div")
-          .classed("description", true);
-          
-          description.append("h4").text((d) => d.speaker);
-          description.append("small").text((d) => d.affiliation);
-          
-          description
-            .append("h3")
-            .text((d) => d.title)
-            .style("display", (d) => (d.speaker === "" ? "none" : "block"));
-          description.append("p").text((d) => d.description);
+
+        const description = item
+        .append('div')
+        .classed('description',true);
+
+        description 
+        .append('h3')
+        .text(d=>d.title)
+        .classed('text-add', true)
+        .style('display',d=>d.title===''?'none':'block')
+        .style("color", function(d) {
+            if (d.type === "keynote") {return "#ff3f19"}
+            else    { return "#5800FF" }});
+
+        description
+        .append('p')
+        .classed('text-add', true)
+        .text(d=>d.description)
+        .style('display',d=>d.description===''?'none':'block')
+        .style("color", function(d) {
+            if (d.type === "keynote") {return "#ff3f19"}
+            else    { return "#5800FF" }});
+
+
+        description 
+        .append("a")
+        .text( function(d) {return '--> ' + d.action})
+        .attr("href", d=>d.link)
+        .attr("xlink:target", "_blank")
+        .style("color", function(d) {
+            if (d.type === "keynote") {return "#ff3f19"}
+            else    { return "#5800FF" }});
+
+        description
+        .append('h4')
+        .text(d=>d.speaker)
+        .style("color", "black")
+        .append('small')
+        .text(d=>d.affiliation)
+        .style('display',d=>d.affiliation===''?'none':'block')
+        .style("color", "black");
+      }
 
     
-      };
-
-  
       function init() {
-        Tabletop.init({
-          key: "https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing",
-          callback: function (data, tabletop) {
+        Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing',
+          callback: function(data, tabletop) { 
             populateSchedule(data.schedule.elements);
           },
-          simpleSheet: false,
-        });
+          simpleSheet: false
+        } );
       }
-      window.addEventListener("DOMContentLoaded", init);
+      window.addEventListener('DOMContentLoaded', init);
 
 
     </script>
