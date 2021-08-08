@@ -269,7 +269,13 @@
           <div class="row">
             <div class="col-lg-12">
               <div id="timeZone"><p class="text-add">Which time zone are you in? the default program follows the cest zone.</p>
-              <button type="button accordion"><p>Change timezone</p></button>
+                <p>Change timezone</p>  <select id="label-option">
+                  <option value="CEST">CEST</option>
+                  <option value="IST">IST</option>
+                  <option value="EDT">EDT</option>
+                  <option value="MT">MT</option>
+                  <option value="PT">PT</option>
+                </select>
             </div>
               <div><button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="one accordion collapsible-link">
                 <p class="text-add">Monday, 27th September</p><span>
@@ -762,7 +768,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-
 const populateSchedule = (data)=>{
 
         console.log(data)
@@ -785,7 +790,6 @@ const populateSchedule = (data)=>{
         .attr('class',d=> `day_${d.key}`);
 
 
-
         console.log(day)
 
         const item = day
@@ -797,8 +801,9 @@ const populateSchedule = (data)=>{
 
         item
         .append('div')
-        .classed('item',true)
+        .classed('itemNotFiltered',true)
         .text(d=>d.cest);
+
 
         item
         .append('p')
@@ -808,7 +813,6 @@ const populateSchedule = (data)=>{
         .style("background-color", function(d) {
             if (d.type === "keynote") {return "#ff3f19"}
             else    { return "#5800FF" }});
-
 
         const description = item
         .append('div')
@@ -851,7 +855,6 @@ const populateSchedule = (data)=>{
         .style('display',d=>d.affiliation===''?'none':'block')
         .style("color", "black");
       }
-
     
       function init() {
         Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing',
@@ -863,7 +866,6 @@ const populateSchedule = (data)=>{
       }
       window.addEventListener('DOMContentLoaded', init);
 
-
     </script>
   </body>
-</html> -->
+</html> 
