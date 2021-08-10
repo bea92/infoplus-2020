@@ -245,8 +245,10 @@ h1 {
   width: fit-content;
   padding:0 5px 0 5px;
   border-radius: 20px;
+  margin:1.5em 0 1.5em 0;
   color:white;
-  background-color:#ff3f19;
+  background-color:#af10ff;
+  border:1px solid #5800FF;
 }
 
 .type p{
@@ -435,11 +437,15 @@ h1 {
   position: sticky;
 }
 
-/* #conference{
+#conference h3{
+  margin-top:0.1em;
+}
+
+#keynotes{
   border-top: 1px solid #5800FF;
   color: #5800FF;
   position: sticky;
-} */
+}
 
 #registration {
   border-top: 1px solid #ff3f19;
