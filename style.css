@@ -429,17 +429,17 @@ h1 {
   position: sticky;
 }
 
-#keynotes {
+#conference {
   border-top: 1px solid #ff3f19;
   color: #ff3f19;
   position: sticky;
 }
 
-#schedule{
+/* #conference{
   border-top: 1px solid #5800FF;
   color: #5800FF;
   position: sticky;
-}
+} */
 
 #registration {
   border-top: 1px solid #ff3f19;
