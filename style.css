@@ -447,6 +447,13 @@ h1 {
   position: sticky;
 }
 
+#schedule{
+  border-top: 1px solid #af10ff;
+  color: #af10ff;
+  position: sticky;
+}
+
+
 #registration {
   border-top: 1px solid #ff3f19;
   color: #ff3f19;
