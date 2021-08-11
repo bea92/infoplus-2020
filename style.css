@@ -697,7 +697,7 @@ img {
 }
 
 
-#overlay img {
+.overlay img {
   display: inline;
   position: relative;
   width:40%;
@@ -706,7 +706,7 @@ img {
   background-color: transparent;
 }
 
-#overlay .floatL {
+.overlay .floatL {
   animation: floatL 5s infinite;
   transform: translatex(-40px);
   animation-direction:inherit;
@@ -714,14 +714,14 @@ img {
   margin-top:2em;
 }
 
-#overlay .floatR {
+.overlay .floatR {
   animation: floatR 5s infinite;
   animation-direction: normal;
   height: auto;
   margin-bottom:3em;
 }
 
-#overlay{
+.overlay{
 
 }
 /* Exhibition */
