@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -33,7 +33,7 @@
     <meta property="og:title" content="Information+ Conference 2021" />
     <meta
       property="og:description "
-      content="Interdisciplinary practices in information design & visualization. Online, 
+      content="Interdisciplinary practices in information design & visualization. Online,
 		27 September - 2 October 2021"
     />
     <meta property="og:type" content="website" />
@@ -212,10 +212,10 @@
             <h2 class="title">Conference</h2>
             <div class="row">
               <div class="col-lg-8 col-md-8">
-            <p class="text-add"> Information+ will take place as a remote, but real-time event with all conference sessions running weekdays at 9 am–12 pm EST, 3–6 pm CEST and 9 pm–12 am CST. We hope that this format eases participation across most time zones. Rather than giving formal lectures, our keynote speakers will engage in conversations about each other’s work, discuss current challenges and take questions from conference attendees. The submitted paper presentations and lightning talks will be shared as pre-recorded videos already before the live event. This will enable all participants to watch the talks at their own leisure and prepare for questions and comments in the panel conversations. As usual: there will be plenty of breaks, during which all participants can meet and mingle. Over the course of the next weeks, more details on registration, workshops, and panels will be published below. </p>
+            <p class="text-add"> Information+ will take place as a remote, but real-time event with all conference sessions running weekdays in a three-hour time window of 9 am – 12 pm EST. We hope that this format eases participation across most time zones. Rather than giving formal lectures, our keynote speakers will engage in conversations about each other’s work, discuss current challenges and take questions from attendees. The submitted paper presentations and lightning talks will be shared as pre-recorded videos before the live event. This will enable all participants to watch the talks at their own leisure and prepare for questions and comments in the panel conversations. As usual: there will be plenty of breaks, during which all participants can meet and mingle. <br><br><em>Over the course of the next weeks, more details on registration, workshops, and panels will be published below.</em> </p>
           </div>
           <div class="col-sm">
-            <h3>Real-time event</h3>
+            <h3>27 Sep – 2 Oct 2021 </h3>
             <p>
               <em>9 am – 12 pm EST</em><br />
               <em>3 – 6 pm CEST</em><br />
@@ -232,22 +232,22 @@
             <h2 class="title">Keynotes</h2>
             <div class="row">
               <div class="col-sm uni">
-              <div id="overlay">
-                <img class="people floatR" src="assets/keynote_1.png" />
-                <img class="people floatL" src="assets/keynote_2.png" /></div>
+              <div class="overlay">
+                <img alt="photo of Shannon Mattern" class="people floatR" src="assets/keynote_1.png" />
+                <img alt="photo of Kameelah Janan Rasheed" class="people floatL" src="assets/keynote_2.png" /></div>
                 <h3 class="dates">(Mis)Organizing Information</h3>
             <div class="uni">
               <p>Shannon Mattern, <small>The New School</small></p>
               <p>Kameelah Janan Rasheed, <small>Learner</small></p>
             </div>
               <p class="text-add">
-               This conversation brings together Kameelah Janan Rasheed,a learner who explores the poetics and politics of the unfinished and uncategorized through her sprawling installations, public art, publications, poems, other forms yet to be determined; and Shannon Mattern, a Professor of Anthropology at The New School, who has written books, taught classes, and worked with community groups on projects about maps, libraries, archives, media architectures and infrastructures, and urban data. We’ll address such themes as: how the designed world materializes humans’ and other species’ means of (mis)organizing information, miscommunication, and the productivity of error, ambiguity, and opacity.
+               This conversation brings together Kameelah Janan Rasheed, a learner who explores the poetics and politics of the unfinished and uncategorized through her sprawling installations, public art, publications, poems, other forms yet to be determined; and Shannon Mattern, a Professor of Anthropology at The New School, who has written books, taught classes, and worked with community groups on projects about maps, libraries, archives, media architectures and infrastructures, and urban data. We’ll address such themes as: how the designed world materializes humans’ and other species’ means of (mis)organizing information, miscommunication, and the productivity of error, ambiguity, and opacity.
               </p>
             </div>
             <div class="col-sm uni">
-              <div id="overlay">
-                <img class="people floatR" src="assets/keynote_4.png"/>
-                <img class="people floatL" src="assets/keynote_3.png"/>
+              <div class="overlay">
+                <img alt="photo of Margaret Pearce"  class="people floatL" src="assets/keynote_4.png"/>
+                <img alt="photo of Marty Schnure" class="people floatR" src="assets/keynote_3.png"/>
                 <h3 class="dates">On Maps</h3>
                 <p>Margaret Pearce, <small>Studio 1:1</small></p>
                 <p>Marty Schnure, <small>The Wilderness Society and Maps for Good</small></p>
@@ -270,6 +270,8 @@
             </div>
         </div>
       </div>
+		</div>
+	</div>
     </section>
     <!-- <section id="schedule">
       <div class="wrap">
@@ -819,7 +821,7 @@ const populateSchedule = (data)=>{
         .append('div')
         .classed('description',true);
 
-        description 
+        description
         .append('h3')
         .text(d=>d.title)
         .classed('text-add', true)
@@ -838,7 +840,7 @@ const populateSchedule = (data)=>{
             else    { return "#5800FF" }});
 
 
-        description 
+        description
         .append("a")
         .text( function(d) {return '--> ' + d.action})
         .attr("href", d=>d.link)
@@ -856,10 +858,10 @@ const populateSchedule = (data)=>{
         .style('display',d=>d.affiliation===''?'none':'block')
         .style("color", "black");
       }
-    
+
       function init() {
         Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1WEv5aAm04iCJuHJMCLF_WL3Xd-Pb4EC5k5_qSVs84I8/edit?usp=sharing',
-          callback: function(data, tabletop) { 
+          callback: function(data, tabletop) {
             populateSchedule(data.schedule.elements);
           },
           simpleSheet: false
@@ -869,4 +871,4 @@ const populateSchedule = (data)=>{
 
     </script>
   </body>
-</html> 
+</html>
