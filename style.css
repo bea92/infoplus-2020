@@ -663,51 +663,52 @@ img {
 @keyframes floatR {
 	0% {
 		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-    z-index: 0;
-		transform: translatey(-20px);
-    transform: translatex(10px);
+		transform: translatex(45px);
+    z-index:3;
 	}
 
-  40% {
-    z-index:0;
-	}
-
-	50% {
+	33.33% {
 		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
-    z-index: 0;
-		transform: translatey(-25px);
-    transform: translatex(-10px);
-    transition: ease;
+    transform: translatex(10px);
+    z-index: 3;
+	}
+
+  66.66% {
+    z-index: 2;
 	}
 
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-    z-index:1;
-		transform: translatey(0px);
-    transform: translatex(10px);
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(45px);
+    z-index:2;
 	}
 }
 
 @keyframes floatL {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
-    z-index:0;
-		transform: translatey(-25px);
-    transform: translatex(-10px);
+  0% {
+		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(-20px);
+    z-index:2;
 	}
-	50% {
-		box-shadow: 0 10px 15px 0px rgba(175,15,255,.3);
-		transform: translatey(-25px);
-    z-index: 0;
+
+	33.33% {
+		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
     transform: translatex(10px);
+    z-index:2;
+	}
+
+  66.66% {
+    z-index:3;
 	}
 
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
-		transform: translatey(-25px);
-    z-index:0;
-    transform: translatex(-10px);
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(-20px);
+    z-index:2;
 	}
+}
+
+  
 }
 
 
@@ -721,23 +722,21 @@ img {
 
 .overlay .floatL {
   animation: floatL 5s infinite;
+  animation-iteration-count:infinite;
   transform: translatex(-40px);
   animation-direction: normal;
   height: auto;
   margin-top:2em;
+  z-index:1;
 }
 
 .overlay .floatR {
   animation: floatR 5s infinite;
-  animation-direction: normal;
+  animation-iteration-count:infinite;
   height: auto;
   margin-bottom:3em;
 }
 
-.overlay{
-
-}
-/* Exhibition */
 
 .bullets-text {
     padding-left: 70px;
