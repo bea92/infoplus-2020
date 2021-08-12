@@ -443,7 +443,7 @@ h1 {
 
 #keynotes{
   border-top: 1px solid #5800FF;
-  color: #5800FF;
+  color: black;
   position: sticky;
 }
 
@@ -670,68 +670,92 @@ img {
 @keyframes floatR {
 	0% {
 		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-		transform: translatey(-20px);
-    transform: translatex(25px);
+		transform: translatex(45px);
+    z-index:3;
 	}
-	50% {
-		box-shadow: 0 10px 15px 0px rgba(175,15,255,.3);
-		transform: translatey(-25px);
-    transform: translatex(-25px);
+
+	25% {
+		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+    transform: translatex(10px);
+    z-index: 3;
 	}
+
+  50% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(45px);
+    z-index:3;
+	}
+
+  75% {
+    box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
+    transform: translatex(10px);
+    z-index: 0;
+	}
+
+
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-		transform: translatey(0px);
-    transform: translatex(25px);
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(45px);
+    z-index:0;
 	}
 }
 
 @keyframes floatL {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
-		transform: translatey(-25px);
-    transform: translatex(-40px);
+  0% {
+		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(-20px);
+    z-index:0;
 	}
-	50% {
-		box-shadow: 0 10px 15px 0px rgba(222,63,25,.5);
-		transform: translatey(20px);
-    transform: translatex(20px);
+
+	25% {
+		box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+    transform: translatex(30px);
+    z-index:0;
 	}
+
+  50% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(-20px);
+    z-index:0;
+	}
+
+  75% {
+    box-shadow: 0 5px 25px 0px rgba(222,63,25,.5);
+    transform: translatex(30px);
+    z-index:3;
+	}
+
 	100% {
-		box-shadow: 0 5px 15px 0px rgba(222,63,25,.5);
-		transform: translatey(20px);
-    transform: translatex(-40px);
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(-20px);
+    z-index:3;
 	}
 }
 
 
-#overlay img {
+
+.overlay img {
   display: inline;
   position: relative;
   width:40%;
   opacity:1;
-  z-index:1;
   background-color: transparent;
 }
 
-#overlay .floatL {
-  animation: floatL 5s infinite;
+.overlay .floatL {
+  animation: floatL 12s infinite;
   transform: translatex(-40px);
-  animation-direction:inherit;
+  animation-direction: normal;
   height: auto;
   margin-top:2em;
 }
 
-#overlay .floatR {
-  animation: floatR 5s infinite;
-  animation-direction: normal;
+.overlay .floatR {
+  animation: floatR 12s infinite;
   height: auto;
   margin-bottom:3em;
 }
 
-#overlay{
-
-}
-/* Exhibition */
 
 .bullets-text {
     padding-left: 70px;
