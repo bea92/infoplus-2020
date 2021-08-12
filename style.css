@@ -206,8 +206,7 @@ h1 {
   grid-row-gap: 15px;
   grid-template-columns: 100px auto;
   filter:drop-shadow(10px);
-  margin:15px 0px 15px 0px;
-  align-items: baseline;
+  margin:15px 0px 35px 10px;
 }
 
 .day {
@@ -247,8 +246,6 @@ h1 {
   border-radius: 20px;
   margin:1.5em 0 1.5em 0;
   color:white;
-  background-color:#af10ff;
-  border:1px solid #5800FF;
 }
 
 .type p{
@@ -281,26 +278,58 @@ h1 {
 
 .accordion {
     background-color: rgb(255, 252, 242);
-    color: black;
     border-bottom: 1px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
     cursor: pointer;
-    padding: 20px 0px 10px 10px;
+    padding: 18px;
     width: 100%;
+    height: fit-content;
     text-align: left;
+    outline: none;
+    font-size: 15px;
     transition: 0.4s;
+    align-items: center;
+  }
+
+  .accordion h3, .day{
+    transition: 0.4s ease;
   }
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .focus, .active, .accordion:hover {
     background-color:white;
-    border-bottom: 1px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    border-bottom:1px solid black;
+    border:none;
   }
+
+  .accordion:hover {
+    background-color:white;
+    border-bottom:1px solid black;
+  }
+
+  .accordion:hover h3{
+    color: #af10ff;
+  }
+
+
+  .day {
+    color: black;
+  }
+
+
+ .accordion .day:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: inherit;
+    float: right;
+    font-size: em;
+  }
+  
+  .active .day:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
@@ -309,6 +338,7 @@ h1 {
     border-bottom: 2px solid black;
     display: none;
     overflow: hidden;
+    max-height: 0;
   }
 
 
@@ -349,64 +379,6 @@ h1 {
   .mobile-nav{
     display: block;
   }}
-  /* 🌺🌸🌼🍀 Get rid of those, from here */
-
-  /* #myBottomnav {
-    display: block;
-  }
-  .bottomnav {
-    overflow: hidden;
-    background: linear-gradient(180deg, rgba(255, 63, 25, 1) 0%, rgba(175, 16, 255, 1) 98%, rgba(88, 0, 255, 1) 100%);
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    text-align: center;
-    transition: bottom 0.5s ease;
-  }
-  .bottomnav.responsive {
-    bottom: 0;
-  }
-  .bottomnav a {
-    display: block;
-    font-size: 1.2em;
-    color: rgb(255, 252, 242);
-    padding: 1em 1em 1em 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-
-  }
-  .bottomnav a:hover {
-    color: rgb(255, 252, 242);
-  }
-  .bottomnav a {
-    text-align: center;
-  }
-  .bottomnav .icon {
-    display: block;
-    padding: 1em 1em 1em 1em;
-    transition: 0.5s ease;
-  }
-  .bottomnav.responsive .icon {
-    position: relative;
-    top: 0;
-    transform: rotate(180deg);
-  }
-  .bottomnav.responsive a {
-    bottom: 0;
-    float: none;
-    display: block;
-    text-align: left;
-    text-align: center;
-    -webkit-animation: slide 0.5s;
-    animation: slide 0.5s;}
-  }
-  @keyframes slide {
-    0% { bottom: 0; }
-    100% { bottom: 10px; }
-  } */
-
-  /* to here 🌺🌸🌼🍀*/
 
 /* End Navabar */
 #intro {
@@ -448,8 +420,8 @@ h1 {
 }
 
 #schedule{
-  border-top: 1px solid #af10ff;
-  color: #af10ff;
+  border-top: 1px solid #ff3f19;
+  color: black;
   position: sticky;
 }
 
