@@ -895,7 +895,6 @@ const populateSchedule = (data)=>{
         .text(d=>d.speaker)
         .classed('col-lg-8', true)
         .append('small')
-        .append('tr')
         .style('margin-top', '1em')
         .text(d=>d.affiliation)
         .style('display',d=>d.affiliation===''?'none':'block')
