@@ -204,7 +204,7 @@ h1 {
   display: grid;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 150px auto;
   filter:drop-shadow(10px);
   margin:15px 0px 35px 10px;
 }
@@ -242,9 +242,9 @@ h1 {
 
 .type{
   width: fit-content;
-  padding:0 5px 0 5px;
+  padding:0 8px 0 8px;
   border-radius: 20px;
-  margin:1.5em 0 1.5em 0;
+  margin:15px;
   color:white;
 }
 
@@ -293,7 +293,7 @@ h1 {
     align-items: center;
   }
 
-  .accordion h3, .day{
+  .accordion h3, .day {
     transition: 0.4s ease;
   }
   
@@ -306,10 +306,14 @@ h1 {
 
   .accordion:hover {
     background-color:white;
-    border-bottom:1px solid black;
+    border-bottom:1px solid white;
   }
 
   .accordion:hover h3{
+    color: #af10ff;
+  }
+
+  .here-d3:hover a{
     color: #af10ff;
   }
 
@@ -338,7 +342,6 @@ h1 {
     border-bottom: 2px solid black;
     display: none;
     overflow: hidden;
-    max-height: 0;
   }
 
 
@@ -442,6 +445,12 @@ h1 {
   position: sticky;
 }
 
+.sticky-top{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
 
 .wrap{
   background: rgb(255, 252, 242);
@@ -630,7 +639,16 @@ img {
 }
 
 .people{
-  width: 30%;
+  width: 50%;
+  height: auto;
+  margin-top:1em;
+  margin-bottom:1em;
+  display: inline;
+  background-color: transparent;
+}
+
+.cover{
+  width: 100%;
   height: auto;
   margin-top:1em;
   margin-bottom:1em;
@@ -638,6 +656,7 @@ img {
   background-color: transparent;
 
 }
+
 
 @keyframes floatR {
 	0% {
@@ -796,6 +815,10 @@ margin-bottom: -23px;
  @media only screen and (min-width: 1000px) {
   	#covid {
       margin-top: -5rem;
+    }
+
+    .dates{
+      margin-top:-3em;
     }
   }
 
