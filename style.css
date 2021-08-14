@@ -268,45 +268,45 @@ h1 {
   color:black;
 }
 
-  /* Style the buttons that are used to open and close the accordion panel */
-
-.collapsible-link .icon {
-  transition: transform 0.35s ease;
-  transform: rotate(0);
-  position: absolute;
-  bottom: 0;
-}
-
-.collapsible-link.visible .icon {
-  transform: rotate(180deg);
-}
 
 .accordion {
     background-color: rgb(255, 252, 242);
     color: black;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #af10ff;
     border-top: none;
     border-left: none;
     border-right: none;
     cursor: pointer;
-    padding: 20px 0px 10px 10px;
     width: 100%;
     text-align: left;
     transition: 0.4s;
+    padding: 15px 35px 5px 35px;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .focus, .active, .accordion:hover {
-    background-color:white;
-    border-bottom: 1px solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .focus, .active, .accordion:hover {
+      background-color:white;
+      border-bottom:1px solid #af10ff;
+      border:none;
+    }
+  
+    .accordion:hover {
+      background-color:white;
+      border-bottom:1px solid white;
+    }
+  
+    .accordion:hover h3{
+      color: #af10ff;
+    }
+  
+    .here-d3:hover a{
+      color: #af10ff;
+    }
+  
   
   /* Style the accordion panel. Note: hidden by default */
   .panel {
-    padding: 10px 20px 0px 20px;
+    padding: 20px 35px 20px 35px;
     background-color: white;
     border-bottom: 2px solid black;
     display: none;
@@ -318,7 +318,6 @@ h1 {
    
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: inherit;
-  margin-right:1em;
   float: right;
   transition: .5s all ease-out;
   color:#af10ff;
@@ -327,7 +326,6 @@ h1 {
 .active .day:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
   border-top: none;
-  margin-right:1em;
   border-left: none;
   border-right: none;
 }
