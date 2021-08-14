@@ -474,6 +474,11 @@ h1 {
   position: sticky;
 }
 
+.sticky-top{
+  display: block;
+  position: sticky;
+}
+
 #registration {
   border-top: 1px solid #ff3f19;
   color: #ff3f19;
@@ -823,6 +828,10 @@ margin-bottom: -23px;
   h1 {
     font-size: 3em;
     font-weight: 700;
+  }
+
+  .sticky-top{
+    margin-top:1.5em;
   }
 
 	#covid { 	font-size: 1em; }

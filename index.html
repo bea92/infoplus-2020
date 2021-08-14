@@ -813,8 +813,7 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .data(panels)
         .enter()
         .append('div')
-        .attr('class',d=> `panel_${d.key}`)
-        .append('p');
+        .attr('class',d=> `panel_${d.key}`);
 
         console.log(group)
 
@@ -859,11 +858,9 @@ d3.csv("infoplus20 - data.csv", function(data) {
         description
         .append('h3')
         .text(d=>d.title)
+        .style("color", "#5800FF")
         .classed('text-add', true)
         .style('display',d=>d.title===''?'none':'block')
-        .style("color", function(d) {
-            if (d.type === "keynote") {return "#ff3f19"}
-            else    { return "#5800FF" }})
         .classed('col-lg-8', true);
 
         description
@@ -882,9 +879,21 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .classed('text-add', true)
         .text(d=>d.description)
         .style('margin-top', '1em')
-        .style('margin-bottom', '3em')
+        .style('margin-bottom', '1.5em')
         .style('display',d=>d.description===''?'none':'block')
-        .classed('col-lg-10', true);;
+        .classed('col-lg-10', true);
+
+        description
+        .append('div')
+        .classed('col-lg-10', true)
+        .append('p')
+        .text("⁓")
+        .style("color", "#af10ff")
+        .style("text-align", "center")
+        .style('margin-bottom', '1.5em');
+
+
+       
 
 
         // description
