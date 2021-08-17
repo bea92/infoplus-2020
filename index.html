@@ -97,7 +97,7 @@
       <div class="container">
         <a href="#header">Information+</a>
         <a href="#keynotes">Keynotes</a>
-        <a href="#schedule">Contributions</a>
+        <a href="#contributions">Contributions</a>
         <a href="#about">About</a>
 
       </div>
@@ -119,7 +119,7 @@
       <div class="items">
         <a href="#header" onclick="$('.mobile-nav').toggleClass('visible')">Intro</a>
       <a href="#keynotes" onclick="$('.mobile-nav').toggleClass('visible')">Keynotes</a>
-      <a href="#schedule" onclick="$('.mobile-nav').toggleClass('visible')">Contributions</a>
+      <a href="#contributions" onclick="$('.mobile-nav').toggleClass('visible')">Contributions</a>
       <a href="#about" onclick="$('.mobile-nav').toggleClass('visible')">About</a></div>
       <a
         href="javascript:void(0);"
@@ -239,7 +239,7 @@
 		</div>
 	</div>
     </section>
-    <section id="schedule">
+    <section id="contributions">
       <div class="wrap">
         <div class="container">
           <h2 class="title">Contributions</h2>
@@ -466,6 +466,7 @@
       </div>
     </section> -->
     <section id="about">
+      <div class="wrap">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -676,7 +677,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div></div>
     </section>
     <!-- Footer -->
     <footer>
@@ -780,17 +781,13 @@ for (i = 0; i < acc.length; i++) {
 
 d3.csv("infoplus20 - data.csv", function(data) {
 
-        console.log(data)
-
         const panels = d3
           .nest()
           .key(d=>d.panel)
           .entries(data);
 
-          console.log(data)
         const schedule = d3
-        .selectAll('#schedule .here-d3');
-
+        .selectAll('#contributions .here-d3');
 
         const group = schedule
         .selectAll('.day')
@@ -798,8 +795,6 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .enter()
         .append('div')
         .attr('class',d=> `panel_${d.key}`);
-
-        console.log(group)
 
         const item = group
         .selectAll('.item')
@@ -825,7 +820,6 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .append('div')
         .classed('description',true)
 
-
         description
         .append('p')
         .classed('type',true)
@@ -840,22 +834,22 @@ d3.csv("infoplus20 - data.csv", function(data) {
             else    { return "#5800FF" }});
 
         description
-        .append('h3')
+				.append('h3')
         .text(d=>d.title)
         .style("color", "#5800FF")
         .classed('text-add', true)
         .style('display',d=>d.title===''?'none':'block')
-        .classed('col-lg-8', true);
+        .classed('col-lg-12', true);
 
         description
         .append('p')
-        .text(d=>d.speaker)
-        .classed('col-lg-8', true)
-        .append('small')
-        .text(d=>d.affiliation)
-        .style('display',d=>d.affiliation===''?'none':'block')
-        .style("color", "#5800FF")
-        .style("text-transform", "uppercase");
+        .html(d=>d.authors)
+        .classed('col-lg-12', true);
+        // .append('small')
+        // .text(d=>d.affiliation)
+        // .style('display',d=>d.affiliation===''?'none':'block')
+        // .style("color", "#5800FF")
+        // .style("text-transform", "uppercase");
 
 
         description
@@ -865,13 +859,13 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .style('margin-top', '1em')
         .style('margin-bottom', '1.5em')
         .style('display',d=>d.description===''?'none':'block')
-        .classed('col-lg-10', true);
+        .classed('col-lg-12', true);
 
         description
         .append('div')
-        .classed('col-lg-10', true)
+        .classed('col-lg-12', true)
         .append('p')
-        .text("⁓")
+        // .text("⁓")
         .style("color", "#af10ff")
         .style("text-align", "center")
         .style('margin-bottom', '1.5em');

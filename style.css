@@ -178,9 +178,9 @@ h1 {
   transform: rotate(180deg);
 }
 
-/* schedule */
+/* contributions */
 
-#schedule{
+#contributions{
   display: block;
   border-top:1px solid #5800FF;
 }
@@ -279,21 +279,26 @@ h1 {
     cursor: pointer;
     width: 100%;
     text-align: left;
-    transition: 0.4s;
+    xtransition: 0.4s;
     padding: 15px 35px 5px 35px;
   }
   
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     .focus, .active, .accordion:hover {
       background-color:white;
-      border-bottom:1px solid #af10ff;
-      border:none;
+      border-bottom:1px solid white;
+      xborder:none;
     }
   
     .accordion:hover {
       background-color:white;
-      border-bottom:1px solid white;
+      border-bottom: 1px solid #af10ff;
     }
+		
+    .accordion.active:hover {
+      border-bottom: 1px solid white;
+    }
+		
   
     .accordion:hover h3{
       color: #af10ff;
@@ -510,7 +515,7 @@ h1 {
   margin-left: .25em;
 }
 
-.uni small{
+.uni small, #contributions small {
   color:#5800FF;
 } 
 
