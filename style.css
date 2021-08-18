@@ -407,11 +407,10 @@ h1 {
 	.wrap { padding: 1rem !important; } 
 	
 	.description img {
-		xwidth: 10em;
 		position: relative;
-		float: right;
+		xfloat: right;
 		right: 0;
-		margin: 0 0 2em 1em;	
+		margin: 1em;
 	}
 	
 
