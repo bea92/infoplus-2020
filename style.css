@@ -240,6 +240,7 @@ h1 {
 
 .description img {
 	width: 20em;
+	max-width: 100%;
 	position: absolute;
 	right: -21em;
 	margin: 0 0 2em 1em;	
@@ -408,7 +409,6 @@ h1 {
 	
 	.description img {
 		position: relative;
-		xfloat: right;
 		right: 0;
 		margin: 1em;
 	}
@@ -873,14 +873,29 @@ margin-bottom: -23px;
 
 	#covid { 	font-size: 1em; }
 
-  img {
+/*  img {
     vertical-align: middle;
     border-style: none;
     width: 150%;
     margin-bottom: 2em;
     height: 80px;
   }
+*/
+	.description img {
+		padding: 0;
+		left: -1em;
+	}
+	
+	footer .col {
+	 display: block;
+	 width: 100%;
+	 padding: 15px;
+	}
 
+	footer .col img {
+		width: 100%;
+	}
+	
   footer {
     padding: 0em 2em 2em 2em;
     border-Top: 1px solid #5800FF;
