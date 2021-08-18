@@ -708,12 +708,12 @@ a img:focus {
   transition-duration: 0.3s;
 }
 
-img {
+footer img {
   vertical-align: middle;
-/*  width: 50%;
+	width: 50%;
   margin-top: 2em;
   height: 80px;
-*/}
+}
 
 .logo {
   width: 70%;
