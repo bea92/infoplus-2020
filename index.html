@@ -283,8 +283,8 @@
       </div>
             </div> 
             <div class="col-sm dates sticky-top">
-              <h3>Panels as conversations</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <!-- <h3>Panels as conversations</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
             </div>         
                     </div>
                   </div>
@@ -820,6 +820,18 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .append('div')
         .classed('description',true)
 
+        description
+				.append('img')
+        .attr("src", function(d) { 
+					console.log(d);
+					return "assets/"+d.number+".png" 
+				});
+				
+        // .style("color", "#5800FF")
+        // .classed('text-add', true)
+        // .style('display',d=>d.title===''?'none':'block')
+        // .classed('col-lg-12', true);
+				
         description
 				.append('h4')
         .text(d=>d.title)

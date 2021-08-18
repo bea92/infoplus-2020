@@ -238,6 +238,13 @@ h1 {
   color: #5800FF;
 }
 
+.description img {
+	width: 20em;
+	position: absolute;
+	right: -21em;
+	margin: 0 0 2em 1em;	
+}
+
 .description h4 {
   background: -webkit-linear-gradient(#af10ff, #5800FF);
   -webkit-background-clip: text;
@@ -287,7 +294,6 @@ h1 {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  xtransition: 0.4s;
   padding: 15px 35px 5px 35px;
 }
 
@@ -392,7 +398,24 @@ h1 {
   }
   .mobile-nav{
     display: block;
-  }}
+  }
+
+	.accordion {   padding: 5px 10px 5px 10px; }
+
+	.panel {   padding: 5px 10px 5px 10px; }
+		
+	.wrap { padding: 1rem !important; } 
+	
+	.description img {
+		xwidth: 10em;
+		position: relative;
+		float: right;
+		right: 0;
+		margin: 0 0 2em 1em;	
+	}
+	
+
+}
   /* 🌺🌸🌼🍀 Get rid of those, from here */
 
   /* #myBottomnav {
@@ -512,10 +535,9 @@ h1 {
   position: sticky;
 }
 
-
 .wrap{
   background: rgb(255, 252, 242);
-   padding: 2rem;
+  padding: 2rem;
 } 
 
 
@@ -689,11 +711,10 @@ a img:focus {
 
 img {
   vertical-align: middle;
-
-  width: 50%;
+/*  width: 50%;
   margin-top: 2em;
   height: 80px;
-}
+*/}
 
 .logo {
   width: 70%;
