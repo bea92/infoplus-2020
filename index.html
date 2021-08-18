@@ -283,8 +283,8 @@
       </div>
             </div> 
             <div class="col-sm dates sticky-top">
-              <h3>Conversations, Panels, Contributions</h3>
-              <p>Information+, an interdisciplinary conference for information design and data visualization, invites proposals from all relevant areas of professional practice, research, and pedagogy. We welcome submissions on topics, such as but not limited to the following: <em>algorithmic accountability, critical visualization, cultural analytics, data journalism, data studies, digital civics, digital humanities, environmental awareness, health information, historical collections, science communication, and social advocacy.</em></p>
+              <h3>Panels as conversations</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>         
                     </div>
                   </div>
@@ -821,20 +821,7 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .classed('description',true)
 
         description
-        .append('p')
-        .classed('type',true)
-        .text(d=>d.type)
-        .classed('col-lg-8', true)
-        .style('display',d=>d.type===''?'none':'block')
-        .style("background-color", function(d) {
-            if (d.type === "paper") {return "#5800FF"}
-            else    { return "rgb(255, 252, 242)" }})
-            .style("color", function(d) {
-            if (d.type === "paper") {return "rgb(255, 252, 242)"}
-            else    { return "#5800FF" }});
-
-        description
-				.append('h3')
+				.append('h4')
         .text(d=>d.title)
         .style("color", "#5800FF")
         .classed('text-add', true)
@@ -856,33 +843,44 @@ d3.csv("infoplus20 - data.csv", function(data) {
         .append('p')
         .classed('text-add', true)
         .text(d=>d.description)
-        .style('margin-top', '1em')
-        .style('margin-bottom', '1.5em')
+        // .style('margin-top', '1em')
+        // .style('margin-bottom', '1.5em')
         .style('display',d=>d.description===''?'none':'block')
         .classed('col-lg-12', true);
 
-        description
-        .append('div')
-        .classed('col-lg-12', true)
-        .append('p')
-        // .text("⁓")
-        .style("color", "#af10ff")
-        .style("text-align", "center")
-        .style('margin-bottom', '1.5em');
-
-
-       
-
+        // description
+        // .append('p')
+        // .classed('type',true)
+        // .text(d=>d.type)
+        // .classed('col-lg-8', true)
+        // .style('display',d=>d.type===''?'none':'block')
+        // .style("background-color", function(d) {
+        //     if (d.type === "paper") {return "#5800FF"}
+        //     else    { return "rgb(255, 252, 242)" }})
+        //     .style("color", function(d) {
+        //     if (d.type === "paper") {return "rgb(255, 252, 242)"}
+        //     else    { return "#5800FF" }});
 
         // description
-        // .append("a")
-        // .text( function(d) {return '--> ' + d.action})
-        // .attr("href", d=>d.link)
-        // .attr("xlink:target", "_blank")
-        // .classed("action", true)
-        // .style("color", function(d) {
-        //     if (d.type === "keynote") {return "#ff3f19"}
-        //     else    { return "#5800FF" }});
+        // .append('div')
+        // .classed('col-lg-12', true)
+        // .append('p')
+        // // .text("⁓")
+        // .style("color", "#af10ff")
+        // .style("text-align", "center")
+        // .style('margin-bottom', '1.5em');
+        //
+
+       
+        description
+				.append('p')
+        .classed('col-lg-12', true)
+        .append("a")
+        .text( function(d) {return '→ ' + d.action})
+        .attr("href", d=>d.link)
+        .attr("xlink:target", "_blank")
+        .classed("action", true)
+        .style("color", "#5800FF");
 
       });
 

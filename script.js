@@ -18,7 +18,7 @@ var width = window.innerWidth,
     alignmentForce = 0.3,
     cohesionForce = 0.03,
     startingPosition = "Random",
-    coloring = "By Movement",
+    // coloring = "By Movement",
     boids;
 
 d3.select("canvas").attr("width", window.innerWidth);
@@ -37,20 +37,26 @@ offscreenContext.globalAlpha = 0.85;
 // gui.add(window, "coloring", ["Rainbow", "By Movement"]);
 // gui.add(window, "restart");
 
-d3.select("canvas").on("click", function(){
-  var xy = d3.mouse(this);
-  boids.push({
-    color: d3.interpolateRainbow((boids.length / 10) % 1),
-    position: new Vec2(xy[0], xy[1]),
-    velocity: randomVelocity(),
-    last: []
-  });
-});
+// d3.select("canvas").on("click", function(){
+//   var xy = d3.mouse(this);
+//   boids.push({
+//     color: d3.interpolateRainbow((boids.length / 10) % 1),
+//     position: new Vec2(xy[0], xy[1]),
+//     velocity: randomVelocity(),
+//     last: []
+//   });
+// });
 
 restart();
 requestAnimationFrame(tick);
 
 function tick() {
+	
+	var rect = canvas.getBoundingClientRect();
+	if (rect.bottom<0) {
+		setTimeout(function() { requestAnimationFrame(tick); }, 1000);
+		return;
+	}
 
   offscreenContext.clearRect(0, 0, width, height);
   offscreenContext.drawImage(canvas, 0, 0, width, height);
@@ -94,18 +100,15 @@ function tick() {
       }
     }
 
-    if (coloring === "By Movement") {
+    // if (coloring === "By Movement") {
       b.last.push(b.acceleration.length() / (alignmentForce + cohesionForce + separationForce));
-      if (b.last.length > 20) {
-        b.last.shift();
-      }
-    }
+      if (b.last.length > 20) b.last.shift();      
+    // }
 
   });
 
   boids.forEach(updateBoid);
   requestAnimationFrame(tick);
-
 }
 
 function updateBoid(b) {
@@ -124,11 +127,11 @@ function updateBoid(b) {
   }
 
   context.beginPath();
-  if (coloring === "Rainbow") {
-    context.fillStyle = b.color;
-  } else {
-    context.fillStyle = d3.interpolateWarm(d3.mean(b.last));
-  }
+  // if (coloring === "Rainbow") {
+  //   context.fillStyle = b.color;
+  // } else {
+  context.fillStyle = d3.interpolateWarm(d3.mean(b.last));
+  // }
   context.arc(b.position.x, b.position.y, 2, 0, 2 * Math.PI);
   context.fill();
 }

@@ -57,7 +57,7 @@ h3 {
 
 h4 {
   font-size: 1.1em;
-  margin-top: 1em;
+  margin-top: 0em;
   line-height: 1.7em;
 }
 
@@ -207,7 +207,7 @@ h1 {
   grid-row-gap: 15px;
   grid-template-columns: 100px auto;
   filter:drop-shadow(10px);
-  margin:15px 0px 15px 0px;
+  margin:0 0px 15px 0px;
   align-items: baseline;
 }
 
@@ -229,21 +229,29 @@ h1 {
 .description {
   grid-column-start: 1;
   grid-column-end: 10;
-  padding:0 15px 0 0;
+  padding: 0 0 1em 0;
 }
 
-.description .title{
+.description .title {
   font-size: 1.3em;
   font-weight: 800;
   color: #5800FF;
 }
 
-.speaker{
+.description h4 {
+  background: -webkit-linear-gradient(#af10ff, #5800FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 400;
+	font-size: 1.3em;
+}
+
+.speaker {
   grid-row-start: 1;
   grid-row-end: 4;
 }
 
-.type{
+.type {
   width: fit-content;
   padding:3px 12px 3px 12px;
   border-radius: 20px;
@@ -270,18 +278,22 @@ h1 {
 
 
 .accordion {
-    background-color: rgb(255, 252, 242);
-    color: black;
-    border-bottom: 1px solid #af10ff;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    xtransition: 0.4s;
-    padding: 15px 35px 5px 35px;
-  }
+  background-color: rgb(255, 252, 242);
+  color: black;
+  border-bottom: 1px solid #af10ff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  xtransition: 0.4s;
+  padding: 15px 35px 5px 35px;
+}
+
+#contributions button:last-of-type{
+	border-bottom: none;
+}
   
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
     .focus, .active, .accordion:hover {
