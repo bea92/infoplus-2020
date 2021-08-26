@@ -726,7 +726,18 @@ footer img {
   margin-bottom:1em;
   display: inline;
   background-color: transparent;
+}
 
+
+.wsPic{
+  width: 100%;
+  align-items: center;
+  height: auto;
+  margin-top:2em;
+  display: inline;
+  background-color: transparent;
+  box-shadow: 0 5px 15px 0px #5800FF;
+  animation: float 5s infinite;
 }
 
 @keyframes floatR {
@@ -790,6 +801,28 @@ footer img {
 	100% {
     box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
 		transform: translatex(-20px);
+    z-index:3;
+	}
+}
+
+@keyframes float {
+  0% {
+		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(0px);
+    z-index:0;
+	}
+
+
+  50% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+    transform: translatex(20px);
+    transform: translatey(-20px);
+    z-index:0;
+	}
+
+	100% {
+    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
+		transform: translatex(0px);
     z-index:3;
 	}
 }
