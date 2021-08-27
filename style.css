@@ -729,6 +729,7 @@ footer img {
 }
 
 
+
 .wsPic{
   width: 100%;
   align-items: center;
@@ -736,8 +737,12 @@ footer img {
   margin-top:2em;
   display: inline;
   background-color: transparent;
-  box-shadow: 0 5px 15px 0px #5800FF;
+	box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);	
   animation: float 5s infinite;
+}
+
+img.wsPic2 {
+  animation: floatb 5s infinite !important;
 }
 
 @keyframes floatR {
@@ -806,25 +811,15 @@ footer img {
 }
 
 @keyframes float {
-  0% {
-		box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-		transform: translatex(0px);
-    z-index:0;
-	}
+  0% { transform: translatey(0px); }
+  50% { transform: translatey(-20px); }
+	100% { transform: translatey(0px); }
+}
 
-
-  50% {
-    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-    transform: translatex(20px);
-    transform: translatey(-20px);
-    z-index:0;
-	}
-
-	100% {
-    box-shadow: 0 5px 15px 0px rgba(175,15,255,.3);
-		transform: translatex(0px);
-    z-index:3;
-	}
+@keyframes floatb {
+  0% { transform: translatey(-20px); }
+  50% { transform: translatey(0px); }
+	100% { transform: translatey(-20px); }
 }
 
 
