@@ -949,6 +949,150 @@
 
 			  #covid p {margin-bottom: 0;}
 			}
+
+
+/* Gris Schedule Layout */
+
+@media screen and (min-width:700px) {
+  .schedule {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-rows:
+      [tracks] auto
+      [time-0800] 1fr
+      [time-0900] 1fr
+      [time-1000] 1fr
+      [time-1100] 1fr
+      [time-1200] 1fr
+      [time-1300] 1fr
+      [time-1400] 1fr;
+      /* Note 1:
+      Use 24hr time for gridline names for simplicity
+
+      Note 2: Use "auto" instead of "1fr" for a more compact schedule where height of a slot is not proportional to the session length. Implementing a "compact" shortcode attribute might make sense for this!
+      Try 0.5fr for more compact equal rows. I don't quite understand how that works :)
+      */
+    
+    grid-template-columns:
+      [times] 5em
+      [track-1-start] 1fr
+      [track-1-end track-2-start] 1fr
+      [track-2-end track-3-start] 1fr
+      [track-3-end track-4-start] 1fr
+      [track-4-end track-5-start] 1fr
+      [track-5-end];
+  }
+}
+
+.time-slot {
+  grid-column: times;
+}
+
+.track-slot,
+.desktop-all{
+  display: none; /* hidden on small screens and browsers without grid support */
+}
+
+.session-day,
+.session-time{
+  display: block;
+}
+
+
+
+@supports( display:grid ) {
+  @media screen and (min-width:700px) {
+    .track-slot, 
+    .time-slot {
+      display: block;
+      position: sticky;
+      top: 0
+    }
+  }
+}
+
+/* Small-screen & fallback styles */
+.session {
+  margin-bottom:  1em;
+}
+
+@supports( display:grid ) {
+  @media screen and (min-width: 700px) {
+    .session {
+      margin: 0;
+    } 
+    .session-day, 
+    .session-time{
+      display: none;
+    }
+  }
+}
+
+.session {
+  padding: .5em;
+  font-size: 14px;
+}
+
+.session-title{
+  display: block;
+}
+
+.session-title,
+.time-slot {
+  margin: 0;
+  font-size: 1em;
+}
+
+.session-title a {
+  color: #5800FF;
+}
+
+.track-slot,.time-slot{
+  color:#5800FF;
+}
+
+.track-1 {
+  background-color:rgb(255, 252, 242);
+  color: #5800FF;
+  border:1px solid #5800FF;
+}
+
+.track-2 {
+  background-color:#5800FF;
+  color: rgb(255, 252, 242);
+}
+
+.track-3 {
+  background-color:white;
+}
+
+.track-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #af10ff;
+  color: rgb(255, 252, 242);;
+}
+
+.text {
+  max-width: 750px;
+  font-size: 18px;
+  margin: 0 auto 50px;
+}
+
+.meta {
+  color: #555;
+  font-style: italic;
+}
+
+.meta a {
+  color: #555;
+}
+
+hr {
+  margin: 40px 0;
+}
+
 		</style>
   </head>
   <body>
@@ -1087,6 +1231,178 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="schedule">
+      <div class="wrap">
+        <div class="container">
+          <h2 class="title">Schedule</h2>
+          <div class="row">
+            <div class="col-sm">
+            <div class="schedule" aria-labelledby="schedule-heading">
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Mon, 27 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;">Tue, 28 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-3; grid-row: tracks;">Wed, 29 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-4; grid-row: tracks;">Thu, 30 Sep</span>
+              <span class="track-slot" aria-hidden="true" style="grid-column: track-5; grid-row: tracks;">Fri, 1 Oct</span>
+              
+              <h2 class="time-slot" style="grid-row: time-0800;">8:00am</h2>      
+              <h2 class="time-slot" style="grid-row: time-0900;">9:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1000;">10:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1100;">11:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1200;">12:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1300;">13:00am</h2>
+              <h2 class="time-slot" style="grid-row: time-1400;">14:00am</h2>
+     
+              <!-- DAY ONE -->
+            
+              <h3 class="session-day">Mon, 27 Sep</h2>
+              
+              <div class="session session-1 track-1" style="grid-column: track-1; grid-row: time-0800 / time-0900; justify-content: center;">
+                <p class="session-time">08:00am - 09:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+              </div>
+
+               <div class="session session-1 track-2" style="grid-column: track-1; grid-row: time-0900 / time-1000;">
+                <p class="session-time">09:00am - 10:00am</p>
+                <span class="session-track">Keynote</span>
+                <h3 class="session-title"><a style="color:white" href="#keynotes">(Mis)Organizing Information</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-1; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title">Take a break!</h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-1; grid-row: time-1100 / time-1300;">
+                <p class="session-time">11:00am - 13:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Visualizing Uncertainty</a></h3>
+              </div> 
+
+              <!-- DAY TWO -->
+              <h3 class="session-day">Tue, 28 Sep</h2>
+                            
+              <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-0800 / time-0900; justify-content: center;">
+                <p class="session-time">08:00am - 09:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+              </div>
+
+               <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-0900 / time-1000;">
+                <p class="session-time">09:00am - 10:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Getting Critical</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-2; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title">Take a break!</h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-1100 / time-1300;">
+                <p class="session-time">11:00am - 13:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Reframing Maps</a></h3>
+              </div> 
+
+              <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-1300 / time-1400;">
+                <p class="session-time">13:00am - 14:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
+              </div>
+
+
+              <!-- DAY THREE -->
+
+              <h3 class="session-day">Wed, 29 Sep</h2>
+
+              <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-0800 / time-0900; justify-content: center;">
+                <p class="session-time">08:00am - 09:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+              </div>
+
+              <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-0900 / time-1000;">
+                <p class="session-time">09:00am - 10:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Rethinking Practice</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-3; grid-row: time-1000 / time-1100;">s
+                <h3 class="session-title">Take a break!</h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-1100 / time-1300;">
+                <p class="session-time">11:00am - 13:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Communicating Science</a></h3>
+              </div> 
+
+              <!-- DAY FOUR -->
+
+              <h3 class="session-day">Thu, 30 Sep</h2>
+                            
+              <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-0800 / time-0900; justify-content: center;">
+                <p class="session-time">08:00am - 09:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+              </div>
+
+               <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-0900 / time-1000;">
+                <p class="session-time">09:00am - 10:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Deliberating Health</a></h3>
+              </div>
+
+              <div class="session session-7 track-all mobile-all" style="grid-column: track-4; grid-row: time-1000 / time-1100;">
+                <!-- <p class="session-time">10:00am - 11:00am</p> -->
+                <h3 class="session-title">Take a break!</h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-1100 / time-1300;">
+                <p class="session-time">11:00am - 13:00am</p>
+                <span class="session-track">Contributions</span>
+                <h3 class="session-title"><a href="#contributions">Getting Physical</a></h3>
+              </div> 
+
+              <div class="session session-1 track-1" style="grid-column: track-4-start; grid-row: time-1300 / time-1400;">
+                <p class="session-time">13:00am - 14:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
+              </div>
+
+
+              <!-- DAY FIVE -->
+
+              <h3 class="session-day">Fri, 1 Oct</h2>
+
+              <div class="session session-1 track-1" style="grid-column: track-5; grid-row: time-0800 / time-0900; justify-content: center;">
+                <p class="session-time">08:00am - 09:00am</p>
+                <span class="session-track">Workshop</span>
+                <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
+              </div>
+
+              <div class="session session-1 track-2" style="grid-column: track-5; grid-row: time-0900 / time-1000;">
+                <p class="session-time">09:00am - 10:00am</p>
+                <span class="session-track">Keynote</span>
+                <h3 class="session-title"><a style="color:white" href="#keynotes">On Maps</a></h3>
+              </div>
+              
+              <div class="session session-1 track-1" style="grid-column: track-5; grid-row: time-1100 / time-1300;">
+                <p class="session-time">11:00am - 13:00am</p>
+                <span class="session-track">Closing & Summary</span>
+              </div> 
+
+                        
+              <div class="session track-all desktop-all" style="grid-column: track-1-start / track-5-end; grid-row: time-1000 / time-1100;">
+                <h3 class="session-title">Take a break!</h3>
+              </div>
+               
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
     </section>
     <section id="keynotes">
         <div class="wrap">
