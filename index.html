@@ -1224,6 +1224,9 @@
       <div class="wrap">
         <div class="container">
           <h2 class="title">Schedule</h2>
+          <select name="time-zones" id="time-zones">
+            <!-- <option value="volvo">Volvo</option> -->
+          </select>
           <div class="row">
             <div class="col-sm">
             <div class="schedule" aria-labelledby="schedule-heading">
@@ -1943,8 +1946,17 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+
+
+    <!-- Moment.js and Moment Timezone to include all IANA zones -->
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
+    <!-- Luxon to handle date/time conversions -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.0.2/build/global/luxon.min.js" integrity="sha256-CnZmNCHHUMy22/PJclCIISZ5Ib4MnUu+7ee5YNxtsZQ=" crossorigin="anonymous"></script>
+
     <script>
 
+var DateTime = luxon.DateTime;
 
 $(document).ready(function () {
         // Add smooth scrolling to all links
@@ -1969,6 +1981,29 @@ $(document).ready(function () {
             );
           } // End if
         });
+
+        let dt = DateTime.now();
+        let localZone = dt.zoneName;
+
+        console.log(dt)
+        console.log(localZone, DateTime.local().setZone(localZone).isValid)
+
+        const zones = moment.tz.names();
+        const availableZones = zones.filter(zone=>DateTime.local().setZone(zone).isValid);
+
+        console.log(zones)
+        console.log(availableZones)
+
+        availableZones.forEach(tz => {
+          const item = document.createElementNS("http://www.w3.org/1999/xhtml","option")
+          item.setAttribute("value",tz)
+          if (tz===localZone) {
+            item.setAttribute("selected","selected")
+          }
+          item.innerHTML=tz
+          document.querySelector("select#time-zones").appendChild(item)
+        });
+
       });
 
 var acc = document.getElementsByClassName("accordion");
