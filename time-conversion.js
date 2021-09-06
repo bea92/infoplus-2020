@@ -29,15 +29,37 @@ availableZones.forEach((tz) => {
   document.querySelector("select#time-zones").appendChild(item);
 });
 
+availableZones.forEach((tz) => {
+  const item = document.createElementNS(
+    "http://www.w3.org/1999/xhtml",
+    "li"
+  );
+  item.setAttribute("value", tz);
+  if (tz === localZone) {
+    convertTimezones(localZone);
+    item.classList.add("active");
+  }
+  item.innerHTML = tz;
+  document.querySelector("div#time-zones-dropdown").appendChild(item);
+});
+
 function convertTimezones(localZone) {
-	// console.log(localZone)
-	const slots = document.querySelectorAll(".converted-timezone")
-	slots.forEach(function(el){
-		const dataTime = el.getAttribute("data-time")
-		const date = DateTime.fromISO(`2021-09-27T${dataTime}:00:00`, { zone: defaultZone })
-		const convertedDate = date.setZone(localZone);
-		const formattedDate = convertedDate.toLocaleString(DateTime.TIME_SIMPLE);
-		// console.log(formattedDate);
-		el.innerHTML = formattedDate
-	})
+  // console.log(localZone)
+  const slots = document.querySelectorAll(".converted-timezone");
+  slots.forEach(function (el) {
+    const dataTime = el.getAttribute("data-time");
+    const date = DateTime.fromISO(`2021-09-27T${dataTime}:00:00`, {
+      zone: defaultZone,
+    });
+    const convertedDate = date.setZone(localZone);
+    let formattedDate = convertedDate.toFormat("hha");
+    if (el.hasAttribute("data-duration")) {
+      const end = convertedDate.plus({
+        hours: el.getAttribute("data-duration"),
+      });
+      formattedDate += " - " + end.toFormat("hha");
+    }
+
+    el.innerHTML = formattedDate;
+  });
 }
