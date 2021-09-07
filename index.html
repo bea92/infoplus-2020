@@ -1485,7 +1485,7 @@
     <section id="contributions">
       <div class="wrap">
         <div class="container">
-          <h2 class="title">Contributions</h2>
+          <h2 class="title">Contributions: Author conversations</h2>
           <div class="row">
             <div class="col-lg-8">
                 <div>
@@ -2141,15 +2141,16 @@ d3.csv("contributions.csv", function(data) {
         //
 
        
-				//         description
-				// .append('p')
-				//         .classed('col-lg-12', true)
-				//         .append("a")
-				//         .text( function(d) {return '→ ' + d.action})
-				//         .attr("href", d=>d.link)
-				//         .attr("xlink:target", "_blank")
-				//         .classed("action", true)
-				//         .style("color", "#5800FF");
+				description
+				.append('p')
+        .classed('col-lg-12', true)
+        .style('display',d=>d.link===''?'none':'block')				
+        .append("a")
+        .text( function(d) {return '→ ' + d.action})
+        .attr("href", d=>d.link)
+        .attr("xlink:target", "_blank")
+        .classed("action", true)
+        .style("color", "#5800FF");
 
       });
 
