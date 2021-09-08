@@ -1060,9 +1060,18 @@
   color: rgb(255, 252, 242);;
 }
 
+.tz small {
+  color: #5800FF;
+}
+
+.tz #selected-time-zone, #guess-timezone {
+  /* color: #af10ff; */
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .timezones-converter, .converted-timezone {
   text-align: right;
-  text-transform: lowercase;
 }
 
 .time-slot.timezone {
@@ -1077,6 +1086,22 @@
     justify-content: space-between;
 }
 
+#selectTimezoneModal .modal-content {
+ border-color: #5800FF;
+}
+
+#selectTimezoneModal .modal-title {
+  color:#5800FF;
+}
+
+#selectTimezoneModal select {
+  color:#5800FF;
+  border-color: #5800FF;
+}
+
+#selectTimezoneModal .close {
+  color:#5800FF;
+}
 
 @media screen and (max-width: 700px) {
   .time-slot,.track-slot{
@@ -1252,14 +1277,40 @@
             <div class="col-sm">
             <div class="schedule" aria-labelledby="schedule-heading">
 
-              <div class="" style="grid-column: times / track-1-end; grid-row: timezones;">
-                <h4>Conference Timezone:</h4>
-                <h6>Atlanta (America/New York)</h6>
+              <div class="tz" style="grid-column: times / track-1-end; grid-row: timezones;">
+                <p class="mb-0"><small>Conference Timezone</small></p>
+                <p>Atlanta (America/New York)</p>
               </div>
 
-              <div class="timezones-converter" style="grid-column: track-3-end / timezone-end; grid-row: timezones;">
-                <h4>Your Timezone:</h4>
-                <select id="time-zones" onchange="convertTimezones(this.value)"></select>
+              <div class="tz timezones-converter" style="grid-column: track-3-end / timezone-end; grid-row: timezones;">
+                <p class="mb-0"><small> <i class="fa fa-globe" aria-hidden="true"></i> Your Timezone</small></p>
+                <!-- Button trigger modal -->
+                <p type="button" data-toggle="modal" data-target="#selectTimezoneModal"><span id="selected-time-zone">Loading timezone&hellip;</span></p>
+
+                <!-- Modal -->
+                <div class="text-left modal fade" id="selectTimezoneModal" tabindex="-1" aria-labelledby="selectTimezoneModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="selectTimezoneModalLabel">Change timezone</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Pick one from the list of the available timezones (IANA)</p>
+                        <p><select id="time-zones" class="w-100" onchange="convertTimezones(this.value)"></select></p>
+                        <p>or <span id="guess-timezone" onclick="guessTimezone()">guess it from your browser</span> <i class="fa fa-magic" aria-hidden="true"></i></p>
+                        <p>Your browser will remember the selection for upcoming visits.</p>
+                      </div>
+                      <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
               <span class="track-slot" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;">Mon, 27 Sep</span>
@@ -1276,26 +1327,26 @@
               <h2 class="time-slot" style="grid-row: time-1300;">1pm</h2>
               <h2 class="time-slot" style="grid-row: time-1400;">2pm</h2>
 
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-0800;" data-time="08">8am</h2>      
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-0900;" data-time="09">9am</h2>
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-1000;" data-time="10">10am</h2>
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-1100;" data-time="11">11am</h2>
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-1200;" data-time="12">12pm</h2>
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-1300;" data-time="13">1pm</h2>
-              <h2 class="time-slot timezone converted-timezone" style="grid-row: time-1400;" data-time="14">2pm</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-0800;" data-time="08">8am</h2>      
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-0900;" data-time="09">9am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1000;" data-time="10">10am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1100;" data-time="11">11am</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1200;" data-time="12">12pm</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1300;" data-time="13">1pm</h2>
+              <h2 class="time-slot timezone converted-timezone text-lowercase" style="grid-row: time-1400;" data-time="14">2pm</h2>
      
               <!-- DAY ONE -->
             
               <h3 class="session-day">Mon, 27 Sep</h2>
               
               <div class="session session-1 track-1" style="grid-column: track-1; grid-row: time-0800 / time-0900; justify-content: center;">
-                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone" data-time="08" data-duration="1">08am - 09am</div></div>
+                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone text-lowercase" data-time="08" data-duration="1">08am - 09am</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
               </div>
 
                <div class="session session-1 track-2" style="grid-column: track-1; grid-row: time-0900 / time-1000;">
-                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone" data-time="09" data-duration="1">09am - 10am</div></div>
+                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">09am - 10am</div></div>
                 <span class="session-track">Keynote conversation</span>
                 <h3 class="session-title"><a style="color:white" href="#keynotes">(Mis)Organizing Information</a></h3>
               </div>
@@ -1305,7 +1356,7 @@
               </div>
               
               <div class="session session-1 track-1" style="grid-column: track-1; grid-row: time-1100 / time-1200;">
-                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone" data-time="11" data-duration="1">11am - 12am</div></div>
+                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11am - 12am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Visualizing Uncertainty</a></h3>
               </div> 
@@ -1314,13 +1365,13 @@
               <h3 class="session-day">Tue, 28 Sep</h2>
                             
               <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-0800 / time-0900; justify-content: center;">
-                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone" data-time="08" data-duration="1">08am - 09am</div></div>
+                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone text-lowercase" data-time="08" data-duration="1">08am - 09am</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
               </div>
 
                <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-0900 / time-1000;">
-                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone" data-time="09" data-duration="1">09am - 10am</div></div>
+                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">09am - 10am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Getting Critical</a></h3>
               </div>
@@ -1330,13 +1381,13 @@
               </div>
               
               <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-1100 / time-1200;">
-                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone" data-time="11" data-duration="1">11am - 12am</div></div>
+                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11am - 12am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Reframing Maps</a></h3>
               </div> 
 
               <div class="session session-1 track-1" style="grid-column: track-2; grid-row: time-1300 / time-1400;">
-                <div class="session-time-box"><div class="session-time">1pm - 2pm</div><div class="session-time converted-timezone" data-time="13" data-duration="1">1pm - 2pm</div></div>
+                <div class="session-time-box"><div class="session-time">1pm - 2pm</div><div class="session-time converted-timezone text-lowercase" data-time="13" data-duration="1">1pm - 2pm</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
               </div>
@@ -1347,13 +1398,13 @@
               <h3 class="session-day">Wed, 29 Sep</h2>
 
               <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-0800 / time-0900; justify-content: center;">
-                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone" data-time="08" data-duration="1">08am - 09am</div></div>
+                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone text-lowercase" data-time="08" data-duration="1">08am - 09am</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
               </div>
 
               <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-0900 / time-1000;">
-                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone" data-time="09" data-duration="1">09am - 10am</div></div>
+                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">09am - 10am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Rethinking Practice</a></h3>
               </div>
@@ -1363,7 +1414,7 @@
               </div>
               
               <div class="session session-1 track-1" style="grid-column: track-3; grid-row: time-1100 / time-1200;">
-                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone" data-time="11" data-duration="1">11am - 12am</div></div>
+                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11am - 12am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Communicating Science</a></h3>
               </div> 
@@ -1373,13 +1424,13 @@
               <h3 class="session-day">Thu, 30 Sep</h2>
                             
               <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-0800 / time-0900; justify-content: center;">
-                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone" data-time="08" data-duration="1">08am - 09am</div></div>
+                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone text-lowercase" data-time="08" data-duration="1">08am - 09am</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
               </div>
 
                <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-0900 / time-1000;">
-                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone" data-time="09" data-duration="1">09am - 10am</div></div>
+                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">09am - 10am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Deliberating Health</a></h3>
               </div>
@@ -1390,13 +1441,13 @@
               </div>
               
               <div class="session session-1 track-1" style="grid-column: track-4; grid-row: time-1100 / time-1200;">
-                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone" data-time="11" data-duration="1">11am - 12am</div></div>
+                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11am - 12am</div></div>
                 <span class="session-track">Author conversation</span>
                 <h3 class="session-title"><a href="#contributions">Getting Physical</a></h3>
               </div> 
 
               <div class="session session-1 track-1" style="grid-column: track-4-start; grid-row: time-1300 / time-1400;">
-                <div class="session-time-box"><div class="session-time">1pm - 2pm</div><div class="session-time converted-timezone" data-time="13" data-duration="1">1pm - 2pm</div></div>
+                <div class="session-time-box"><div class="session-time">1pm - 2pm</div><div class="session-time converted-timezone text-lowercase" data-time="13" data-duration="1">1pm - 2pm</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Open Data Visualizations with RAWGraphs 2.0</a></h3>
               </div>
@@ -1407,13 +1458,13 @@
               <h3 class="session-day">Fri, 1 Oct</h2>
 
               <div class="session session-1 track-1" style="grid-column: track-5; grid-row: time-0800 / time-0900; justify-content: center;">
-                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone" data-time="08" data-duration="1">08am - 09am</div></div>
+                <div class="session-time-box"><div class="session-time">08am - 09am</div><div class="session-time converted-timezone text-lowercase" data-time="08" data-duration="1">08am - 09am</div></div>
                 <span class="session-track">Workshop</span>
                 <h3 class="session-title"><a href="#workshops">Unsettling Boundaries Through Data</a></h3>
               </div>
 
               <div class="session session-1 track-2" style="grid-column: track-5; grid-row: time-0900 / time-1000;">
-                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone" data-time="09" data-duration="1">09am - 10am</div></div>
+                <div class="session-time-box"><div class="session-time">09am - 10am</div><div class="session-time converted-timezone text-lowercase" data-time="09" data-duration="1">09am - 10am</div></div>
                 <span class="session-track">Keynote conversation</span>
                 <h3 class="session-title"><a style="color:white" href="#keynotes">On Maps</a></h3>
               </div>
@@ -1424,7 +1475,7 @@
                
               
               <div class="session session-1 track-3" style="grid-column: track-5; grid-row: time-1100 / time-1200;">
-                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone" data-time="11" data-duration="1">11am - 12am</div></div>
+                <div class="session-time-box"><div class="session-time">11am - 12am</div><div class="session-time converted-timezone text-lowercase" data-time="11" data-duration="1">11am - 12am</div></div>
                 <span class="session-track">Closing & Summary</span>
               </div> 
             </div>
