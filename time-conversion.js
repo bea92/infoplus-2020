@@ -41,7 +41,6 @@ function convertTimezones(localZone) {
       formattedDate += " - " + end.toFormat("ha");
     }
     el.innerHTML = formattedDate;
-
     storeTimeZone(localZone);
   });
 }
@@ -50,6 +49,14 @@ function storeTimeZone(localZone) {
   // remember the selection
   localStorage.setItem('previousTimeZone', localZone);
   document.querySelector('#selected-time-zone').innerHTML = localZone;
+  // set option in dropdown
+  const options = document.querySelector("select#time-zones").querySelectorAll("option").forEach(option=>{
+    if (option.getAttribute("value")===localZone) {
+      option.setAttribute("selected", "selected");
+    } else {
+      option.removeAttribute("selected");
+    }
+  })
   // hide modal
   $('#selectTimezoneModal').modal('hide')
 }
