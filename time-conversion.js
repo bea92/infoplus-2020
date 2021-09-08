@@ -52,12 +52,12 @@ function convertTimezones(localZone) {
       zone: defaultZone,
     });
     const convertedDate = date.setZone(localZone);
-    let formattedDate = convertedDate.toFormat("hha");
+    let formattedDate = convertedDate.toFormat("ha");
     if (el.hasAttribute("data-duration")) {
       const end = convertedDate.plus({
         hours: el.getAttribute("data-duration"),
       });
-      formattedDate += " - " + end.toFormat("hha");
+      formattedDate += " - " + end.toFormat("ha");
     }
 
     el.innerHTML = formattedDate;
