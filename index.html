@@ -2254,12 +2254,16 @@ d3.csv("contributions.csv", function(data) {
           .classed("action", true)
           .style("color", "#5800FF")
           .on("click", (d)=>{
-            console.log(d)
             $('#contributionVideoModal').modal('toggle')
             const videoId = d.link.split("/").pop()
             document.querySelector("#modal-video-iframe").setAttribute("src", `https://player.vimeo.com/video/${videoId}?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0`)
             document.querySelector("#modal-video-title").innerHTML = d.title;
           });
+
+        // Prevent video from playing in background
+        $('#contributionVideoModal').on('hidden.bs.modal', function (event) {
+          document.querySelector("#modal-video-iframe").removeAttribute("src")
+        })
 
       });
 
