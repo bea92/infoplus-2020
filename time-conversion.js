@@ -1,28 +1,30 @@
-const DateTime = luxon.DateTime;
+if (document.querySelector("select#time-zones")) {
+  const DateTime = luxon.DateTime;
 
-const dt = DateTime.now();
-const previousZone = localStorage.getItem('previousTimeZone');
-const localZone = previousZone || dt.zoneName;
-const defaultZone = "America/New_York";
+  const dt = DateTime.now();
+  const previousZone = localStorage.getItem("previousTimeZone");
+  const localZone = previousZone || dt.zoneName;
+  const defaultZone = "America/New_York";
 
-const zones = moment.tz.names();
-const availableZones = zones.filter(
-  (zone) => DateTime.local().setZone(zone).isValid
-);
-
-availableZones.forEach((tz) => {
-  const item = document.createElementNS(
-    "http://www.w3.org/1999/xhtml",
-    "option"
+  const zones = moment.tz.names();
+  const availableZones = zones.filter(
+    (zone) => DateTime.local().setZone(zone).isValid
   );
-  item.setAttribute("value", tz);
-  if (tz === localZone) {
-    convertTimezones(localZone);
-    item.setAttribute("selected", "selected");
-  }
-  item.innerHTML = tz;
-  document.querySelector("select#time-zones").appendChild(item);
-});
+
+  availableZones.forEach((tz) => {
+    const item = document.createElementNS(
+      "http://www.w3.org/1999/xhtml",
+      "option"
+    );
+    item.setAttribute("value", tz);
+    if (tz === localZone) {
+      convertTimezones(localZone);
+      item.setAttribute("selected", "selected");
+    }
+    item.innerHTML = tz;
+    document.querySelector("select#time-zones").appendChild(item);
+  });
+}
 
 function convertTimezones(localZone) {
   // console.log(localZone)
@@ -47,18 +49,21 @@ function convertTimezones(localZone) {
 
 function storeTimeZone(localZone) {
   // remember the selection
-  localStorage.setItem('previousTimeZone', localZone);
-  document.querySelector('#selected-time-zone').innerHTML = localZone;
+  localStorage.setItem("previousTimeZone", localZone);
+  document.querySelector("#selected-time-zone").innerHTML = localZone;
   // set option in dropdown
-  const options = document.querySelector("select#time-zones").querySelectorAll("option").forEach(option=>{
-    if (option.getAttribute("value")===localZone) {
-      option.setAttribute("selected", "selected");
-    } else {
-      option.removeAttribute("selected");
-    }
-  })
+  const options = document
+    .querySelector("select#time-zones")
+    .querySelectorAll("option")
+    .forEach((option) => {
+      if (option.getAttribute("value") === localZone) {
+        option.setAttribute("selected", "selected");
+      } else {
+        option.removeAttribute("selected");
+      }
+    });
   // hide modal
-  $('#selectTimezoneModal').modal('hide')
+  $("#selectTimezoneModal").modal("hide");
 }
 
 function guessTimezone() {
