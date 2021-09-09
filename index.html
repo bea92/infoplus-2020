@@ -1559,50 +1559,43 @@
                 <div>
                 <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="one accordion collapsible-link">
                   <h3 class="dates day my-1">Visualizing Uncertainty</h3>
-                  <p class="my-0">Mon, 27 Sep <small>Second conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                  <p class="mt-0 mb-1">Moderator <small>Danielle Szafir</small></p>
+                  <p class="my-0">Mon, 27 Sep: Second conversation — Moderator: Danielle Szafir</p>
                 </button>
               <div class="panel here-d3 firstPanel"></div>
 
             <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
                 <h3 class="dates day my-1">Getting Critical</h3>
-                <p class="m-0">Tue, 28 Sep <small>First conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                <p class="mb-1">Moderator <small>Catherine D’Ignazio</small></p>
+                <p class="m-0">Tue, 28 Sep: First conversation — Moderator: Catherine D’Ignazio</p>
               </button>
             <div class="panel here-d3 secondPanel"></div>
 
             <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
                 <h3 class="dates day my-1">Reframing Maps</h3>
-                <p class="m-0">Tue, 28 Sep <small>Second conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                <p class="mb-1">Moderator <small>Vincent Brown</small></p>
+                <p class="m-0">Tue, 28 Sep: Second conversation — Moderator: Vincent Brown</p>
               </button>
             <div class="panel here-d3 thirdPanel"></div>
 
             <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
               <h3 class="dates day my-1">Rethinking Practice</h3>
-              <p class="m-0">Tue, 29 Sep <small>First conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-              <p class="mb-1">Moderator <small>Kennedy Elliot</small></p>
+              <p class="m-0">Tue, 29 Sep: First conversation — Moderator: Kennedy Elliot</p>
             </button>
             <div class="panel here-d3 fourthPanel"></div>
 
             <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">           
               <h3 class="dates day my-1">Communicating Science</h3>
-              <p class="m-0">Tue, 29 Sep <small>Second conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                <p class="mb-1">Moderator <small>Jessica Roberts</small></p>
+              <p class="m-0">Tue, 29 Sep: Second conversation — Moderator: Jessica Roberts</p>
               </button>
               <div class="panel here-d3 fifthPanel"></div>
 
               <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
                     <h3 class="dates day my-1">Deliberating Health</h3>
-                    <p class="m-0">Tue, 30 Sep <small>First conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                    <p class="mb-1">Moderator <small>Karel Van-Der-Waarde</small></p>
+                    <p class="m-0">Tue, 30 Sep: First conversation — Moderator: Karel Van-Der-Waarde</p>
                 </button>
                 <div class="panel here-d3 sixthPanel"></div>
 
                 <button type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="accordion collapsible-link">
                       <h3 class="dates day my-1">Getting Physical</h3>
-                      <p class="my-0">Tue, 30 Sep <small>Second conversation</small><!--  (<i class="fa fa-map-marker" aria-hidden="true"></i> 11am - <i class="fa fa-globe" aria-hidden="true"></i> <span class="converted-timezone text-lowercase" data-time="11">11am</span>) --></p>
-                      <p class="mt-0 mb-1">Moderator <small>Skye Moret</small></p>
+                      <p class="my-0">Tue, 30 Sep: Second conversation — Moderator: Skye Moret</p>
                   </button>
                   <div class="panel here-d3 seventhPanel"></div>
       </div>
@@ -2255,7 +2248,7 @@ d3.csv("contributions.csv", function(data) {
           .style('display',d=>d.link===''?'none':'block')
           .style('cursor', 'pointer')			
           .append("a")
-          .text( function(d) {return '→ ' + d.action})
+          .html( function(d) {return '<i class="fa fa-play-circle" aria-hidden="true"></i> ' + d.action})
           // .attr("href", d=>d.link)
           // .attr("xlink:target", "_blank")
           .classed("action", true)
