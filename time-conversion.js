@@ -51,7 +51,7 @@ function convertTimezones(localZone) {
 
 function storeTimeZone(localZone) {
   // remember the selection
-  localStorage.setItem("previousTimeZone", localZone);
+  // localStorage.setItem("previousTimeZone", localZone);
   document.querySelector("#selected-time-zone").innerHTML = localZone;
   // set option in dropdown
   const options = document
