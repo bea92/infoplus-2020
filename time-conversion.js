@@ -1,8 +1,9 @@
 const DateTime = luxon.DateTime;
 
 const dt = DateTime.now();
-const previousZone = localStorage.getItem("previousTimeZone");
-const localZone = previousZone || dt.zoneName;
+// const previousZone = localStorage.getItem("previousTimeZone");
+// const localZone = previousZone || dt.zoneName;
+const localZone = dt.zoneName;
 const defaultZone = "America/New_York";
 
 const zones = moment.tz.names();
@@ -30,7 +31,7 @@ function convertTimezones(localZone) {
   slots.forEach(function (el) {
     const dataTime = el.getAttribute("data-time");
     const dataMinutes = el.getAttribute("data-minutes") || "00";
-    console.log(dataTime, dataMinutes)
+    // console.log(dataTime, dataMinutes)
     const date = DateTime.fromISO(`2021-09-27T${dataTime}:${dataMinutes}:00`, {
       zone: defaultZone,
     });
