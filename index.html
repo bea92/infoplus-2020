@@ -1376,8 +1376,8 @@
               <p class="text-add">
                 The schedule below is for the live events during the conference. 
                 <br>
-                You can watch a <a href="#contributions">pre-recorded presentations</a> by authors and the <span class="videoHover" style="color:#5800FF; cursor: pointer;">
-                <a data-toggle="modal" data-target="#welcomeVideoModal">
+                You can watch <a href="#contributions">pre-recorded presentations</a> by authors and the <span class="videoHover" style="color:#5800FF; cursor: pointer;">
+                <a data-toggle="modal" onclick="openWelcomeVideo()">
                   <i class="fa fa-play-circle"></i> welcoming message
                 </a></span> at your own time.
               </p>
@@ -2229,7 +2229,7 @@ The conference organizers will be happy to help participants and assist those ex
     </div>
 
       <!-- Modal overlay for cwelcome videos -->
-      <div class="text-left modal fade" id="welcomeVideoModal" tabindex="-1" aria-labelledby="welcomeVideoModalLabel" aria-hidden="true">
+      <!-- <div class="text-left modal fade" id="welcomeVideoModal" tabindex="-1" aria-labelledby="welcomeVideoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
           <div class="modal-content">
             <div class="modal-header py-2 pl-4">
@@ -2247,7 +2247,7 @@ The conference organizers will be happy to help participants and assist those ex
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -2271,6 +2271,15 @@ The conference organizers will be happy to help participants and assist those ex
     
 
     <script>
+
+      function openWelcomeVideo() {
+
+        $('#contributionVideoModal').modal('toggle')
+            const videoId = "609977122"
+            document.querySelector("#modal-video-iframe").setAttribute("src", `https://player.vimeo.com/video/${videoId}?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0`)
+            document.querySelector("#modal-video-title").innerHTML = `Yanni Loukissas, Marian Dörk, Isabel Meirelles and Dean Kaye Husbands Fealing - Welcome`;
+
+      }
 
 
 $(document).ready(function () {
@@ -2296,6 +2305,7 @@ $(document).ready(function () {
             );
           } // End if
         });
+        
       });
 
 var acc = document.getElementsByClassName("accordion");
@@ -2312,12 +2322,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-
-
-        // Prevent video from playing in background
-        $('#welcomeVideoModal').on('hidden.bs.modal', function (event) {
-          document.querySelector("#modal-video-iframe").removeAttribute("src")
-        })
 
 d3.csv("contributions.csv", function(data) {
 
