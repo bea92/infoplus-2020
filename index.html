@@ -1216,6 +1216,9 @@
   z-index: 20000;
 }
 
+.videoHover a:hover{
+  color:#af10ff;
+}
 
 		</style>
   </head>
@@ -1369,7 +1372,16 @@
         <div class="container">
           <h2 class="title">Schedule</h2>
           <div class="row">
-
+            <div class="col-lg-8">
+              <p class="text-add">
+                The schedule below is for the live events during the conference. 
+                <br>
+                You can watch a <a href="#contributions">pre-recorded presentations</a> by authors and the <span class="videoHover" style="color:#5800FF; cursor: pointer;">
+                <a data-toggle="modal" data-target="#welcomeVideoModal">
+                  <i class="fa fa-play-circle"></i> welcoming message
+                </a></span> at your own time.
+              </p>
+        </div>
           </div>
           <div class="row">
             <div class="col-sm">
@@ -2216,6 +2228,27 @@ The conference organizers will be happy to help participants and assist those ex
       </div>
     </div>
 
+      <!-- Modal overlay for cwelcome videos -->
+      <div class="text-left modal fade" id="welcomeVideoModal" tabindex="-1" aria-labelledby="welcomeVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header py-2 pl-4">
+              <h6 id="modal-video-title" class="modal-title">Yanni Loukissas, Marian Dörk, Isabel Meirelles and Dean Kaye Husbands Fealing - Welcome</h6>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body p-0">
+              <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe id="modal-video-iframe" src="https://player.vimeo.com/video/609977122?h=873a36aee4&color=6251ff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+                </iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
@@ -2279,6 +2312,12 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+        // Prevent video from playing in background
+        $('#welcomeVideoModal').on('hidden.bs.modal', function (event) {
+          document.querySelector("#modal-video-iframe").removeAttribute("src")
+        })
 
 d3.csv("contributions.csv", function(data) {
 
